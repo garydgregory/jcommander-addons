@@ -30,6 +30,12 @@ import com.beust.jcommander.converters.BaseConverter;
  */
 public final class ByteOrderConverter extends BaseConverter<ByteOrder> {
 
+	/**
+	 * Constructs a converter with the given options
+	 * 
+	 * @param optionName
+	 *            currently no options are implemented.
+	 */
 	public ByteOrderConverter(final String optionName) {
 		super(optionName);
 	}
