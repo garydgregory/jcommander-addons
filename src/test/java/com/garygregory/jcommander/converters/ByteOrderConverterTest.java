@@ -23,6 +23,8 @@ import java.nio.ByteOrder;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.ParameterException;
+
 /**
  * Tests {@link ByteOrderConverter}.
  * 
@@ -38,7 +40,7 @@ public class ByteOrderConverterTest {
 		Assert.assertEquals(CONVERTER.convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
 	}
 
-	@Test(expectedExceptions = IllegalArgumentException.class)
+	@Test(expectedExceptions = ParameterException.class)
 	public void testGargabeInput() {
 		CONVERTER.convert("!@#$%");
 	}
