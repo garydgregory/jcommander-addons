@@ -26,7 +26,7 @@ import org.junit.Test;
 import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
- * Tests {@link LocalDate}.
+ * Tests {@link LocalDateConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
