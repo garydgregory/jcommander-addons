@@ -17,32 +17,38 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.sql;
+package com.garygregory.jcommander.converters.xml.datatype;
 
-import java.sql.Connection;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.Duration;
 
-import org.junit.Assert;
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractConverterTest;
-
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link ConnectionConverter}.
+ * Converts a {@link String} into a {@link Duration}.
+ * <p>
+ * For a description of the format, see {@link DatatypeFactory#newDuration(String)}.
+ * </p>
+ * 
+ * @see Duration
+ * @see DatatypeFactory#newDuration(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ConnectionConverterTest extends AbstractConverterTest<Connection> {
+public class DurationConverter extends AbstractBaseConverter<Duration> {
 
-    public ConnectionConverterTest() {
-        super(new ConnectionConverter());
+    /**
+     * Constructs a converter.
+     */
+    public DurationConverter() {
+        super(null, Duration.class);
     }
 
-    @Test
-    public void testConnection() {
-        final Connection connection = convert("jdbc:h2:mem:test");
-        Assert.assertNotNull(connection);
+    @Override
+    protected Duration convertImpl(final String value) throws DatatypeConfigurationException {
+        return DatatypeFactory.newInstance().newDuration(value);
     }
 
 }

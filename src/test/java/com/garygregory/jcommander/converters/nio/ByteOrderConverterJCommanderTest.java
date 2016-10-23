@@ -27,7 +27,6 @@ import org.junit.Test;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
-import com.garygregory.jcommander.converters.nio.ByteOrderConverter;
 
 /**
  * Tests {@link ByteOrderConverter}.

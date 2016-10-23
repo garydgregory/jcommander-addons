@@ -41,7 +41,7 @@ public class DriverConverterTest extends AbstractConverterTest<Driver> {
 
     @Test
     public void testDriver() {
-        Driver driver = convert("jdbc:h2:mem:test");
+        final Driver driver = convert("jdbc:h2:mem:test");
         Assert.assertNotNull(driver);
     }
 

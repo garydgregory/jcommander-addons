@@ -24,7 +24,6 @@ import java.nio.ByteOrder;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractConverterTest;
-import com.garygregory.jcommander.converters.nio.ByteOrderConverter;
 
 /**
  * Tests {@link ByteOrderConverter}.

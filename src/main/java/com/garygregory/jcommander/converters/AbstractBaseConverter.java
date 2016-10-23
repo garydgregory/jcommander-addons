@@ -18,7 +18,6 @@
  */
 package com.garygregory.jcommander.converters;
 
-import java.sql.SQLException;
 import java.util.Objects;
 
 import com.beust.jcommander.ParameterException;
@@ -58,7 +57,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         }
     }
 
-    protected abstract T convertImpl(String value) throws SQLException;
+    protected abstract T convertImpl(String value) throws Exception;
 
     protected String getErrorString(final String value) {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
