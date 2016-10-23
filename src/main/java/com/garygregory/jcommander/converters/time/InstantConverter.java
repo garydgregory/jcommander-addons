@@ -39,7 +39,7 @@ public class InstantConverter extends AbstractTimeConverter<Instant> {
      * Constructs a converter.
      */
     public InstantConverter() {
-        super(null, null);
+        super(null, Instant.class);
     }
 
     @Override

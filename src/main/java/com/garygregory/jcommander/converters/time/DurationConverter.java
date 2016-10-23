@@ -40,7 +40,7 @@ public class DurationConverter extends AbstractTimeConverter<Duration> {
      * Constructs a converter.
      */
     public DurationConverter() {
-        super(null, null);
+        super(null, Duration.class);
     }
 
     @Override

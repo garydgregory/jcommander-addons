@@ -39,7 +39,7 @@ public class PeriodConverter extends AbstractTimeConverter<Period> {
      * Constructs a converter.
      */
     public PeriodConverter() {
-        super(null, null);
+        super(null, Period.class);
     }
 
     @Override
