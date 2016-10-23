@@ -19,7 +19,6 @@ language: java
 sudo: false
 
 jdk:
-  - openjdk8
   - oraclejdk8
 
 after_success:
