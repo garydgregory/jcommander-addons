@@ -19,32 +19,27 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.OffsetTime;
 
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Tests {@link OffsetTimeConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class OffsetTimeConverterTest extends AbstractConverterTest<OffsetTime> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    public OffsetTimeConverterTest() {
+        super(new OffsetTimeConverter());
     }
 
     @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    public void testOffsetTime() {
+        testRoundtrip(OffsetTime.parse("10:15:30+01:00"));
     }
 
 }

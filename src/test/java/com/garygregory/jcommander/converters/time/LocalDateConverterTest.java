@@ -39,7 +39,7 @@ public class LocalDateConverterTest extends AbstractConverterTest<LocalDate> {
 
     @Test
     public void testLocalDate() {
-        testEquals(LocalDate.parse("2007-12-03"), "2007-12-03");
+        testRoundtrip(LocalDate.parse("2007-12-03"));
     }
 
 }

@@ -59,7 +59,11 @@ public abstract class AbstractConverterTest<T> {
         test("");
     }
 
-    protected void testEquals(final T expected, final String value) {
+    protected void testRoundtrip(final T expected) {
+        Assert.assertEquals(expected, convert(expected.toString()));
+    }
+
+    protected void testRoundtrip(final T expected, final String value) {
         Assert.assertEquals(expected, convert(value));
     }
 

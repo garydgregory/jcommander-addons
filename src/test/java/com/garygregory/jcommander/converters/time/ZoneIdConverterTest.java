@@ -19,32 +19,27 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.ZoneId;
 
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Tests {@link ZoneIdConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class ZoneIdConverterTest extends AbstractConverterTest<ZoneId> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    public ZoneIdConverterTest() {
+        super(new ZoneIdConverter());
     }
 
     @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    public void testZoneId() {
+        testRoundtrip(ZoneId.of("Europe/Paris"));
     }
 
 }

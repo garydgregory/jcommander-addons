@@ -19,32 +19,34 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.YearMonth;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Converts a {@link String} into a {@link YearMonth}.
+ * <p>
+ * For a description of the format, see {@link YearMonth#parse(CharSequence)}.
+ * </p>
+ * 
+ * @see YearMonth
+ * @see YearMonth#parse(CharSequence)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class YearMonthConverter extends AbstractBaseConverter<YearMonth> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    /**
+     * Constructs a converter.
+     */
+    public YearMonthConverter() {
+        super(null, YearMonth.class);
     }
 
-    @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    @Override
+    protected YearMonth convertImpl(final String value) {
+        return YearMonth.parse(value);
     }
 
 }

@@ -37,12 +37,12 @@ public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
 
     @Test
     public void testBigEndian() {
-        testEquals(ByteOrder.BIG_ENDIAN, "BIG_ENDIAN");
+        testRoundtrip(ByteOrder.BIG_ENDIAN, "BIG_ENDIAN");
     }
 
     @Test
     public void testLittleEndian() {
-        testEquals(ByteOrder.LITTLE_ENDIAN, "LITTLE_ENDIAN");
+        testRoundtrip(ByteOrder.LITTLE_ENDIAN, "LITTLE_ENDIAN");
     }
 
 }

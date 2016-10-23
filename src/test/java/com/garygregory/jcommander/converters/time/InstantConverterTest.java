@@ -39,7 +39,7 @@ public class InstantConverterTest extends AbstractConverterTest<Instant> {
 
     @Test
     public void testInstant() {
-        testEquals(Instant.parse("2007-12-03T10:15:30.00Z"), "2007-12-03T10:15:30.00Z");
+        testRoundtrip(Instant.parse("2007-12-03T10:15:30.00Z"));
     }
 
 }

@@ -19,32 +19,27 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.YearMonth;
 
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Tests {@link YearConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class YearMonthConverterTest extends AbstractConverterTest<YearMonth> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    public YearMonthConverterTest() {
+        super(new YearMonthConverter());
     }
 
     @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    public void testYear() {
+        testRoundtrip(YearMonth.parse("2007-12"));
     }
 
 }

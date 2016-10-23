@@ -19,32 +19,34 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.OffsetTime;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Converts a {@link String} into a {@link OffsetTime}.
+ * <p>
+ * For a description of the format, see {@link OffsetTime#parse(CharSequence)}.
+ * </p>
+ * 
+ * @see OffsetTime
+ * @see OffsetTime#parse(CharSequence)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class OffsetTimeConverter extends AbstractBaseConverter<OffsetTime> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    /**
+     * Constructs a converter.
+     */
+    public OffsetTimeConverter() {
+        super(null, OffsetTime.class);
     }
 
-    @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    @Override
+    protected OffsetTime convertImpl(final String value) {
+        return OffsetTime.parse(value);
     }
 
 }

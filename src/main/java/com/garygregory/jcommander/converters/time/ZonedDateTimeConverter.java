@@ -19,32 +19,34 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.ZonedDateTime;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Converts a {@link String} into a {@link ZonedDateTime}.
+ * <p>
+ * For a description of the format, see {@link ZonedDateTime#parse(CharSequence)}.
+ * </p>
+ * 
+ * @see ZonedDateTime
+ * @see ZonedDateTime#parse(CharSequence)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class ZonedDateTimeConverter extends AbstractBaseConverter<ZonedDateTime> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    /**
+     * Constructs a converter.
+     */
+    public ZonedDateTimeConverter() {
+        super(null, ZonedDateTime.class);
     }
 
-    @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    @Override
+    protected ZonedDateTime convertImpl(final String value) {
+        return ZonedDateTime.parse(value);
     }
 
 }

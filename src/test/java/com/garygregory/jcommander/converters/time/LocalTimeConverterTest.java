@@ -39,7 +39,7 @@ public class LocalTimeConverterTest extends AbstractConverterTest<LocalTime> {
 
     @Test
     public void testLocalTime() {
-        testEquals(LocalTime.parse("10:15:30"), "10:15:30");
+        testRoundtrip(LocalTime.parse("10:15:30"));
     }
 
 }

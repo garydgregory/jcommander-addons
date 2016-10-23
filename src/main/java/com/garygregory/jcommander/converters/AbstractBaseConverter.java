@@ -26,6 +26,8 @@ import com.beust.jcommander.converters.BaseConverter;
 /**
  * Provides common services for converters in this package
  * 
+ * @param <T>
+ *            the target type of the convertion.
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
@@ -33,6 +35,14 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
     protected final Class<T> targetClass;
 
+    /**
+     * Constructs a new instance.
+     * 
+     * @param optionName
+     *            may be null
+     * @param targetClass
+     *            must not be null
+     */
     public AbstractBaseConverter(final String optionName, final Class<T> targetClass) {
         super(optionName);
         this.targetClass = Objects.requireNonNull(targetClass, "targetClass for " + getClass());
@@ -43,17 +53,17 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         try {
             return convertImpl(value);
         } catch (final Exception e) {
-            throw newParameterException(value);
+            throw newParameterException(value, e);
         }
     }
 
     protected abstract T convertImpl(String value);
-    
+
     protected String getErrorString(final String value) {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
     }
 
-    protected ParameterException newParameterException(final String value) {
+    protected ParameterException newParameterException(final String value, Throwable t) {
         return new ParameterException(getErrorString(value));
     }
 

@@ -19,32 +19,27 @@
 
 package com.garygregory.jcommander.converters.time;
 
-import java.time.Period;
+import java.time.MonthDay;
 
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
- * Tests {@link PeriodConverter}.
+ * Tests {@link LocalDateTimeConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class MonthDayConverterTest extends AbstractConverterTest<MonthDay> {
 
-    public PeriodConverterTest() {
-        super(new PeriodConverter());
+    public MonthDayConverterTest() {
+        super(new MonthDayConverter());
     }
 
     @Test
-    public void testPeriodMinusP1Y2M() {
-        testRoundtrip(Period.of(-1, -2, 0));
-    }
-
-    @Test
-    public void testPeriodZero() {
-        testRoundtrip(Period.ZERO, "P0Y0M0D");
+    public void testMonthDay() {
+        testRoundtrip(MonthDay.parse("--12-03"));
     }
 
 }

@@ -39,7 +39,7 @@ public class ByteOrderConverterJCommanderTest {
     class CommandLineArguments {
 
         @Parameter(names = { "--byteOrder" }, converter = ByteOrderConverter.class)
-        private ByteOrder byteOrder;
+        protected ByteOrder byteOrder;
 
     }
 
