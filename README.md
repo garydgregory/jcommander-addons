@@ -18,7 +18,7 @@
 -->
 ![jcommander-addons](https://github.com/garydgregory/jcommander-addons/raw/master/src/site/resources/images/logo.png "jcommander-addons")
 
-Add-ons for JCommander
+Add-ons to the JCommander command line parser framework.
 
 [![Build Status](https://travis-ci.org/garydgregory/jcommander-addons.svg?branch=master)](https://travis-ci.org/garydgregory/jcommander-addons)
 [![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
