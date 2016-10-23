@@ -21,4 +21,4 @@
 Add-ons for JCommander
 
 [![Build Status](https://travis-ci.org/garydgregory/jcommander-addons.svg?branch=master)](https://travis-ci.org/garydgregory/jcommander-addons)
-
+[![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
