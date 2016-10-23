@@ -27,7 +27,7 @@ import com.beust.jcommander.converters.BaseConverter;
  * Provides common services for converters in this package
  * 
  * @param <T>
- *            the target type of the convertion.
+ *            the target type of the conversion.
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
