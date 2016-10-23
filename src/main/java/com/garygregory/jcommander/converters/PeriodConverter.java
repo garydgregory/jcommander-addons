@@ -19,30 +19,37 @@
 
 package com.garygregory.jcommander.converters;
 
-import java.nio.ByteOrder;
-
-import org.junit.Test;
+import java.time.Period;
+import java.time.format.DateTimeParseException;
 
 /**
- * Tests {@link ByteOrderConverter}.
+ * Converts a {@link String} into a {@link Period}.
+ * <p>
+ * For a description of the format, see {@link Period#parse(CharSequence)}.
+ * </p>
+ * 
+ * @see Period
+ * @see Period#parse(CharSequence)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public class PeriodConverter extends AbstractBaseConverter<Period> {
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+    /**
+     * Constructs a converter.
+     */
+    public PeriodConverter() {
+        super(null);
     }
 
-    @Test
-    public void testBigEndian() {
-        testEquals(ByteOrder.BIG_ENDIAN, "BIG_ENDIAN");
-    }
-
-    @Test
-    public void testLittleEndian() {
-        testEquals(ByteOrder.LITTLE_ENDIAN, "LITTLE_ENDIAN");
+    @Override
+    public Period convert(final String value) {
+        try {
+            return Period.parse(value);
+        } catch (final DateTimeParseException e) {
+            throw newParameterException(value, Period.class);
+        }
     }
 
 }

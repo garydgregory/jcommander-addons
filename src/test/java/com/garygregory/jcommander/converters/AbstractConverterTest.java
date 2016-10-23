@@ -19,6 +19,7 @@
 
 package com.garygregory.jcommander.converters;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.beust.jcommander.IStringConverter;
@@ -35,7 +36,7 @@ public abstract class AbstractConverterTest<T> {
     protected T convert(final String value) {
         return stringConverter.convert(value);
     }
-    
+
     public IStringConverter<T> getStringConverter() {
         return stringConverter;
     }
@@ -56,6 +57,10 @@ public abstract class AbstractConverterTest<T> {
     @Test(expected = ParameterException.class)
     public void testEmptyString() {
         test("");
+    }
+
+    protected void testEquals(final T expected, final String value) {
+        Assert.assertEquals(expected, convert(value));
     }
 
 }

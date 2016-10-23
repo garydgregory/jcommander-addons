@@ -37,7 +37,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
     }
 
-    protected ParameterException newParameterException(final String value, final Class<?> targetClass) {
+    protected ParameterException newParameterException(final String value, final Class<T> targetClass) {
         return new ParameterException(getErrorString(value, targetClass));
     }
 

@@ -19,30 +19,30 @@
 
 package com.garygregory.jcommander.converters;
 
-import java.nio.ByteOrder;
+import java.time.Period;
 
 import org.junit.Test;
 
 /**
- * Tests {@link ByteOrderConverter}.
+ * Tests {@link PeriodConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public class PeriodConverterTest extends AbstractConverterTest<Period> {
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+    public PeriodConverterTest() {
+        super(new PeriodConverter());
     }
 
     @Test
-    public void testBigEndian() {
-        testEquals(ByteOrder.BIG_ENDIAN, "BIG_ENDIAN");
+    public void testMinusP1Y2M() {
+        testEquals(Period.of(-1, -2, 0), "-P1Y2M");
     }
 
     @Test
-    public void testLittleEndian() {
-        testEquals(ByteOrder.LITTLE_ENDIAN, "LITTLE_ENDIAN");
+    public void testZero() {
+        testEquals(Period.ZERO, "P0Y0M0D");
     }
 
 }

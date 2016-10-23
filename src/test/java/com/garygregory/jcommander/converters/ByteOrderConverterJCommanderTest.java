@@ -47,13 +47,6 @@ public class ByteOrderConverterJCommanderTest {
         testJCommander(byteOrder.toString());
     }
 
-    private void testJCommander(final String byteOrder) {
-        final CommandLineArguments commandLineArgs = new CommandLineArguments();
-        final String[] argv = { "--byteOrder", byteOrder };
-        new JCommander(commandLineArgs, argv);
-        Assert.assertEquals(commandLineArgs.byteOrder.toString(), byteOrder);
-    }
-
     public void testBadInput() {
         testJCommander("X");
     }
@@ -66,6 +59,13 @@ public class ByteOrderConverterJCommanderTest {
     @Test(expected = ParameterException.class)
     public void testEmptyString() {
         testJCommander("X");
+    }
+
+    private void testJCommander(final String byteOrder) {
+        final CommandLineArguments commandLineArgs = new CommandLineArguments();
+        final String[] argv = { "--byteOrder", byteOrder };
+        new JCommander(commandLineArgs, argv);
+        Assert.assertEquals(commandLineArgs.byteOrder.toString(), byteOrder);
     }
 
     @Test
