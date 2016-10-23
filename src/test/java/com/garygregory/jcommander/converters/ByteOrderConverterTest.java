@@ -38,12 +38,12 @@ public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
 
     @Test
     public void testBigEndian() {
-        Assert.assertEquals(getStringConverter().convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
+        Assert.assertEquals(convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
     }
 
     @Test
     public void testLittleEndian() {
-        Assert.assertEquals(getStringConverter().convert("LITTLE_ENDIAN"), ByteOrder.LITTLE_ENDIAN);
+        Assert.assertEquals(convert("LITTLE_ENDIAN"), ByteOrder.LITTLE_ENDIAN);
     }
 
 }

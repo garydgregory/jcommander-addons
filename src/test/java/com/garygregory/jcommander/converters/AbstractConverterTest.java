@@ -32,12 +32,16 @@ public abstract class AbstractConverterTest<T> {
         this.stringConverter = stringConverter;
     }
 
+    protected T convert(final String value) {
+        return stringConverter.convert(value);
+    }
+    
     public IStringConverter<T> getStringConverter() {
         return stringConverter;
     }
 
     protected void test(final String value) {
-        stringConverter.convert(value);
+        convert(value);
     }
 
     @Test(expected = ParameterException.class)

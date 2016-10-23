@@ -42,7 +42,7 @@ public class QNameConverterTest extends AbstractConverterTest<QName> {
     @Override
     @Test
     public void testEmptyString() {
-        final QName qname = getStringConverter().convert(EMPTY_STRING);
+        final QName qname = convert(EMPTY_STRING);
         Assert.assertEquals(XMLConstants.DEFAULT_NS_PREFIX, qname.getPrefix());
         Assert.assertEquals(EMPTY_STRING, qname.getNamespaceURI());
         Assert.assertEquals(EMPTY_STRING, qname.getLocalPart());
@@ -50,7 +50,7 @@ public class QNameConverterTest extends AbstractConverterTest<QName> {
 
     @Test
     public void testLocalPart() {
-        final QName qname = getStringConverter().convert("ALocalPart");
+        final QName qname = convert("ALocalPart");
         Assert.assertEquals(XMLConstants.DEFAULT_NS_PREFIX, qname.getPrefix());
         Assert.assertEquals(EMPTY_STRING, qname.getNamespaceURI());
         Assert.assertEquals("ALocalPart", qname.getLocalPart());
@@ -58,7 +58,7 @@ public class QNameConverterTest extends AbstractConverterTest<QName> {
 
     @Test
     public void testNamespaceUriLocalPart() {
-        final QName qname = getStringConverter().convert("{namespaceUri}ALocalPart");
+        final QName qname = convert("{namespaceUri}ALocalPart");
         Assert.assertEquals(XMLConstants.DEFAULT_NS_PREFIX, qname.getPrefix());
         Assert.assertEquals("namespaceUri", qname.getNamespaceURI());
         Assert.assertEquals("ALocalPart", qname.getLocalPart());
@@ -66,7 +66,7 @@ public class QNameConverterTest extends AbstractConverterTest<QName> {
 
     @Test
     public void testPrefixNamespaceUriLocalPart() {
-        final QName qname = getStringConverter().convert("{abc:namespaceUri}ALocalPart");
+        final QName qname = convert("{abc:namespaceUri}ALocalPart");
         Assert.assertEquals(XMLConstants.DEFAULT_NS_PREFIX, qname.getPrefix());
         Assert.assertEquals("abc:namespaceUri", qname.getNamespaceURI());
         Assert.assertEquals("ALocalPart", qname.getLocalPart());
