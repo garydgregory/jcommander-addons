@@ -21,9 +21,6 @@ package com.garygregory.jcommander.converters.time;
 
 import java.time.Duration;
 import java.time.Period;
-import java.time.format.DateTimeParseException;
-
-import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
  * Converts a {@link String} into a {@link Duration}.
@@ -37,22 +34,18 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class DurationConverter extends AbstractBaseConverter<Duration> {
+public class DurationConverter extends AbstractTimeConverter<Duration> {
 
     /**
      * Constructs a converter.
      */
     public DurationConverter() {
-        super(null);
+        super(null, null);
     }
 
     @Override
-    public Duration convert(final String value) {
-        try {
-            return Duration.parse(value);
-        } catch (final DateTimeParseException e) {
-            throw newParameterException(value, Duration.class);
-        }
+    public Duration convertTime(final String value) {
+        return Duration.parse(value);
     }
 
 }

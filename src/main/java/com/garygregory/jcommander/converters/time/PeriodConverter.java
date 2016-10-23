@@ -20,9 +20,6 @@
 package com.garygregory.jcommander.converters.time;
 
 import java.time.Period;
-import java.time.format.DateTimeParseException;
-
-import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
  * Converts a {@link String} into a {@link Period}.
@@ -36,22 +33,18 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverter extends AbstractBaseConverter<Period> {
+public class PeriodConverter extends AbstractTimeConverter<Period> {
 
     /**
      * Constructs a converter.
      */
     public PeriodConverter() {
-        super(null);
+        super(null, null);
     }
 
     @Override
-    public Period convert(final String value) {
-        try {
-            return Period.parse(value);
-        } catch (final DateTimeParseException e) {
-            throw newParameterException(value, Period.class);
-        }
+    public Period convertTime(final String value) {
+        return Period.parse(value);
     }
 
 }

@@ -20,10 +20,6 @@
 package com.garygregory.jcommander.converters.time;
 
 import java.time.Instant;
-import java.time.Period;
-import java.time.format.DateTimeParseException;
-
-import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
  * Converts a {@link String} into a {@link Instant}.
@@ -37,22 +33,18 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class InstantConverter extends AbstractBaseConverter<Instant> {
+public class InstantConverter extends AbstractTimeConverter<Instant> {
 
     /**
      * Constructs a converter.
      */
     public InstantConverter() {
-        super(null);
+        super(null, null);
     }
 
     @Override
-    public Instant convert(final String value) {
-        try {
-            return Instant.parse(value);
-        } catch (final DateTimeParseException e) {
-            throw newParameterException(value, Instant.class);
-        }
+    public Instant convertTime(final String value) {
+        return Instant.parse(value);
     }
 
 }

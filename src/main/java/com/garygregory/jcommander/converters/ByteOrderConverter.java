@@ -36,7 +36,7 @@ public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
      * Constructs a converter with the given options
      */
     public ByteOrderConverter() {
-        super(null);
+        super(null, ByteOrder.class);
     }
 
     @Override
@@ -47,6 +47,6 @@ public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
         if (value.equalsIgnoreCase(ByteOrder.LITTLE_ENDIAN.toString())) {
             return ByteOrder.LITTLE_ENDIAN;
         }
-        throw newParameterException(value, ByteOrder.class);
+        throw newParameterException(value);
     }
 }

@@ -38,7 +38,7 @@ public class QNameConverter extends AbstractBaseConverter<QName> {
      * Constructs a converter.
      */
     public QNameConverter() {
-        super(null);
+        super(null, QName.class);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class QNameConverter extends AbstractBaseConverter<QName> {
         try {
             return QName.valueOf(value);
         } catch (final IllegalArgumentException e) {
-            throw newParameterException(value, QName.class);
+            throw newParameterException(value);
         }
     }
 

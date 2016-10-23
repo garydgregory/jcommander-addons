@@ -29,16 +29,19 @@ import com.beust.jcommander.converters.BaseConverter;
  */
 public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
-    public AbstractBaseConverter(final String optionName) {
+    protected final Class<T> targetClass;
+
+    public AbstractBaseConverter(final String optionName, final Class<T> targetClass) {
         super(optionName);
+        this.targetClass = targetClass;
     }
 
-    protected String getErrorString(final String value, final Class<?> targetClass) {
+    protected String getErrorString(final String value) {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
     }
 
-    protected ParameterException newParameterException(final String value, final Class<T> targetClass) {
-        return new ParameterException(getErrorString(value, targetClass));
+    protected ParameterException newParameterException(final String value) {
+        return new ParameterException(getErrorString(value));
     }
 
 }
