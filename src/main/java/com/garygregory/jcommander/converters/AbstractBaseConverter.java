@@ -38,6 +38,17 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         this.targetClass = Objects.requireNonNull(targetClass, "targetClass for " + getClass());
     }
 
+    @Override
+    public T convert(final String value) {
+        try {
+            return convertImpl(value);
+        } catch (final Exception e) {
+            throw newParameterException(value);
+        }
+    }
+
+    protected abstract T convertImpl(String value);
+    
     protected String getErrorString(final String value) {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
     }

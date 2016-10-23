@@ -40,13 +40,13 @@ public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
     }
 
     @Override
-    public ByteOrder convert(final String value) {
+    protected ByteOrder convertImpl(final String value) {
         if (value.equalsIgnoreCase(ByteOrder.BIG_ENDIAN.toString())) {
             return ByteOrder.BIG_ENDIAN;
         }
         if (value.equalsIgnoreCase(ByteOrder.LITTLE_ENDIAN.toString())) {
             return ByteOrder.LITTLE_ENDIAN;
         }
-        throw newParameterException(value);
+        throw new IllegalArgumentException(value);
     }
 }

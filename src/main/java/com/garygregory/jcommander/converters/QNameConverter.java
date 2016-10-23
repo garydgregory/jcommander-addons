@@ -42,12 +42,8 @@ public class QNameConverter extends AbstractBaseConverter<QName> {
     }
 
     @Override
-    public QName convert(final String value) {
-        try {
-            return QName.valueOf(value);
-        } catch (final IllegalArgumentException e) {
-            throw newParameterException(value);
-        }
+    protected QName convertImpl(final String value) {
+        return QName.valueOf(value);
     }
 
 }

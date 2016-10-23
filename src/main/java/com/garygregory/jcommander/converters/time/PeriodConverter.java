@@ -21,6 +21,8 @@ package com.garygregory.jcommander.converters.time;
 
 import java.time.Period;
 
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
+
 /**
  * Converts a {@link String} into a {@link Period}.
  * <p>
@@ -33,7 +35,7 @@ import java.time.Period;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverter extends AbstractTimeConverter<Period> {
+public class PeriodConverter extends AbstractBaseConverter<Period> {
 
     /**
      * Constructs a converter.
@@ -43,7 +45,7 @@ public class PeriodConverter extends AbstractTimeConverter<Period> {
     }
 
     @Override
-    public Period convertTime(final String value) {
+    protected Period convertImpl(final String value) {
         return Period.parse(value);
     }
 

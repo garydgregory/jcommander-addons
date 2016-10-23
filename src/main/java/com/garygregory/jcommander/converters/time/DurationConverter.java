@@ -22,6 +22,8 @@ package com.garygregory.jcommander.converters.time;
 import java.time.Duration;
 import java.time.Period;
 
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
+
 /**
  * Converts a {@link String} into a {@link Duration}.
  * <p>
@@ -34,7 +36,7 @@ import java.time.Period;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class DurationConverter extends AbstractTimeConverter<Duration> {
+public class DurationConverter extends AbstractBaseConverter<Duration> {
 
     /**
      * Constructs a converter.
@@ -44,7 +46,7 @@ public class DurationConverter extends AbstractTimeConverter<Duration> {
     }
 
     @Override
-    public Duration convertTime(final String value) {
+    protected Duration convertImpl(final String value) {
         return Duration.parse(value);
     }
 
