@@ -16,34 +16,29 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
 package com.garygregory.jcommander.converters;
 
-import java.nio.ByteOrder;
-
-import org.junit.Assert;
-import org.junit.Test;
+import com.beust.jcommander.ParameterException;
+import com.beust.jcommander.converters.BaseConverter;
 
 /**
- * Tests {@link ByteOrderConverter}.
+ * Provides common services for converters in this package
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+    public AbstractBaseConverter(final String optionName) {
+        super(optionName);
     }
 
-    @Test
-    public void testBigEndian() {
-        Assert.assertEquals(getStringConverter().convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
+    protected String getErrorString(final String value, final Class<?> targetClass) {
+        return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
     }
 
-    @Test
-    public void testLittleEndian() {
-        Assert.assertEquals(getStringConverter().convert("LITTLE_ENDIAN"), ByteOrder.LITTLE_ENDIAN);
+    protected ParameterException newParameterException(final String value, final Class<?> targetClass) {
+        return new ParameterException(getErrorString(value, targetClass));
     }
 
 }

@@ -24,26 +24,52 @@ import java.nio.ByteOrder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
+import com.beust.jcommander.ParameterException;
+
 /**
  * Tests {@link ByteOrderConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public class ByteOrderConverterJCommanderTest {
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+    class CommandLineArguments {
+
+        @Parameter(names = { "--byteOrder" }, converter = ByteOrderConverter.class)
+        private ByteOrder byteOrder;
+
+    }
+
+    private void test(final ByteOrder byteOrder) {
+        testJCommander(byteOrder.toString());
+    }
+
+    private void testJCommander(final String byteOrder) {
+        final CommandLineArguments commandLineArgs = new CommandLineArguments();
+        final String[] argv = { "--byteOrder", byteOrder };
+        new JCommander(commandLineArgs, argv);
+        Assert.assertEquals(commandLineArgs.byteOrder.toString(), byteOrder);
+    }
+
+    public void testBadInput() {
+        testJCommander("X");
     }
 
     @Test
     public void testBigEndian() {
-        Assert.assertEquals(getStringConverter().convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
+        test(ByteOrder.BIG_ENDIAN);
+    }
+
+    @Test(expected = ParameterException.class)
+    public void testEmptyString() {
+        testJCommander("X");
     }
 
     @Test
     public void testLittleEndian() {
-        Assert.assertEquals(getStringConverter().convert("LITTLE_ENDIAN"), ByteOrder.LITTLE_ENDIAN);
+        test(ByteOrder.LITTLE_ENDIAN);
     }
-
 }

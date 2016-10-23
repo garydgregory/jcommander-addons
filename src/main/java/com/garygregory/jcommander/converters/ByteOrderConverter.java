@@ -1,53 +1,52 @@
 /**
- * Copyright (C) 2010 the original author or authors.
- * See the notice.md file distributed with this work for additional
- * information regarding copyright ownership.
+ *  Copyright (C) 2016 Gary Gregory. All rights reserved.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ *  See the NOTICE.txt file distributed with this work for additional
+ *  information regarding copyright ownership.
+ *  
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *  
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *  
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
  */
 
 package com.garygregory.jcommander.converters;
 
 import java.nio.ByteOrder;
 
-import com.beust.jcommander.ParameterException;
-import com.beust.jcommander.converters.BaseConverter;
-
 /**
- * Converts a String to a {@link ByteOrder}.
+ * Converts a String to a {@link ByteOrder}. Values are {@code "BIG_ENDIAN"} and {@code "LITTLE_ENDIAN"}.
  * 
- * @author Gary Gregory
+ * @see ByteOrder
+ * @see ByteOrder#BIG_ENDIAN
+ * @see ByteOrder#LITTLE_ENDIAN
+ * @since 1.0.0
+ * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public final class ByteOrderConverter extends BaseConverter<ByteOrder> {
+public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
 
-	/**
-	 * Constructs a converter with the given options
-	 * 
-	 * @param optionName
-	 *            currently no options are implemented.
-	 */
-	public ByteOrderConverter(final String optionName) {
-		super(optionName);
-	}
+    /**
+     * Constructs a converter with the given options
+     */
+    public ByteOrderConverter() {
+        super(null);
+    }
 
-	@Override
-	public ByteOrder convert(final String value) {
-		if (value.equalsIgnoreCase(ByteOrder.BIG_ENDIAN.toString())) {
-			return ByteOrder.BIG_ENDIAN;
-		}
-		if (value.equalsIgnoreCase(ByteOrder.LITTLE_ENDIAN.toString())) {
-			return ByteOrder.LITTLE_ENDIAN;
-		}
-		throw new ParameterException(getErrorString(value, "a ByteOrder"));
-	}
+    @Override
+    public ByteOrder convert(final String value) {
+        if (value.equalsIgnoreCase(ByteOrder.BIG_ENDIAN.toString())) {
+            return ByteOrder.BIG_ENDIAN;
+        }
+        if (value.equalsIgnoreCase(ByteOrder.LITTLE_ENDIAN.toString())) {
+            return ByteOrder.LITTLE_ENDIAN;
+        }
+        throw newParameterException(value, ByteOrder.class);
+    }
 }

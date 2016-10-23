@@ -19,31 +19,39 @@
 
 package com.garygregory.jcommander.converters;
 
-import java.nio.ByteOrder;
-
-import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Tests {@link ByteOrderConverter}.
- * 
- * @since 1.0.0
- * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
- */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+import com.beust.jcommander.IStringConverter;
+import com.beust.jcommander.ParameterException;
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+public abstract class AbstractConverterTest<T> {
+
+    private final IStringConverter<T> stringConverter;
+
+    public AbstractConverterTest(final IStringConverter<T> stringConverter) {
+        this.stringConverter = stringConverter;
     }
 
-    @Test
-    public void testBigEndian() {
-        Assert.assertEquals(getStringConverter().convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
+    public IStringConverter<T> getStringConverter() {
+        return stringConverter;
     }
 
-    @Test
-    public void testLittleEndian() {
-        Assert.assertEquals(getStringConverter().convert("LITTLE_ENDIAN"), ByteOrder.LITTLE_ENDIAN);
+    protected void test(final String value) {
+        stringConverter.convert(value);
+    }
+
+    @Test(expected = ParameterException.class)
+    public void testBadInput() {
+        test("{ BAD INPUT ");
+    }
+
+    public void testBlankString() {
+        test(" ");
+    }
+
+    @Test(expected = ParameterException.class)
+    public void testEmptyString() {
+        test("");
     }
 
 }

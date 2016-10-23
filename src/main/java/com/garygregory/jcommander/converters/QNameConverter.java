@@ -19,31 +19,35 @@
 
 package com.garygregory.jcommander.converters;
 
-import java.nio.ByteOrder;
-
-import org.junit.Assert;
-import org.junit.Test;
+import javax.xml.namespace.QName;
 
 /**
- * Tests {@link ByteOrderConverter}.
+ * Converts a {@link String} into a {@link QName}.
+ * <p>
+ * For a description of the format, see {@link QName#valueOf(String)}.
+ * 
+ * @see QName
+ * @see QName#valueOf(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public class QNameConverter extends AbstractBaseConverter<QName> {
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+    /**
+     * Constructs a converter.
+     */
+    public QNameConverter() {
+        super(null);
     }
 
-    @Test
-    public void testBigEndian() {
-        Assert.assertEquals(getStringConverter().convert("BIG_ENDIAN"), ByteOrder.BIG_ENDIAN);
-    }
-
-    @Test
-    public void testLittleEndian() {
-        Assert.assertEquals(getStringConverter().convert("LITTLE_ENDIAN"), ByteOrder.LITTLE_ENDIAN);
+    @Override
+    public QName convert(final String value) {
+        try {
+            return QName.valueOf(value);
+        } catch (final IllegalArgumentException e) {
+            throw newParameterException(value, QName.class);
+        }
     }
 
 }
