@@ -38,12 +38,12 @@ public class PeriodConverterTest extends AbstractConverterTest<Period> {
     }
 
     @Test
-    public void testMinusP1Y2M() {
+    public void testPeriodMinusP1Y2M() {
         testEquals(Period.of(-1, -2, 0), "-P1Y2M");
     }
 
     @Test
-    public void testZero() {
+    public void testPeriodZero() {
         testEquals(Period.ZERO, "P0Y0M0D");
     }
 

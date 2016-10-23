@@ -38,12 +38,12 @@ public class DurationConverterTest extends AbstractConverterTest<Duration> {
     }
 
     @Test
-    public void testMinusPT15M() {
+    public void testDurationMinusPT15M() {
         testEquals(Duration.ofMinutes(15), "PT15M");
     }
 
     @Test
-    public void testZero() {
+    public void testDurationZero() {
         testEquals(Duration.ZERO, "PT0S");
     }
 
