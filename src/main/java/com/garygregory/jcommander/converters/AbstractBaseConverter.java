@@ -18,6 +18,8 @@
  */
 package com.garygregory.jcommander.converters;
 
+import java.util.Objects;
+
 import com.beust.jcommander.ParameterException;
 import com.beust.jcommander.converters.BaseConverter;
 
@@ -33,7 +35,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
     public AbstractBaseConverter(final String optionName, final Class<T> targetClass) {
         super(optionName);
-        this.targetClass = targetClass;
+        this.targetClass = Objects.requireNonNull(targetClass, "targetClass for " + getClass());
     }
 
     protected String getErrorString(final String value) {
