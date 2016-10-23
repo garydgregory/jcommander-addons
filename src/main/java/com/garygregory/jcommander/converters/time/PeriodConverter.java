@@ -17,10 +17,12 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.time;
 
 import java.time.Period;
 import java.time.format.DateTimeParseException;
+
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
  * Converts a {@link String} into a {@link Period}.

@@ -17,11 +17,13 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.time;
 
 import java.time.Period;
 
 import org.junit.Test;
+
+import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
  * Tests {@link PeriodConverter}.
