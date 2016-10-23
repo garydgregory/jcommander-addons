@@ -17,13 +17,15 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.xml.namespace;
 
 import javax.xml.XMLConstants;
 import javax.xml.namespace.QName;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.garygregory.jcommander.converters.AbstractConverterTest;
 
 /**
  * Tests {@link QNameConverter}.

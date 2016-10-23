@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.nio;
 
 import java.nio.ByteOrder;
 
@@ -27,6 +27,7 @@ import org.junit.Test;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.garygregory.jcommander.converters.nio.ByteOrderConverter;
 
 /**
  * Tests {@link ByteOrderConverter}.

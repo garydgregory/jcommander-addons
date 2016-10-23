@@ -17,36 +17,35 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.nio;
 
 import java.nio.ByteOrder;
 
+import org.junit.Test;
+
+import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.nio.ByteOrderConverter;
+
 /**
- * Converts a String to a {@link ByteOrder}. Values are {@code "BIG_ENDIAN"} and {@code "LITTLE_ENDIAN"}.
+ * Tests {@link ByteOrderConverter}.
  * 
- * @see ByteOrder
- * @see ByteOrder#BIG_ENDIAN
- * @see ByteOrder#LITTLE_ENDIAN
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
+public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
 
-    /**
-     * Constructs a converter with the given options
-     */
-    public ByteOrderConverter() {
-        super(null, ByteOrder.class);
+    public ByteOrderConverterTest() {
+        super(new ByteOrderConverter());
     }
 
-    @Override
-    protected ByteOrder convertImpl(final String value) {
-        if (value.equalsIgnoreCase(ByteOrder.BIG_ENDIAN.toString())) {
-            return ByteOrder.BIG_ENDIAN;
-        }
-        if (value.equalsIgnoreCase(ByteOrder.LITTLE_ENDIAN.toString())) {
-            return ByteOrder.LITTLE_ENDIAN;
-        }
-        throw new IllegalArgumentException(value);
+    @Test
+    public void testBigEndian() {
+        testRoundtrip(ByteOrder.BIG_ENDIAN, "BIG_ENDIAN");
     }
+
+    @Test
+    public void testLittleEndian() {
+        testRoundtrip(ByteOrder.LITTLE_ENDIAN, "LITTLE_ENDIAN");
+    }
+
 }

@@ -17,33 +17,38 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.nio;
 
-import javax.xml.namespace.QName;
+import java.nio.ByteOrder;
+
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a {@link QName}.
- * <p>
- * For a description of the format, see {@link QName#valueOf(String)}.
+ * Converts a String to a {@link ByteOrder}. Values are {@code "BIG_ENDIAN"} and {@code "LITTLE_ENDIAN"}.
  * 
- * @see QName
- * @see QName#valueOf(String)
- * 
+ * @see ByteOrder
+ * @see ByteOrder#BIG_ENDIAN
+ * @see ByteOrder#LITTLE_ENDIAN
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class QNameConverter extends AbstractBaseConverter<QName> {
+public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
 
     /**
-     * Constructs a converter.
+     * Constructs a converter with the given options
      */
-    public QNameConverter() {
-        super(null, QName.class);
+    public ByteOrderConverter() {
+        super(null, ByteOrder.class);
     }
 
     @Override
-    protected QName convertImpl(final String value) {
-        return QName.valueOf(value);
+    protected ByteOrder convertImpl(final String value) {
+        if (value.equalsIgnoreCase(ByteOrder.BIG_ENDIAN.toString())) {
+            return ByteOrder.BIG_ENDIAN;
+        }
+        if (value.equalsIgnoreCase(ByteOrder.LITTLE_ENDIAN.toString())) {
+            return ByteOrder.LITTLE_ENDIAN;
+        }
+        throw new IllegalArgumentException(value);
     }
-
 }

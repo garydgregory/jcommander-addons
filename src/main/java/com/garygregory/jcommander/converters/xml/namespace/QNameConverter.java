@@ -17,32 +17,35 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters;
+package com.garygregory.jcommander.converters.xml.namespace;
 
-import java.nio.ByteOrder;
+import javax.xml.namespace.QName;
 
-import org.junit.Test;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link ByteOrderConverter}.
+ * Converts a {@link String} into a {@link QName}.
+ * <p>
+ * For a description of the format, see {@link QName#valueOf(String)}.
+ * 
+ * @see QName
+ * @see QName#valueOf(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public class QNameConverter extends AbstractBaseConverter<QName> {
 
-    public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+    /**
+     * Constructs a converter.
+     */
+    public QNameConverter() {
+        super(null, QName.class);
     }
 
-    @Test
-    public void testBigEndian() {
-        testRoundtrip(ByteOrder.BIG_ENDIAN, "BIG_ENDIAN");
-    }
-
-    @Test
-    public void testLittleEndian() {
-        testRoundtrip(ByteOrder.LITTLE_ENDIAN, "LITTLE_ENDIAN");
+    @Override
+    protected QName convertImpl(final String value) {
+        return QName.valueOf(value);
     }
 
 }
