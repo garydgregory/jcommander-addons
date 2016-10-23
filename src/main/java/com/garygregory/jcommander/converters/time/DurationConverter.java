@@ -31,8 +31,8 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link Period#parse(CharSequence)}.
  * </p>
  * 
- * @see Period
- * @see Period#parse(CharSequence)
+ * @see Duration
+ * @see Duration#parse(CharSequence)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
