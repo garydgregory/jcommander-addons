@@ -26,11 +26,8 @@ import com.beust.jcommander.ParameterException;
 
 public abstract class AbstractStringConverterBasicTest<T> extends AbstractStringConverterTestWrapper<T> {
 
-    private final IStringConverter<T> stringConverter;
-
     public AbstractStringConverterBasicTest(final IStringConverter<T> stringConverter) {
         super(stringConverter);
-        this.stringConverter = stringConverter;
     }
 
     @Test(expected = ParameterException.class)
