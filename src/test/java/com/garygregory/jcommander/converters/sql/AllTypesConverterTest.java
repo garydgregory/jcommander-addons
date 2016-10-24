@@ -97,7 +97,7 @@ public class AllTypesConverterTest extends AbstractStringConverterTestWrapper<In
 
     @Test
     public void testRoundtrip() {
-        testRoundtrip(expectedType, actualString);
+        testRoundtrip(Integer.valueOf(expectedType), actualString);
     }
 
 }
