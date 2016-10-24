@@ -18,10 +18,12 @@
  */
 package com.garygregory.jcommander.converters;
 
+import java.net.URI;
 import java.util.Objects;
 
 import com.beust.jcommander.ParameterException;
 import com.beust.jcommander.converters.BaseConverter;
+import com.garygregory.jcommander.converters.net.URIConverter;
 
 /**
  * Provides common services for converters in this package
@@ -87,6 +89,10 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
     protected ParameterException newParameterException(final String value, final Throwable t) {
         return new ParameterException(getErrorString(value), t);
+    }
+
+    protected URI toURI(String value) {
+        return new URIConverter().convert(value);
     }
 
 }
