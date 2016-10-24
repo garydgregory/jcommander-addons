@@ -31,7 +31,7 @@ import org.junit.runners.Parameterized.Parameters;
 import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
 
 /**
- * Tests {@link TimeConverter}.
+ * Tests {@link TypesConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
