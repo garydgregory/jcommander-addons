@@ -48,7 +48,14 @@ public class TypesConverter extends AbstractBaseConverter<Integer> {
         return Integer.valueOf(toType(value));
     }
 
-    private int toType(final String value) {
+    /**
+     * Converts a string to a JDBC SQL type int.
+     * 
+     * @param value
+     *            Type name
+     * @return a {@link Types} value
+     */
+    public static int toType(final String value) {
         switch (value) {
         case "ARRAY":
             return Types.ARRAY;
@@ -129,7 +136,7 @@ public class TypesConverter extends AbstractBaseConverter<Integer> {
         case "VARCHAR":
             return Types.VARCHAR;
         default:
-            throw newParameterException("Unknown JDBC SQL type '" + value + "'");
+            throw new IllegalArgumentException("Unknown JDBC SQL type '" + value + "'");
         }
     }
 

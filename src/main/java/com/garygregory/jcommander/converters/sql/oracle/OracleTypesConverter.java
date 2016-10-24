@@ -22,6 +22,7 @@ package com.garygregory.jcommander.converters.sql.oracle;
 import java.sql.Types;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
+import com.garygregory.jcommander.converters.sql.TypesConverter;
 
 /**
  * Converts a {@link String} into a SQL Types {@link Integer}.
@@ -151,7 +152,7 @@ public class OracleTypesConverter extends AbstractBaseConverter<Integer> {
         case "VARCHAR":
             return 12;
         default:
-            throw newParameterException("Unknown JDBC SQL type '" + value + "'");
+            return TypesConverter.toType(value);
         }
     }
 
