@@ -34,6 +34,7 @@ import com.beust.jcommander.converters.BaseConverter;
 public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
     protected final Class<T> targetClass;
+    protected final boolean failOnNull;
 
     /**
      * Constructs a new instance.
@@ -44,14 +45,31 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
      *            must not be null
      */
     public AbstractBaseConverter(final String optionName, final Class<T> targetClass) {
+        this(optionName, targetClass, false);
+    }
+
+    /**
+     * Constructs a new instance.
+     * 
+     * @param optionName
+     *            may be null
+     * @param targetClass
+     *            must not be null
+     */
+    public AbstractBaseConverter(final String optionName, final Class<T> targetClass, final boolean failOnNull) {
         super(optionName);
+        this.failOnNull = failOnNull;
         this.targetClass = Objects.requireNonNull(targetClass, "targetClass for " + getClass());
     }
 
     @Override
     public T convert(final String value) {
         try {
-            return convertImpl(value);
+            T result = convertImpl(value);
+            if (result == null && failOnNull) {
+                throw newParameterException(value);
+            }
+            return result;
         } catch (final Exception e) {
             throw newParameterException(value, e);
         }
@@ -63,8 +81,12 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
     }
 
-    protected ParameterException newParameterException(final String value, final Throwable t) {
+    protected ParameterException newParameterException(final String value) {
         return new ParameterException(getErrorString(value));
+    }
+
+    protected ParameterException newParameterException(final String value, final Throwable t) {
+        return new ParameterException(getErrorString(value), t);
     }
 
 }

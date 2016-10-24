@@ -23,7 +23,7 @@ import java.util.Currency;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link CurrencyConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class CurrencyConverterTest extends AbstractStringConverterTestWrapper<Currency> {
+public class CurrencyConverterTest extends AbstractStringConverterBasicTest<Currency> {
 
     public CurrencyConverterTest() {
         super(new CurrencyConverter());

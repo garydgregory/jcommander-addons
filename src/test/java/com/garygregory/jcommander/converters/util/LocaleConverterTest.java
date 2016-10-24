@@ -23,7 +23,7 @@ import java.util.Locale;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link LocaleConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class LocaleConverterTest extends AbstractStringConverterTestWrapper<Locale> {
+public class LocaleConverterTest extends AbstractStringConverterBasicTest<Locale> {
 
     public LocaleConverterTest() {
         super(new LocaleConverter());

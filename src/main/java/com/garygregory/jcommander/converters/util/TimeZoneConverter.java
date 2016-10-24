@@ -19,6 +19,7 @@
 
 package com.garygregory.jcommander.converters.util;
 
+import java.time.ZoneId;
 import java.util.TimeZone;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
@@ -26,11 +27,11 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 /**
  * Converts a {@link String} into a {@link TimeZone}.
  * <p>
- * For a description of the format, see {@link TimeZone#getTimeZone(String)}.
+ * For a description of the format, see {@link TimeZone#getTimeZone(ZoneId)}.
  * </p>
  * 
  * @see TimeZone
- * @see TimeZone#getTimeZone(String)
+ * @see TimeZone#getTimeZone(ZoneId)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
@@ -46,7 +47,8 @@ public class TimeZoneConverter extends AbstractBaseConverter<TimeZone> {
 
     @Override
     protected TimeZone convertImpl(final String value) {
-        return TimeZone.getTimeZone(value);
+        // We do NOT use TimeZone.getTimeZone(String) which does not fail for bad input.
+        return TimeZone.getTimeZone(ZoneId.of(value));
     }
 
 }

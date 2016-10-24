@@ -26,11 +26,10 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 /**
  * Converts a {@link String} into a {@link Locale}.
  * <p>
- * For a description of the format, see {@link Locale#forLanguageTag(String)}.
+ * For a description of the format, see {@link Locale} and IETF BCP 47.
  * </p>
  * 
  * @see Locale
- * @see Locale#forLanguageTag(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
@@ -46,7 +45,8 @@ public class LocaleConverter extends AbstractBaseConverter<Locale> {
 
     @Override
     protected Locale convertImpl(final String value) {
-        return Locale.forLanguageTag(value);
+        // We do NOT use Locale.forLanguageTag(String) which does not fail on bad input.
+        return new Locale.Builder().setLanguageTag(value).build();
     }
 
 }

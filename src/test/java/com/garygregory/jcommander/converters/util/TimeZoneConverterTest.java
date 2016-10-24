@@ -23,7 +23,7 @@ import java.util.TimeZone;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link TimeZoneConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class TimeZoneConverterTest extends AbstractStringConverterTestWrapper<TimeZone> {
+public class TimeZoneConverterTest extends AbstractStringConverterBasicTest<TimeZone> {
 
     public TimeZoneConverterTest() {
         super(new TimeZoneConverter());
