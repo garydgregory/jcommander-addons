@@ -23,7 +23,7 @@ import java.nio.ByteOrder;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link ByteOrderConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterTest extends AbstractConverterTest<ByteOrder> {
+public class ByteOrderConverterTest extends AbstractStringConverterBasicTest<ByteOrder> {
 
     public ByteOrderConverterTest() {
         super(new ByteOrderConverter());

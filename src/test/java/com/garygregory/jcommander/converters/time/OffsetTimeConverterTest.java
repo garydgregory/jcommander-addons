@@ -23,7 +23,7 @@ import java.time.OffsetTime;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link OffsetTimeConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class OffsetTimeConverterTest extends AbstractConverterTest<OffsetTime> {
+public class OffsetTimeConverterTest extends AbstractStringConverterBasicTest<OffsetTime> {
 
     public OffsetTimeConverterTest() {
         super(new OffsetTimeConverter());

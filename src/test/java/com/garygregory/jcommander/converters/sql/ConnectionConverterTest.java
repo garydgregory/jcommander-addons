@@ -24,7 +24,7 @@ import java.sql.Connection;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
 
 
 /**
@@ -33,7 +33,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ConnectionConverterTest extends AbstractConverterTest<Connection> {
+public class ConnectionConverterTest extends AbstractStringConverterTestWrapper<Connection> {
 
     public ConnectionConverterTest() {
         super(new ConnectionConverter());

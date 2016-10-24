@@ -23,7 +23,7 @@ import java.time.Instant;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link InstantConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class InstantConverterTest extends AbstractConverterTest<Instant> {
+public class InstantConverterTest extends AbstractStringConverterBasicTest<Instant> {
 
     public InstantConverterTest() {
         super(new InstantConverter());

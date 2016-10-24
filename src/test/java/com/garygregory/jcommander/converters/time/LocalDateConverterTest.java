@@ -23,7 +23,7 @@ import java.time.LocalDate;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link LocalDateConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class LocalDateConverterTest extends AbstractConverterTest<LocalDate> {
+public class LocalDateConverterTest extends AbstractStringConverterBasicTest<LocalDate> {
 
     public LocalDateConverterTest() {
         super(new LocalDateConverter());

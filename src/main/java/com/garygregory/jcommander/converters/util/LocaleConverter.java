@@ -17,29 +17,36 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.time;
+package com.garygregory.jcommander.converters.util;
 
-import java.time.LocalTime;
+import java.util.Locale;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link LocalTimeConverter}.
+ * Converts a {@link String} into a {@link Locale}.
+ * <p>
+ * For a description of the format, see {@link Locale#forLanguageTag(String)}.
+ * </p>
+ * 
+ * @see Locale
+ * @see Locale#forLanguageTag(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class LocalTimeConverterTest extends AbstractStringConverterBasicTest<LocalTime> {
+public class LocaleConverter extends AbstractBaseConverter<Locale> {
 
-    public LocalTimeConverterTest() {
-        super(new LocalTimeConverter());
+    /**
+     * Constructs a converter.
+     */
+    public LocaleConverter() {
+        super(null, Locale.class);
     }
 
-    @Test
-    public void testLocalTime() {
-        testRoundtrip(LocalTime.parse("10:15:30"));
+    @Override
+    protected Locale convertImpl(final String value) {
+        return Locale.forLanguageTag(value);
     }
 
 }

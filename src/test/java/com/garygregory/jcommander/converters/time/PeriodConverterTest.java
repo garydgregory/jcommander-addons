@@ -23,7 +23,7 @@ import java.time.Period;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link PeriodConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class PeriodConverterTest extends AbstractConverterTest<Period> {
+public class PeriodConverterTest extends AbstractStringConverterBasicTest<Period> {
 
     public PeriodConverterTest() {
         super(new PeriodConverter());

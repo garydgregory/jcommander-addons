@@ -25,7 +25,7 @@ import javax.xml.datatype.Duration;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link DurationConverter}.
@@ -33,7 +33,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class DurationConverterTest extends AbstractConverterTest<Duration> {
+public class DurationConverterTest extends AbstractStringConverterBasicTest<Duration> {
 
     public DurationConverterTest() {
         super(new DurationConverter());

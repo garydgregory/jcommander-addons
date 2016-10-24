@@ -23,7 +23,7 @@ import java.sql.Date;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link DateConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class DateConverterTest extends AbstractConverterTest<Date> {
+public class DateConverterTest extends AbstractStringConverterBasicTest<Date> {
 
     public DateConverterTest() {
         super(new DateConverter());

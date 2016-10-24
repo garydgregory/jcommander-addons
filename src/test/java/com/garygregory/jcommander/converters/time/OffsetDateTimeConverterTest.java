@@ -23,7 +23,7 @@ import java.time.OffsetDateTime;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link OffsetDateTimeConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class OffsetDateTimeConverterTest extends AbstractConverterTest<OffsetDateTime> {
+public class OffsetDateTimeConverterTest extends AbstractStringConverterBasicTest<OffsetDateTime> {
 
     public OffsetDateTimeConverterTest() {
         super(new OffsetDateTimeConverter());

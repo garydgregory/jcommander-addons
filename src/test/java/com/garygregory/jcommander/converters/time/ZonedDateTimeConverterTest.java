@@ -23,7 +23,7 @@ import java.time.ZonedDateTime;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link ZonedDateTimeConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ZonedDateTimeConverterTest extends AbstractConverterTest<ZonedDateTime> {
+public class ZonedDateTimeConverterTest extends AbstractStringConverterBasicTest<ZonedDateTime> {
 
     public ZonedDateTimeConverterTest() {
         super(new ZonedDateTimeConverter());

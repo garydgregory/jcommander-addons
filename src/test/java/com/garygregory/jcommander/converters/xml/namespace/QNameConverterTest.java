@@ -25,7 +25,7 @@ import javax.xml.namespace.QName;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link QNameConverter}.
@@ -33,7 +33,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class QNameConverterTest extends AbstractConverterTest<QName> {
+public class QNameConverterTest extends AbstractStringConverterBasicTest<QName> {
 
     private static final String EMPTY_STRING = "";
 

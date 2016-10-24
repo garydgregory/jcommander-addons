@@ -17,32 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.sql;
-
-import java.sql.Driver;
+package com.garygregory.jcommander.converters;
 
 import org.junit.Assert;
-import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.beust.jcommander.IStringConverter;
 
+public abstract class AbstractStringConverterTestWrapper<T> {
 
-/**
- * Tests {@link DriverConverter}.
- * 
- * @since 1.0.0
- * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
- */
-public class DriverConverterTest extends AbstractStringConverterBasicTest<Driver> {
+    private final IStringConverter<T> stringConverter;
 
-    public DriverConverterTest() {
-        super(new DriverConverter());
+    public AbstractStringConverterTestWrapper(final IStringConverter<T> stringConverter) {
+        this.stringConverter = stringConverter;
     }
 
-    @Test
-    public void testDriver() {
-        final Driver driver = convert("jdbc:h2:mem:test");
-        Assert.assertNotNull(driver);
+    protected T convert(final String value) {
+        return stringConverter.convert(value);
+    }
+
+    public IStringConverter<T> getStringConverter() {
+        return stringConverter;
+    }
+
+    protected void testRoundtrip(final T expected) {
+        Assert.assertEquals(expected, convert(expected.toString()));
+    }
+
+    protected void testRoundtrip(final T expected, final String value) {
+        Assert.assertEquals(expected, convert(value));
     }
 
 }

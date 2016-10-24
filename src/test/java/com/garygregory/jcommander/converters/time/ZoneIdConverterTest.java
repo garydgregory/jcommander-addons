@@ -23,7 +23,7 @@ import java.time.ZoneId;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link ZoneIdConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ZoneIdConverterTest extends AbstractConverterTest<ZoneId> {
+public class ZoneIdConverterTest extends AbstractStringConverterBasicTest<ZoneId> {
 
     public ZoneIdConverterTest() {
         super(new ZoneIdConverter());

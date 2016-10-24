@@ -17,29 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.time;
-
-import java.time.LocalTime;
+package com.garygregory.jcommander.converters;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.beust.jcommander.IStringConverter;
+import com.beust.jcommander.ParameterException;
 
-/**
- * Tests {@link LocalTimeConverter}.
- * 
- * @since 1.0.0
- * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
- */
-public class LocalTimeConverterTest extends AbstractStringConverterBasicTest<LocalTime> {
+public abstract class AbstractStringConverterBasicTest<T> extends AbstractStringConverterTestWrapper<T> {
 
-    public LocalTimeConverterTest() {
-        super(new LocalTimeConverter());
+    private final IStringConverter<T> stringConverter;
+
+    public AbstractStringConverterBasicTest(final IStringConverter<T> stringConverter) {
+        super(stringConverter);
+        this.stringConverter = stringConverter;
     }
 
-    @Test
-    public void testLocalTime() {
-        testRoundtrip(LocalTime.parse("10:15:30"));
+    @Test(expected = ParameterException.class)
+    public void testBadInput() {
+        convert("{ BAD INPUT ");
+    }
+
+    public void testBlankString() {
+        convert(" ");
+    }
+
+    @Test(expected = ParameterException.class)
+    public void testEmptyString() {
+        convert("");
     }
 
 }

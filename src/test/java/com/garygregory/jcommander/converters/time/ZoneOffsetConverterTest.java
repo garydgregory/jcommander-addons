@@ -23,7 +23,7 @@ import java.time.ZoneOffset;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link ZoneOffsetConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ZoneOffsetConverterTest extends AbstractConverterTest<ZoneOffset> {
+public class ZoneOffsetConverterTest extends AbstractStringConverterBasicTest<ZoneOffset> {
 
     public ZoneOffsetConverterTest() {
         super(new ZoneOffsetConverter());

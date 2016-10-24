@@ -17,29 +17,29 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.time;
+package com.garygregory.jcommander.converters.util;
 
-import java.time.LocalTime;
+import java.util.Locale;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
 
 /**
- * Tests {@link LocalTimeConverter}.
+ * Tests {@link LocaleConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class LocalTimeConverterTest extends AbstractStringConverterBasicTest<LocalTime> {
+public class LocaleConverterTest extends AbstractStringConverterTestWrapper<Locale> {
 
-    public LocalTimeConverterTest() {
-        super(new LocalTimeConverter());
+    public LocaleConverterTest() {
+        super(new LocaleConverter());
     }
 
     @Test
-    public void testLocalTime() {
-        testRoundtrip(LocalTime.parse("10:15:30"));
+    public void testLocale() {
+        testRoundtrip(Locale.forLanguageTag("en"));
     }
 
 }

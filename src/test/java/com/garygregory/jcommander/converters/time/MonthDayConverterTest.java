@@ -23,7 +23,7 @@ import java.time.MonthDay;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link LocalDateTimeConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class MonthDayConverterTest extends AbstractConverterTest<MonthDay> {
+public class MonthDayConverterTest extends AbstractStringConverterBasicTest<MonthDay> {
 
     public MonthDayConverterTest() {
         super(new MonthDayConverter());

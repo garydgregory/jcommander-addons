@@ -23,7 +23,7 @@ import java.time.Year;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link YearConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class YearConverterTest extends AbstractConverterTest<Year> {
+public class YearConverterTest extends AbstractStringConverterBasicTest<Year> {
 
     public YearConverterTest() {
         super(new YearConverter());

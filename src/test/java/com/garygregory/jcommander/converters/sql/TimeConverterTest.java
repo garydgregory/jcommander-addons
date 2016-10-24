@@ -23,7 +23,7 @@ import java.sql.Time;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link TimeConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class TimeConverterTest extends AbstractConverterTest<Time> {
+public class TimeConverterTest extends AbstractStringConverterBasicTest<Time> {
 
     public TimeConverterTest() {
         super(new TimeConverter());

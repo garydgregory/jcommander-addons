@@ -23,7 +23,7 @@ import java.sql.Timestamp;
 
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractConverterTest;
+import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
  * Tests {@link TimestampConverter}.
@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.AbstractConverterTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class TimestampConverterTest extends AbstractConverterTest<Timestamp> {
+public class TimestampConverterTest extends AbstractStringConverterBasicTest<Timestamp> {
 
     public TimestampConverterTest() {
         super(new TimestampConverter());
