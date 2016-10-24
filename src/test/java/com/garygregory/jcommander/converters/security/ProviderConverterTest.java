@@ -41,8 +41,8 @@ public class ProviderConverterTest extends AbstractStringConverterBasicTest<Prov
 
     @Test
     public void testProvider() {
-        Provider expected = Security.getProviders()[0];
-        Provider actual = convert(expected.getName());
+        final Provider expected = Security.getProviders()[0];
+        final Provider actual = convert(expected.getName());
         Assert.assertEquals(expected.getName(), actual.getName());
         Assert.assertEquals(expected.getInfo(), actual.getInfo());
         Assert.assertEquals(expected.getVersion(), actual.getVersion(), 0);

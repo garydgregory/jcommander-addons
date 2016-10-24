@@ -65,7 +65,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
     @Override
     public T convert(final String value) {
         try {
-            T result = convertImpl(value);
+            final T result = convertImpl(value);
             if (result == null && failOnNull) {
                 throw newParameterException(value);
             }

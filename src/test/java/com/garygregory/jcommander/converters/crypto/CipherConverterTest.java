@@ -43,8 +43,8 @@ public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher
 
     @Test
     public void testCipher() throws NoSuchAlgorithmException, NoSuchPaddingException {
-        Cipher expected = Cipher.getInstance("DES/CBC/PKCS5Padding");
-        Cipher actual = convert("DES/CBC/PKCS5Padding");
+        final Cipher expected = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        final Cipher actual = convert("DES/CBC/PKCS5Padding");
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
