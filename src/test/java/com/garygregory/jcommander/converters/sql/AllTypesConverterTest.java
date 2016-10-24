@@ -39,15 +39,6 @@ import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
 @RunWith(Parameterized.class)
 public class AllTypesConverterTest extends AbstractStringConverterTestWrapper<Integer> {
 
-    public AllTypesConverterTest(int expectedType, String actualString) {
-        super(new TypesConverter());
-        this.expectedType = expectedType;
-        this.actualString = actualString;
-    }
-
-    private final int expectedType;
-    private final String actualString;
-
     @Parameters(name = "{1}")
     public static Collection<Object[]> data() {
         // @formatter:off
@@ -93,6 +84,15 @@ public class AllTypesConverterTest extends AbstractStringConverterTestWrapper<In
             { Types.VARCHAR, "VARCHAR" }
            });
         // @formatter:on
+    }
+
+    private final int expectedType;
+    private final String actualString;
+
+    public AllTypesConverterTest(final int expectedType, final String actualString) {
+        super(new TypesConverter());
+        this.expectedType = expectedType;
+        this.actualString = actualString;
     }
 
     @Test

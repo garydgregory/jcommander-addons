@@ -37,18 +37,6 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 public class TypesConverter extends AbstractBaseConverter<Integer> {
 
     /**
-     * Constructs a converter.
-     */
-    public TypesConverter() {
-        super(null, Integer.class);
-    }
-
-    @Override
-    protected Integer convertImpl(final String value) {
-        return Integer.valueOf(toType(value));
-    }
-
-    /**
      * Converts a string to a JDBC SQL type int.
      * 
      * @param value
@@ -138,6 +126,18 @@ public class TypesConverter extends AbstractBaseConverter<Integer> {
         default:
             throw new IllegalArgumentException("Unknown JDBC SQL type '" + value + "'");
         }
+    }
+
+    /**
+     * Constructs a converter.
+     */
+    public TypesConverter() {
+        super(null, Integer.class);
+    }
+
+    @Override
+    protected Integer convertImpl(final String value) {
+        return Integer.valueOf(toType(value));
     }
 
 }

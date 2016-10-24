@@ -19,7 +19,6 @@
 
 package com.garygregory.jcommander.converters.sql.oracle;
 
-import java.sql.Types;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -38,15 +37,6 @@ import com.garygregory.jcommander.converters.AbstractStringConverterTestWrapper;
  */
 @RunWith(Parameterized.class)
 public class AllOracleTypesConverterTest extends AbstractStringConverterTestWrapper<Integer> {
-
-    public AllOracleTypesConverterTest(int expectedType, String actualString) {
-        super(new OracleTypesConverter());
-        this.expectedType = expectedType;
-        this.actualString = actualString;
-    }
-
-    private final int expectedType;
-    private final String actualString;
 
     @Parameters(name = "{1}")
     public static Collection<Object[]> data() {
@@ -104,6 +94,15 @@ public class AllOracleTypesConverterTest extends AbstractStringConverterTestWrap
             { 999, "FIXED_CHAR" }
            });
         // @formatter:on
+    }
+
+    private final int expectedType;
+    private final String actualString;
+
+    public AllOracleTypesConverterTest(final int expectedType, final String actualString) {
+        super(new OracleTypesConverter());
+        this.expectedType = expectedType;
+        this.actualString = actualString;
     }
 
     @Test
