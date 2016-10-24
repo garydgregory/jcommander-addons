@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link SecureRandomConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class SecureRandomConverterTest
+        extends AbstractStringConverterBasicTest<SecureRandom> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    public SecureRandomConverterTest() {
+        super(new SecureRandomConverter());
     }
-
-    @Override
+    
     @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testSecureRandom() throws NoSuchAlgorithmException  {
+        final SecureRandom expected = SecureRandom.getInstance("SHA1PRNG");
+        final SecureRandom actual = convert("SHA1PRNG");
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
     }
 
 }

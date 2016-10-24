@@ -17,35 +17,37 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security.cert;
 
-import java.net.URI;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link CertificateFactory}.
+ * <p>
+ * For a description of the format, see {@link CertificateFactory#getInstance(String)}.
+ * </p>
+ * 
+ * @see CertificateFactory
+ * @see CertificateFactory#getInstance(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class CertificateFactoryConverter extends AbstractBaseConverter<CertificateFactory> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    /**
+     * Constructs a converter.
+     */
+    public CertificateFactoryConverter() {
+        super(null, CertificateFactory.class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    protected CertificateFactory convertImpl(final String value) throws CertificateException {
+        return CertificateFactory.getInstance(value);
     }
 
 }

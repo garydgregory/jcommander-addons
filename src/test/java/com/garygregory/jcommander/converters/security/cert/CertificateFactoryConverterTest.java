@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security.cert;
 
-import java.net.URI;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link CertificateFactoryConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class CertificateFactoryConverterTest
+        extends AbstractStringConverterBasicTest<CertificateFactory> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    public CertificateFactoryConverterTest() {
+        super(new CertificateFactoryConverter());
     }
-
-    @Override
+    
     @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testCertificateFactory() throws CertificateException  {
+        final CertificateFactory expected = CertificateFactory.getInstance("X.509");
+        final CertificateFactory actual = convert("X.509");
+        Assert.assertEquals(expected.getType(), actual.getType());
     }
 
 }

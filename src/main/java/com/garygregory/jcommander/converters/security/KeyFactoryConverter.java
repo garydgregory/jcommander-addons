@@ -17,35 +17,37 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.KeyFactory;
+import java.security.NoSuchAlgorithmException;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link KeyFactory}.
+ * <p>
+ * For a description of the format, see {@link KeyFactory#getInstance(String)}.
+ * </p>
+ * 
+ * @see KeyFactory
+ * @see KeyFactory#getInstance(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class KeyFactoryConverter extends AbstractBaseConverter<KeyFactory> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    /**
+     * Constructs a converter.
+     */
+    public KeyFactoryConverter() {
+        super(null, KeyFactory.class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    protected KeyFactory convertImpl(final String value) throws NoSuchAlgorithmException  {
+        return KeyFactory.getInstance(value);
     }
 
 }

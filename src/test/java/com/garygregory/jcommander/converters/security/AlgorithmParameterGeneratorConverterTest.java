@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.AlgorithmParameterGenerator;
+import java.security.NoSuchAlgorithmException;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link AlgorithmParameterGeneratorConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class AlgorithmParameterGeneratorConverterTest
+        extends AbstractStringConverterBasicTest<AlgorithmParameterGenerator> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
-    }
-
-    @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
+    public AlgorithmParameterGeneratorConverterTest() {
+        super(new AlgorithmParameterGeneratorConverter());
     }
 
     @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testAlgorithmParameterGenerator() throws NoSuchAlgorithmException {
+        final AlgorithmParameterGenerator expected = AlgorithmParameterGenerator.getInstance("DiffieHellman");
+        final AlgorithmParameterGenerator actual = convert("DiffieHellman");
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
     }
 
 }

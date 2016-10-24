@@ -17,35 +17,37 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.NoSuchAlgorithmException;
+import java.security.Signature;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link Signature}.
+ * <p>
+ * For a description of the format, see {@link Signature#getInstance(String)}.
+ * </p>
+ * 
+ * @see Signature
+ * @see Signature#getInstance(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class SignatureConverter extends AbstractBaseConverter<Signature> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    /**
+     * Constructs a converter.
+     */
+    public SignatureConverter() {
+        super(null, Signature.class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    protected Signature convertImpl(final String value) throws NoSuchAlgorithmException {
+        return Signature.getInstance(value);
     }
 
 }

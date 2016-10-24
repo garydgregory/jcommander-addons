@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link KeyStoreConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class KeyStoreConverterTest
+        extends AbstractStringConverterBasicTest<KeyStore> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    public KeyStoreConverterTest() {
+        super(new KeyStoreConverter());
     }
-
-    @Override
+    
     @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testKeyStore() throws KeyStoreException {
+        final KeyStore expected = KeyStore.getInstance("JKS");
+        final KeyStore actual = convert("JKS");
+        Assert.assertEquals(expected.getType(), actual.getType());
     }
 
 }

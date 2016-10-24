@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.NoSuchAlgorithmException;
+import java.security.Signature;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link SignatureConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class SignatureConverterTest
+        extends AbstractStringConverterBasicTest<Signature> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    public SignatureConverterTest() {
+        super(new SignatureConverter());
     }
-
-    @Override
+    
     @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testSignature() throws NoSuchAlgorithmException  {
+        final Signature expected = Signature.getInstance("NONEwithRSA");
+        final Signature actual = convert("NONEwithRSA");
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
     }
 
 }

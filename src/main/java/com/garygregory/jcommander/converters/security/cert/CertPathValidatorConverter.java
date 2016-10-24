@@ -17,35 +17,37 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security.cert;
 
-import java.net.URI;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertPathValidator;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link CertPathValidator}.
+ * <p>
+ * For a description of the format, see {@link CertPathValidator#getInstance(String)}.
+ * </p>
+ * 
+ * @see CertPathValidator
+ * @see CertPathValidator#getInstance(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class CertPathValidatorConverter extends AbstractBaseConverter<CertPathValidator> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    /**
+     * Constructs a converter.
+     */
+    public CertPathValidatorConverter() {
+        super(null, CertPathValidator.class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    protected CertPathValidator convertImpl(final String value) throws NoSuchAlgorithmException {
+        return CertPathValidator.getInstance(value);
     }
 
 }

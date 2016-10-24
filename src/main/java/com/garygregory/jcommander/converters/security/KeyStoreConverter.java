@@ -17,35 +17,37 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link KeyStore}.
+ * <p>
+ * For a description of the format, see {@link KeyStore#getInstance(String)}.
+ * </p>
+ * 
+ * @see KeyStore
+ * @see KeyStore#getInstance(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class KeyStoreConverter extends AbstractBaseConverter<KeyStore> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    /**
+     * Constructs a converter.
+     */
+    public KeyStoreConverter() {
+        super(null, KeyStore.class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    protected KeyStore convertImpl(final String value) throws KeyStoreException  {
+        return KeyStore.getInstance(value);
     }
 
 }

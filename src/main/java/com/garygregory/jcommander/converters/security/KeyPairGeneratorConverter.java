@@ -17,35 +17,37 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link KeyPairGenerator}.
+ * <p>
+ * For a description of the format, see {@link KeyPairGenerator#getInstance(String)}.
+ * </p>
+ * 
+ * @see KeyPairGenerator
+ * @see KeyPairGenerator#getInstance(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class KeyPairGeneratorConverter extends AbstractBaseConverter<KeyPairGenerator> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    /**
+     * Constructs a converter.
+     */
+    public KeyPairGeneratorConverter() {
+        super(null, KeyPairGenerator.class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    protected KeyPairGenerator convertImpl(final String value) throws NoSuchAlgorithmException  {
+        return KeyPairGenerator.getInstance(value);
     }
 
 }

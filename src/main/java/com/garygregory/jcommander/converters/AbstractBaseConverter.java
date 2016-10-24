@@ -91,7 +91,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         return new ParameterException(getErrorString(value), t);
     }
 
-    protected URI toURI(String value) {
+    protected URI toURI(final String value) {
         return new URIConverter().convert(value);
     }
 

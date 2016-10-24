@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link MessageDigestConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class MessageDigestConverterTest
+        extends AbstractStringConverterBasicTest<MessageDigest> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    public MessageDigestConverterTest() {
+        super(new MessageDigestConverter());
     }
-
-    @Override
+    
     @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testMessageDigest() throws NoSuchAlgorithmException  {
+        final MessageDigest expected = MessageDigest.getInstance("MD5");
+        final MessageDigest actual = convert("MD5");
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
     }
 
 }

@@ -17,35 +17,34 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.net;
+package com.garygregory.jcommander.converters.security;
 
-import java.net.URI;
+import java.security.AlgorithmParameters;
+import java.security.NoSuchAlgorithmException;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link AlgorithmParametersConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class AlgorithmParametersConverterTest
+        extends AbstractStringConverterBasicTest<AlgorithmParameters> {
 
-    public URIConverterTest() {
-        super(new URIConverter());
+    public AlgorithmParametersConverterTest() {
+        super(new AlgorithmParametersConverter());
     }
-
-    @Override
+    
     @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(""));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+    public void testAlgorithmParameters() throws NoSuchAlgorithmException {
+        final AlgorithmParameters expected = AlgorithmParameters.getInstance("AES");
+        final AlgorithmParameters actual = convert("AES");
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
     }
 
 }
