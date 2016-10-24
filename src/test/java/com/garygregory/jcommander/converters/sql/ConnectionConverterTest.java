@@ -41,8 +41,7 @@ public class ConnectionConverterTest extends AbstractStringConverterBasicTest<Co
 
     @Test
     public void testConnection() {
-        final Connection connection = convert("jdbc:h2:mem:test");
-        Assert.assertNotNull(connection);
+        Assert.assertNotNull(convert("jdbc:h2:mem:test"));
     }
 
 }
