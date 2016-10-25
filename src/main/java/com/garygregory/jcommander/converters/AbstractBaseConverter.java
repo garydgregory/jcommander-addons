@@ -48,7 +48,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
      *            must not be null
      */
     public AbstractBaseConverter(final String optionName, final Class<T> targetClass) {
-        this(optionName, targetClass, false);
+        this(optionName, targetClass, true);
     }
 
     /**
