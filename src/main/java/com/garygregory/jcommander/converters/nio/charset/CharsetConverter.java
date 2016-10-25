@@ -24,7 +24,7 @@ import java.nio.charset.Charset;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link Charset}.
+ * Converts a {@link String} into a {@link Charset}.
  * <p>
  * For a description of the format, see {@link Charset#forName(String)}.
  * </p>

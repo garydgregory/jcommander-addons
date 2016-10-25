@@ -25,7 +25,7 @@ import java.net.URISyntaxException;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link URI}.
+ * Converts a {@link String} into a {@link URI}.
  * <p>
  * For a description of the format, see {@link URI#URI(String)}.
  * </p>

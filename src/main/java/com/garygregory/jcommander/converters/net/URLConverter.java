@@ -25,7 +25,7 @@ import java.net.URL;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link URL}.
+ * Converts a {@link String} into a {@link URL}.
  * <p>
  * For a description of the format, see {@link URL#URL(String)}.
  * </p>

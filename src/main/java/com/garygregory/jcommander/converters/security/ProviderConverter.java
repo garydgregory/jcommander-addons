@@ -25,7 +25,7 @@ import java.security.Security;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link Provider}.
+ * Converts a {@link String} into a {@link Provider}.
  * <p>
  * For a description of the format, see {@link Security#getProvider(String)}.
  * </p>

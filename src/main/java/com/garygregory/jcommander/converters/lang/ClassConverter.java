@@ -22,7 +22,7 @@ package com.garygregory.jcommander.converters.lang;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link Class}.
+ * Converts a {@link String} into a {@link Class}.
  * <p>
  * For a description of the format, see {@link Class#forName(String)}.
  * </p>

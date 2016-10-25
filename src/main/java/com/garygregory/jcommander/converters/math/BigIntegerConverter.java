@@ -24,7 +24,7 @@ import java.math.BigInteger;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link BigInteger}.
+ * Converts a {@link String} into a {@link BigInteger}.
  * <p>
  * For a description of the format, see {@link BigInteger#BigInteger(String)}.
  * </p>

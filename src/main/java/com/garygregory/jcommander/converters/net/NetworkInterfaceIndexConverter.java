@@ -25,7 +25,7 @@ import java.net.SocketException;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a {@link String} into a SQL {@link NetworkInterface}.
+ * Converts a {@link String} into a {@link NetworkInterface}.
  * <p>
  * For a description of the format, see {@link NetworkInterface#getByIndex(int)}.
  * </p>
