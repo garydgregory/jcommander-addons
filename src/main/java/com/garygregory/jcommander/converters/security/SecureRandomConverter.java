@@ -41,8 +41,8 @@ public class SecureRandomConverter extends AbstractBaseConverter<SecureRandom> {
     /**
      * Constructs a converter.
      */
-    public SecureRandomConverter() {
-        super(null, SecureRandom.class);
+    public SecureRandomConverter(final String optionName) {
+        super(optionName, SecureRandom.class);
     }
 
     @Override

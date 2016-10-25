@@ -42,8 +42,8 @@ public class DurationConverter extends AbstractBaseConverter<Duration> {
     /**
      * Constructs a converter.
      */
-    public DurationConverter() {
-        super(null, Duration.class);
+    public DurationConverter(final String optionName) {
+        super(optionName, Duration.class);
     }
 
     @Override

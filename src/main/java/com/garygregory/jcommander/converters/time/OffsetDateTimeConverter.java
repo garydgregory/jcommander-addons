@@ -40,8 +40,8 @@ public class OffsetDateTimeConverter extends AbstractBaseConverter<OffsetDateTim
     /**
      * Constructs a converter.
      */
-    public OffsetDateTimeConverter() {
-        super(null, OffsetDateTime.class);
+    public OffsetDateTimeConverter(final String optionName) {
+        super(optionName, OffsetDateTime.class);
     }
 
     @Override

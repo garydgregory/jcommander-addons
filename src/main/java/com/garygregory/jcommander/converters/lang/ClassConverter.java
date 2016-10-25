@@ -39,8 +39,8 @@ public class ClassConverter extends AbstractBaseConverter<Class> {
     /**
      * Constructs a converter.
      */
-    public ClassConverter() {
-        super(null, Class.class);
+    public ClassConverter(final String optionName) {
+        super(optionName, Class.class);
     }
 
     @Override

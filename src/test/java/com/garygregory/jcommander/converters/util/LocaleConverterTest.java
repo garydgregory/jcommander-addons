@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class LocaleConverterTest extends AbstractStringConverterBasicTest<Locale> {
 
     public LocaleConverterTest() {
-        super(new LocaleConverter());
+        super(new LocaleConverter(null));
     }
 
     @Test

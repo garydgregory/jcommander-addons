@@ -40,8 +40,8 @@ public class TimeConverter extends AbstractBaseConverter<Time> {
     /**
      * Constructs a converter.
      */
-    public TimeConverter() {
-        super(null, Time.class);
+    public TimeConverter(final String optionName) {
+        super(optionName, Time.class);
     }
 
     @Override

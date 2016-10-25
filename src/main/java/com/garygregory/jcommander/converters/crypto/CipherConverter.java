@@ -43,8 +43,8 @@ public class CipherConverter extends AbstractBaseConverter<Cipher> {
     /**
      * Constructs a converter.
      */
-    public CipherConverter() {
-        super(null, Cipher.class);
+    public CipherConverter(final String optionName) {
+        super(optionName, Cipher.class);
     }
 
     @Override

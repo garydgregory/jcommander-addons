@@ -40,8 +40,8 @@ public class ZoneIdConverter extends AbstractBaseConverter<ZoneId> {
     /**
      * Constructs a converter.
      */
-    public ZoneIdConverter() {
-        super(null, ZoneId.class);
+    public ZoneIdConverter(final String optionName) {
+        super(optionName, ZoneId.class);
     }
 
     @Override

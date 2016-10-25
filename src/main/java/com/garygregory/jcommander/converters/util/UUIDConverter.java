@@ -40,8 +40,8 @@ public class UUIDConverter extends AbstractBaseConverter<UUID> {
     /**
      * Constructs a converter.
      */
-    public UUIDConverter() {
-        super(null, UUID.class);
+    public UUIDConverter(final String optionName) {
+        super(optionName, UUID.class);
     }
 
     @Override

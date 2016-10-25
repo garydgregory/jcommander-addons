@@ -40,8 +40,8 @@ public class ZoneOffsetConverter extends AbstractBaseConverter<ZoneOffset> {
     /**
      * Constructs a converter.
      */
-    public ZoneOffsetConverter() {
-        super(null, ZoneOffset.class);
+    public ZoneOffsetConverter(final String optionName) {
+        super(optionName, ZoneOffset.class);
     }
 
     @Override

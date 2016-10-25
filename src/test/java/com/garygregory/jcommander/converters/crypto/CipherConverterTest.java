@@ -38,7 +38,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher> {
 
     public CipherConverterTest() {
-        super(new CipherConverter());
+        super(new CipherConverter(null));
     }
 
     @Test

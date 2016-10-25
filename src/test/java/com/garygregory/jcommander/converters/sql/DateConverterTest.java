@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class DateConverterTest extends AbstractStringConverterBasicTest<Date> {
 
     public DateConverterTest() {
-        super(new DateConverter());
+        super(new DateConverter(null));
     }
 
     @Test

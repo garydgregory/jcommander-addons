@@ -38,7 +38,7 @@ public class QNameConverterTest extends AbstractStringConverterBasicTest<QName> 
     private static final String EMPTY_STRING = "";
 
     public QNameConverterTest() {
-        super(new QNameConverter());
+        super(new QNameConverter(null));
     }
 
     @Override

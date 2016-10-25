@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class ZoneIdConverterTest extends AbstractStringConverterBasicTest<ZoneId> {
 
     public ZoneIdConverterTest() {
-        super(new ZoneIdConverter());
+        super(new ZoneIdConverter(null));
     }
 
     @Test

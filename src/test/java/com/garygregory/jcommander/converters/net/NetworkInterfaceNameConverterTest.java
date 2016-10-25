@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class NetworkInterfaceNameConverterTest extends AbstractStringConverterBasicTest<NetworkInterface> {
 
     public NetworkInterfaceNameConverterTest() {
-        super(new NetworkInterfaceNameConverter());
+        super(new NetworkInterfaceNameConverter(null));
     }
 
     @Test

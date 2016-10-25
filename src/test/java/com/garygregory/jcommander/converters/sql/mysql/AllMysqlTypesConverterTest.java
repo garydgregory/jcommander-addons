@@ -100,7 +100,7 @@ public class AllMysqlTypesConverterTest extends AbstractStringConverterTestWrapp
     private final String actualString;
 
     public AllMysqlTypesConverterTest(final int expectedType, final String actualString) {
-        super(new MysqlTypesConverter());
+        super(new MysqlTypesConverter(null));
         this.expectedType = expectedType;
         this.actualString = actualString;
     }

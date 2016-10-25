@@ -40,8 +40,8 @@ public class BigIntegerConverter extends AbstractBaseConverter<BigInteger> {
     /**
      * Constructs a converter.
      */
-    public BigIntegerConverter() {
-        super(null, BigInteger.class);
+    public BigIntegerConverter(final String optionName) {
+        super(optionName, BigInteger.class);
     }
 
     @Override

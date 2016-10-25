@@ -100,7 +100,7 @@ public class AllOracleTypesConverterTest extends AbstractStringConverterTestWrap
     private final String actualString;
 
     public AllOracleTypesConverterTest(final int expectedType, final String actualString) {
-        super(new OracleTypesConverter());
+        super(new OracleTypesConverter(null));
         this.expectedType = expectedType;
         this.actualString = actualString;
     }

@@ -41,8 +41,8 @@ public class NetworkInterfaceNameConverter extends AbstractBaseConverter<Network
     /**
      * Constructs a converter.
      */
-    public NetworkInterfaceNameConverter() {
-        super(null, NetworkInterface.class);
+    public NetworkInterfaceNameConverter(final String optionName) {
+        super(optionName, NetworkInterface.class);
     }
 
     @Override

@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class OffsetTimeConverterTest extends AbstractStringConverterBasicTest<OffsetTime> {
 
     public OffsetTimeConverterTest() {
-        super(new OffsetTimeConverter());
+        super(new OffsetTimeConverter(null));
     }
 
     @Test

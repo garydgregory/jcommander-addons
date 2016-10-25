@@ -30,7 +30,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class OracleTypesConverterTest extends AbstractStringConverterBasicTest<Integer> {
 
     public OracleTypesConverterTest() {
-        super(new OracleTypesConverter());
+        super(new OracleTypesConverter(null));
     }
 
 }

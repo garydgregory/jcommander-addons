@@ -41,8 +41,8 @@ public class URIConverter extends AbstractBaseConverter<URI> {
     /**
      * Constructs a converter.
      */
-    public URIConverter() {
-        super(null, URI.class);
+    public URIConverter(final String optionName) {
+        super(optionName, URI.class);
     }
 
     @Override

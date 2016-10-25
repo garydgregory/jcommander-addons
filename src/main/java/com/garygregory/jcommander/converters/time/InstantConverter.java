@@ -40,8 +40,8 @@ public class InstantConverter extends AbstractBaseConverter<Instant> {
     /**
      * Constructs a converter.
      */
-    public InstantConverter() {
-        super(null, Instant.class);
+    public InstantConverter(final String optionName) {
+        super(optionName, Instant.class);
     }
 
     @Override

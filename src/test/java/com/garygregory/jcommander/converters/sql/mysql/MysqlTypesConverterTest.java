@@ -31,7 +31,7 @@ import com.garygregory.jcommander.converters.sql.microsoft.MicrosoftTypesConvert
 public class MysqlTypesConverterTest extends AbstractStringConverterBasicTest<Integer> {
 
     public MysqlTypesConverterTest() {
-        super(new MysqlTypesConverter());
+        super(new MysqlTypesConverter(null));
     }
 
 }

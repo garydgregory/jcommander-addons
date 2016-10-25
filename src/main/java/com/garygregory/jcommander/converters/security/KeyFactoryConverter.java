@@ -41,8 +41,8 @@ public class KeyFactoryConverter extends AbstractBaseConverter<KeyFactory> {
     /**
      * Constructs a converter.
      */
-    public KeyFactoryConverter() {
-        super(null, KeyFactory.class);
+    public KeyFactoryConverter(final String optionName) {
+        super(optionName, KeyFactory.class);
     }
 
     @Override

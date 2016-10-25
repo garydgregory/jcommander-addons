@@ -42,8 +42,8 @@ public class DriverConverter extends AbstractBaseConverter<Driver> {
     /**
      * Constructs a converter.
      */
-    public DriverConverter() {
-        super(null, Driver.class);
+    public DriverConverter(final String optionName) {
+        super(optionName, Driver.class);
     }
 
     @Override

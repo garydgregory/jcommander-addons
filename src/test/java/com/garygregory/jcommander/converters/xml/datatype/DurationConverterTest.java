@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class DurationConverterTest extends AbstractStringConverterBasicTest<Duration> {
 
     public DurationConverterTest() {
-        super(new DurationConverter());
+        super(new DurationConverter(null));
     }
 
     @Test

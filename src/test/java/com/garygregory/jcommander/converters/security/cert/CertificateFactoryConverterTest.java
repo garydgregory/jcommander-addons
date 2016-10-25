@@ -37,7 +37,7 @@ public class CertificateFactoryConverterTest
         extends AbstractStringConverterBasicTest<CertificateFactory> {
 
     public CertificateFactoryConverterTest() {
-        super(new CertificateFactoryConverter());
+        super(new CertificateFactoryConverter(null));
     }
     
     @Test

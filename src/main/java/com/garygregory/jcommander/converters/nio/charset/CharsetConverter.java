@@ -40,8 +40,8 @@ public class CharsetConverter extends AbstractBaseConverter<Charset> {
     /**
      * Constructs a converter.
      */
-    public CharsetConverter() {
-        super(null, Charset.class);
+    public CharsetConverter(final String optionName) {
+        super(optionName, Charset.class);
     }
 
     @Override

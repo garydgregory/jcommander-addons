@@ -41,8 +41,8 @@ public class SignatureConverter extends AbstractBaseConverter<Signature> {
     /**
      * Constructs a converter.
      */
-    public SignatureConverter() {
-        super(null, Signature.class);
+    public SignatureConverter(final String optionName) {
+        super(optionName, Signature.class);
     }
 
     @Override

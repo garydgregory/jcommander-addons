@@ -40,8 +40,8 @@ public class LocalDateConverter extends AbstractBaseConverter<LocalDate> {
     /**
      * Constructs a converter.
      */
-    public LocalDateConverter() {
-        super(null, LocalDate.class);
+    public LocalDateConverter(final String optionName) {
+        super(optionName, LocalDate.class);
     }
 
     @Override

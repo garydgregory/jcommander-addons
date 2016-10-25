@@ -40,8 +40,8 @@ public class MicrosoftTypesConverter extends AbstractBaseConverter<Integer> {
     /**
      * Constructs a converter.
      */
-    public MicrosoftTypesConverter() {
-        super(null, Integer.class);
+    public MicrosoftTypesConverter(final String optionName) {
+        super(optionName, Integer.class);
     }
 
     @Override

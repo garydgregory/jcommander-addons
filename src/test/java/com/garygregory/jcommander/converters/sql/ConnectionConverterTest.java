@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class ConnectionConverterTest extends AbstractStringConverterBasicTest<Connection> {
 
     public ConnectionConverterTest() {
-        super(new ConnectionConverter());
+        super(new ConnectionConverter(null));
     }
 
     @Test

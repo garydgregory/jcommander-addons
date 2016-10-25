@@ -42,8 +42,8 @@ public class ConnectionConverter extends AbstractBaseConverter<Connection> {
     /**
      * Constructs a converter.
      */
-    public ConnectionConverter() {
-        super(null, Connection.class);
+    public ConnectionConverter(final String optionName) {
+        super(optionName, Connection.class);
     }
 
     @Override

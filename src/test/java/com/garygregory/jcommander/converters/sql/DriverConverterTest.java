@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class DriverConverterTest extends AbstractStringConverterBasicTest<Driver> {
 
     public DriverConverterTest() {
-        super(new DriverConverter());
+        super(new DriverConverter(null));
     }
 
     @Test

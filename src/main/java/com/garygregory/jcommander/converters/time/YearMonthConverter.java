@@ -40,8 +40,8 @@ public class YearMonthConverter extends AbstractBaseConverter<YearMonth> {
     /**
      * Constructs a converter.
      */
-    public YearMonthConverter() {
-        super(null, YearMonth.class);
+    public YearMonthConverter(final String optionName) {
+        super(optionName, YearMonth.class);
     }
 
     @Override

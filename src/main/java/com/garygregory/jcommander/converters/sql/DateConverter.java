@@ -40,8 +40,8 @@ public class DateConverter extends AbstractBaseConverter<Date> {
     /**
      * Constructs a converter.
      */
-    public DateConverter() {
-        super(null, Date.class);
+    public DateConverter(final String optionName) {
+        super(optionName, Date.class);
     }
 
     @Override

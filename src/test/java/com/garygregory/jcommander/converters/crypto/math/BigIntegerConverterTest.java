@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.math.BigIntegerConverter;
 public class BigIntegerConverterTest extends AbstractStringConverterBasicTest<BigInteger> {
 
     public BigIntegerConverterTest() {
-        super(new BigIntegerConverter());
+        super(new BigIntegerConverter(null));
     }
 
     @Test

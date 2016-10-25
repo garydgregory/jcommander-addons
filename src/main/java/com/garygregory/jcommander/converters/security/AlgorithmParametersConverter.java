@@ -41,8 +41,8 @@ public class AlgorithmParametersConverter extends AbstractBaseConverter<Algorith
     /**
      * Constructs a converter.
      */
-    public AlgorithmParametersConverter() {
-        super(null, AlgorithmParameters.class);
+    public AlgorithmParametersConverter(final String optionName) {
+        super(optionName, AlgorithmParameters.class);
     }
 
     @Override

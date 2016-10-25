@@ -41,8 +41,8 @@ public class CertificateFactoryConverter extends AbstractBaseConverter<Certifica
     /**
      * Constructs a converter.
      */
-    public CertificateFactoryConverter() {
-        super(null, CertificateFactory.class);
+    public CertificateFactoryConverter(final String optionName) {
+        super(optionName, CertificateFactory.class);
     }
 
     @Override

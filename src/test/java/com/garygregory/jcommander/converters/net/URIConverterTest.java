@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
 
     public URIConverterTest() {
-        super(new URIConverter());
+        super(new URIConverter(null));
     }
 
     @Override

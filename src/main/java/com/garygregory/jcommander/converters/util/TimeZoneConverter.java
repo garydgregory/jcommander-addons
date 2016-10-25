@@ -41,8 +41,8 @@ public class TimeZoneConverter extends AbstractBaseConverter<TimeZone> {
     /**
      * Constructs a converter.
      */
-    public TimeZoneConverter() {
-        super(null, TimeZone.class);
+    public TimeZoneConverter(final String optionName) {
+        super(optionName, TimeZone.class);
     }
 
     @Override

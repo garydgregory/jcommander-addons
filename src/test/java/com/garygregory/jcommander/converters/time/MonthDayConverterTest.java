@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class MonthDayConverterTest extends AbstractStringConverterBasicTest<MonthDay> {
 
     public MonthDayConverterTest() {
-        super(new MonthDayConverter());
+        super(new MonthDayConverter(null));
     }
 
     @Test

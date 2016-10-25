@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class CurrencyConverterTest extends AbstractStringConverterBasicTest<Currency> {
 
     public CurrencyConverterTest() {
-        super(new CurrencyConverter());
+        super(new CurrencyConverter(null));
     }
 
     @Test

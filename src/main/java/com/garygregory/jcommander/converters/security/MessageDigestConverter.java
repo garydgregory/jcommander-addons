@@ -41,8 +41,8 @@ public class MessageDigestConverter extends AbstractBaseConverter<MessageDigest>
     /**
      * Constructs a converter.
      */
-    public MessageDigestConverter() {
-        super(null, MessageDigest.class);
+    public MessageDigestConverter(final String optionName) {
+        super(optionName, MessageDigest.class);
     }
 
     @Override

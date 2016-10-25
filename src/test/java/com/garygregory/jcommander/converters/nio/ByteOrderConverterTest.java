@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class ByteOrderConverterTest extends AbstractStringConverterBasicTest<ByteOrder> {
 
     public ByteOrderConverterTest() {
-        super(new ByteOrderConverter());
+        super(new ByteOrderConverter(null));
     }
 
     @Test

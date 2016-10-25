@@ -51,7 +51,7 @@ public class AllMicrosoftTypesConverterTest extends AbstractStringConverterTestW
     private final String actualString;
 
     public AllMicrosoftTypesConverterTest(final int expectedType, final String actualString) {
-        super(new MicrosoftTypesConverter());
+        super(new MicrosoftTypesConverter(null));
         this.expectedType = expectedType;
         this.actualString = actualString;
     }

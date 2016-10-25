@@ -40,8 +40,8 @@ public class PeriodConverter extends AbstractBaseConverter<Period> {
     /**
      * Constructs a converter.
      */
-    public PeriodConverter() {
-        super(null, Period.class);
+    public PeriodConverter(final String optionName) {
+        super(optionName, Period.class);
     }
 
     @Override

@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class LocalDateTimeConverterTest extends AbstractStringConverterBasicTest<LocalDateTime> {
 
     public LocalDateTimeConverterTest() {
-        super(new LocalDateTimeConverter());
+        super(new LocalDateTimeConverter(null));
     }
 
     @Test

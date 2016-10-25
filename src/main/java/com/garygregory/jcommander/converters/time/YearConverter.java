@@ -40,8 +40,8 @@ public class YearConverter extends AbstractBaseConverter<Year> {
     /**
      * Constructs a converter.
      */
-    public YearConverter() {
-        super(null, Year.class);
+    public YearConverter(final String optionName) {
+        super(optionName, Year.class);
     }
 
     @Override

@@ -37,8 +37,8 @@ public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
     /**
      * Constructs a converter with the given options
      */
-    public ByteOrderConverter() {
-        super(null, ByteOrder.class);
+    public ByteOrderConverter(final String optionName) {
+        super(optionName, ByteOrder.class);
     }
 
     @Override

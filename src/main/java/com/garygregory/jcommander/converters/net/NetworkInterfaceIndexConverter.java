@@ -41,8 +41,8 @@ public class NetworkInterfaceIndexConverter extends AbstractBaseConverter<Networ
     /**
      * Constructs a converter.
      */
-    public NetworkInterfaceIndexConverter() {
-        super(null, NetworkInterface.class);
+    public NetworkInterfaceIndexConverter(final String optionName) {
+        super(optionName, NetworkInterface.class);
     }
 
     @Override

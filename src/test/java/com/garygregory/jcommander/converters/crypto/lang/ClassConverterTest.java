@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.lang.ClassConverter;
 public class ClassConverterTest extends AbstractStringConverterBasicTest<Class> {
 
     public ClassConverterTest() {
-        super(new ClassConverter());
+        super(new ClassConverter(null));
     }
 
     @Test

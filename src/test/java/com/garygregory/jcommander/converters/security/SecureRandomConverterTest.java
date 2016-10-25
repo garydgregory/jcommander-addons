@@ -37,7 +37,7 @@ public class SecureRandomConverterTest
         extends AbstractStringConverterBasicTest<SecureRandom> {
 
     public SecureRandomConverterTest() {
-        super(new SecureRandomConverter());
+        super(new SecureRandomConverter(null));
     }
     
     @Test

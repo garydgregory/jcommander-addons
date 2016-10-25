@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class InstantConverterTest extends AbstractStringConverterBasicTest<Instant> {
 
     public InstantConverterTest() {
-        super(new InstantConverter());
+        super(new InstantConverter(null));
     }
 
     @Test

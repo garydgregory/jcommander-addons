@@ -40,8 +40,8 @@ public class OffsetTimeConverter extends AbstractBaseConverter<OffsetTime> {
     /**
      * Constructs a converter.
      */
-    public OffsetTimeConverter() {
-        super(null, OffsetTime.class);
+    public OffsetTimeConverter(final String optionName) {
+        super(optionName, OffsetTime.class);
     }
 
     @Override

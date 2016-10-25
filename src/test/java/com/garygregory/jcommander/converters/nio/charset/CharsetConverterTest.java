@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class CharsetConverterTest extends AbstractStringConverterBasicTest<Charset> {
 
     public CharsetConverterTest() {
-        super(new CharsetConverter());
+        super(new CharsetConverter(null));
     }
 
     @Test

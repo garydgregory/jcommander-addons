@@ -37,7 +37,7 @@ public class KeyPairGeneratorConverterTest
         extends AbstractStringConverterBasicTest<KeyPairGenerator> {
 
     public KeyPairGeneratorConverterTest() {
-        super(new KeyPairGeneratorConverter());
+        super(new KeyPairGeneratorConverter(null));
     }
     
     @Test

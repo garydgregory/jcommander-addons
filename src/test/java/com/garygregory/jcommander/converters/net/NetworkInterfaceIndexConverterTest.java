@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class NetworkInterfaceIndexConverterTest extends AbstractStringConverterBasicTest<NetworkInterface> {
 
     public NetworkInterfaceIndexConverterTest() {
-        super(new NetworkInterfaceIndexConverter());
+        super(new NetworkInterfaceIndexConverter(null));
     }
 
     @Test

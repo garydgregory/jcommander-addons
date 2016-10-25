@@ -37,7 +37,7 @@ public class AlgorithmParameterGeneratorConverterTest
         extends AbstractStringConverterBasicTest<AlgorithmParameterGenerator> {
 
     public AlgorithmParameterGeneratorConverterTest() {
-        super(new AlgorithmParameterGeneratorConverter());
+        super(new AlgorithmParameterGeneratorConverter(null));
     }
 
     @Test

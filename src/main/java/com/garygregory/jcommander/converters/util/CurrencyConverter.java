@@ -40,8 +40,8 @@ public class CurrencyConverter extends AbstractBaseConverter<Currency> {
     /**
      * Constructs a converter.
      */
-    public CurrencyConverter() {
-        super(null, Currency.class);
+    public CurrencyConverter(final String optionName) {
+        super(optionName, Currency.class);
     }
 
     @Override

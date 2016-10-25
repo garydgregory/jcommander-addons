@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class ProviderConverterTest extends AbstractStringConverterBasicTest<Provider> {
 
     public ProviderConverterTest() {
-        super(new ProviderConverter());
+        super(new ProviderConverter(null));
     }
 
     @Test

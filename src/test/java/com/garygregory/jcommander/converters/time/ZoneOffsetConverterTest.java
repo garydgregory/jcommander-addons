@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class ZoneOffsetConverterTest extends AbstractStringConverterBasicTest<ZoneOffset> {
 
     public ZoneOffsetConverterTest() {
-        super(new ZoneOffsetConverter());
+        super(new ZoneOffsetConverter(null));
     }
 
     @Test

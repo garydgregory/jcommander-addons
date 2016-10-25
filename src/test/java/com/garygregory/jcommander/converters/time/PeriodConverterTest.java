@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class PeriodConverterTest extends AbstractStringConverterBasicTest<Period> {
 
     public PeriodConverterTest() {
-        super(new PeriodConverter());
+        super(new PeriodConverter(null));
     }
 
     @Test

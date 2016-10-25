@@ -40,8 +40,8 @@ public class MonthDayConverter extends AbstractBaseConverter<MonthDay> {
     /**
      * Constructs a converter.
      */
-    public MonthDayConverter() {
-        super(null, MonthDay.class);
+    public MonthDayConverter(final String optionName) {
+        super(optionName, MonthDay.class);
     }
 
     @Override

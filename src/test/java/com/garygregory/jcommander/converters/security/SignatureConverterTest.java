@@ -37,7 +37,7 @@ public class SignatureConverterTest
         extends AbstractStringConverterBasicTest<Signature> {
 
     public SignatureConverterTest() {
-        super(new SignatureConverter());
+        super(new SignatureConverter(null));
     }
     
     @Test

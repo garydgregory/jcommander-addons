@@ -37,7 +37,7 @@ public class MessageDigestConverterTest
         extends AbstractStringConverterBasicTest<MessageDigest> {
 
     public MessageDigestConverterTest() {
-        super(new MessageDigestConverter());
+        super(new MessageDigestConverter(null));
     }
     
     @Test

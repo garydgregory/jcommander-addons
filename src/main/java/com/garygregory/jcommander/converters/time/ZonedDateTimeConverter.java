@@ -40,8 +40,8 @@ public class ZonedDateTimeConverter extends AbstractBaseConverter<ZonedDateTime>
     /**
      * Constructs a converter.
      */
-    public ZonedDateTimeConverter() {
-        super(null, ZonedDateTime.class);
+    public ZonedDateTimeConverter(final String optionName) {
+        super(optionName, ZonedDateTime.class);
     }
 
     @Override

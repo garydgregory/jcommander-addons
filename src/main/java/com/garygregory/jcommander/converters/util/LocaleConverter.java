@@ -39,8 +39,8 @@ public class LocaleConverter extends AbstractBaseConverter<Locale> {
     /**
      * Constructs a converter.
      */
-    public LocaleConverter() {
-        super(null, Locale.class);
+    public LocaleConverter(final String optionName) {
+        super(optionName, Locale.class);
     }
 
     @Override

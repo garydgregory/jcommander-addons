@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class ZonedDateTimeConverterTest extends AbstractStringConverterBasicTest<ZonedDateTime> {
 
     public ZonedDateTimeConverterTest() {
-        super(new ZonedDateTimeConverter());
+        super(new ZonedDateTimeConverter(null));
     }
 
     @Test

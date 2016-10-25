@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class TimeConverterTest extends AbstractStringConverterBasicTest<Time> {
 
     public TimeConverterTest() {
-        super(new TimeConverter());
+        super(new TimeConverter(null));
     }
 
     @Test

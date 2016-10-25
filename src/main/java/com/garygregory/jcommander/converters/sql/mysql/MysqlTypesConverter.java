@@ -40,8 +40,8 @@ public class MysqlTypesConverter extends AbstractBaseConverter<Integer> {
     /**
      * Constructs a converter.
      */
-    public MysqlTypesConverter() {
-        super(null, Integer.class);
+    public MysqlTypesConverter(final String optionName) {
+        super(optionName, Integer.class);
     }
 
     @Override

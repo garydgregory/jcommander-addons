@@ -41,8 +41,8 @@ public class URLConverter extends AbstractBaseConverter<URL> {
     /**
      * Constructs a converter.
      */
-    public URLConverter() {
-        super(null, URL.class);
+    public URLConverter(final String optionName) {
+        super(optionName, URL.class);
     }
 
     @Override

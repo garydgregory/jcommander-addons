@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class UUIDConverterTest extends AbstractStringConverterBasicTest<UUID> {
 
     public UUIDConverterTest() {
-        super(new UUIDConverter());
+        super(new UUIDConverter(null));
     }
 
     @Test

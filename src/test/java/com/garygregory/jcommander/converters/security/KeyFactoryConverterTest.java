@@ -37,7 +37,7 @@ public class KeyFactoryConverterTest
         extends AbstractStringConverterBasicTest<KeyFactory> {
 
     public KeyFactoryConverterTest() {
-        super(new KeyFactoryConverter());
+        super(new KeyFactoryConverter(null));
     }
     
     @Test

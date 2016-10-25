@@ -40,8 +40,8 @@ public class OracleTypesConverter extends AbstractBaseConverter<Integer> {
     /**
      * Constructs a converter.
      */
-    public OracleTypesConverter() {
-        super(null, Integer.class);
+    public OracleTypesConverter(final String optionName) {
+        super(optionName, Integer.class);
     }
 
     @Override

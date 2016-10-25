@@ -40,8 +40,8 @@ public class TimestampConverter extends AbstractBaseConverter<Timestamp> {
     /**
      * Constructs a converter.
      */
-    public TimestampConverter() {
-        super(null, Timestamp.class);
+    public TimestampConverter(final String optionName) {
+        super(optionName, Timestamp.class);
     }
 
     @Override

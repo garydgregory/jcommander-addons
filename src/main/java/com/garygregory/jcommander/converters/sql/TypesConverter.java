@@ -131,8 +131,8 @@ public class TypesConverter extends AbstractBaseConverter<Integer> {
     /**
      * Constructs a converter.
      */
-    public TypesConverter() {
-        super(null, Integer.class);
+    public TypesConverter(final String optionName) {
+        super(optionName, Integer.class);
     }
 
     @Override

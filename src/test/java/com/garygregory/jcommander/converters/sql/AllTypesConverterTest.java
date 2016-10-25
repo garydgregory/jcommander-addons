@@ -90,7 +90,7 @@ public class AllTypesConverterTest extends AbstractStringConverterTestWrapper<In
     private final String actualString;
 
     public AllTypesConverterTest(final int expectedType, final String actualString) {
-        super(new TypesConverter());
+        super(new TypesConverter(null));
         this.expectedType = expectedType;
         this.actualString = actualString;
     }

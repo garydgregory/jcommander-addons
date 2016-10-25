@@ -42,8 +42,8 @@ public class ProviderConverter extends AbstractBaseConverter<Provider> {
     /**
      * Constructs a converter.
      */
-    public ProviderConverter() {
-        super(null, Provider.class);
+    public ProviderConverter(final String optionName) {
+        super(optionName, Provider.class);
     }
 
     @Override

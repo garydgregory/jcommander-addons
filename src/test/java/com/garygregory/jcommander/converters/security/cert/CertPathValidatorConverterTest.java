@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class CertPathValidatorConverterTest extends AbstractStringConverterBasicTest<CertPathValidator> {
 
     public CertPathValidatorConverterTest() {
-        super(new CertPathValidatorConverter());
+        super(new CertPathValidatorConverter(null));
     }
 
     @Test

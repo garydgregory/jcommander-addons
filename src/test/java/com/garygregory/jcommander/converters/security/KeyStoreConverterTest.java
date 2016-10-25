@@ -37,7 +37,7 @@ public class KeyStoreConverterTest
         extends AbstractStringConverterBasicTest<KeyStore> {
 
     public KeyStoreConverterTest() {
-        super(new KeyStoreConverter());
+        super(new KeyStoreConverter(null));
     }
     
     @Test

@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class TimeZoneConverterTest extends AbstractStringConverterBasicTest<TimeZone> {
 
     public TimeZoneConverterTest() {
-        super(new TimeZoneConverter());
+        super(new TimeZoneConverter(null));
     }
 
     @Test

@@ -41,8 +41,8 @@ public class KeyStoreConverter extends AbstractBaseConverter<KeyStore> {
     /**
      * Constructs a converter.
      */
-    public KeyStoreConverter() {
-        super(null, KeyStore.class);
+    public KeyStoreConverter(final String optionName) {
+        super(optionName, KeyStore.class);
     }
 
     @Override

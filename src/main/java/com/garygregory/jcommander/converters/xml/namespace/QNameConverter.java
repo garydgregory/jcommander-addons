@@ -39,8 +39,8 @@ public class QNameConverter extends AbstractBaseConverter<QName> {
     /**
      * Constructs a converter.
      */
-    public QNameConverter() {
-        super(null, QName.class);
+    public QNameConverter(final String optionName) {
+        super(optionName, QName.class);
     }
 
     @Override

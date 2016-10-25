@@ -30,7 +30,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 public class TypesConverterTest extends AbstractStringConverterBasicTest<Integer> {
 
     public TypesConverterTest() {
-        super(new TypesConverter());
+        super(new TypesConverter(null));
     }
 
 }
