@@ -81,7 +81,8 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
     protected abstract T convertImpl(String value) throws Exception;
 
     protected String getErrorString(final String value) {
-        return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass;
+        return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass
+                + " for option " + getOptionName();
     }
 
     protected ParameterException newParameterException(final String value) {
