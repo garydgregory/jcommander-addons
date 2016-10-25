@@ -40,7 +40,7 @@ public class URLConverterTest extends AbstractStringConverterBasicTest<URL> {
 
     @Test
     public void testURL() throws MalformedURLException {
-        testRoundtrip(new URL("http://garygregory.com"));
+        testRoundtrip(new URL("http://localhost"));
     }
 
 }

@@ -45,7 +45,7 @@ public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
 
     @Test
     public void testURI() {
-        testRoundtrip(URI.create("http://garygregory.com"));
+        testRoundtrip(URI.create("http://localhost"));
     }
 
 }
