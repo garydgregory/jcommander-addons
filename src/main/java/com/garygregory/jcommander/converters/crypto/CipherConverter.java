@@ -60,8 +60,8 @@ public class CipherConverter extends AbstractBaseConverter<Cipher> {
     @Override
     protected Cipher convertImpl(final String value)
             throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
-        String[] split = split(value);
-        String transformation = split[0];
+        final String[] split = split(value);
+        final String transformation = split[0];
         return split.length == 1 ? Cipher.getInstance(value) : Cipher.getInstance(transformation, split[1]);
     }
 

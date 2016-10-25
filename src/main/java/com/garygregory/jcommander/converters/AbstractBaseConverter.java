@@ -95,16 +95,16 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         return new ParameterException(getErrorString(value), t);
     }
 
+    protected String[] split(final String value) {
+        return value.split(ConverterConstants.VALUE_SEPARATOR);
+    }
+
     protected int toInt(final String optionName, final String value) {
         return new IntegerConverter(optionName).convert(value).intValue();
     }
 
     protected URI toURI(final String value) {
         return new URIConverter(null).convert(value);
-    }
-
-    protected String[] split(final String value) {
-        return value.split(ConverterConstants.VALUE_SEPARATOR);
     }
 
 }

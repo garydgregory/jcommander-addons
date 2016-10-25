@@ -55,7 +55,7 @@ public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher
     @Test
     public void testCipherWithProvider() throws NoSuchAlgorithmException, NoSuchPaddingException {
         final Cipher expected = Cipher.getInstance("DES/CBC/PKCS5Padding");
-        Provider expectedProvider = expected.getProvider();
+        final Provider expectedProvider = expected.getProvider();
         final Cipher actual = convert(
                 "DES/CBC/PKCS5Padding" + ConverterConstants.VALUE_SEPARATOR + expectedProvider.getName());
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
