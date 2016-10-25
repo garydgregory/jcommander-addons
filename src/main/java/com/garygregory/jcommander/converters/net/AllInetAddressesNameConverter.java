@@ -19,33 +19,38 @@
 
 package com.garygregory.jcommander.converters.net;
 
-import java.net.URI;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
-import org.junit.Test;
-
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Tests {@link URIConverter}.
+ * Converts a {@link String} into a {@link InetAddress}.
+ * <p>
+ * For a description of the format, see {@link InetAddress#getAllByName(String)}.
+ * </p>
+ * 
+ * @see InetAddress
+ * @see InetAddress#getAllByName(String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class AllInetAddressesNameConverter extends AbstractBaseConverter<InetAddress[]> {
 
-    public URIConverterTest() {
-        super(new URIConverter(null));
+    /**
+     * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
+     */
+    public AllInetAddressesNameConverter(final String optionName) {
+        super(optionName, InetAddress[].class);
     }
 
     @Override
-    @Test
-    public void testEmptyString() {
-        testRoundtrip(URI.create(EMPTY_STRING));
-    }
-
-    @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://localhost"));
+    protected InetAddress[] convertImpl(final String value) throws UnknownHostException {
+        return InetAddress.getAllByName(value);
     }
 
 }

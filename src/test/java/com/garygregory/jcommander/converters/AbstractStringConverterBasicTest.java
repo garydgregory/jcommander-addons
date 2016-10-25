@@ -26,6 +26,8 @@ import com.beust.jcommander.ParameterException;
 
 public abstract class AbstractStringConverterBasicTest<T> extends AbstractStringConverterTestWrapper<T> {
 
+    protected static final String EMPTY_STRING = "";
+
     public AbstractStringConverterBasicTest(final IStringConverter<T> stringConverter) {
         super(stringConverter);
     }
@@ -41,7 +43,7 @@ public abstract class AbstractStringConverterBasicTest<T> extends AbstractString
 
     @Test(expected = ParameterException.class)
     public void testEmptyString() {
-        convert("");
+        convert(EMPTY_STRING);
     }
 
 }

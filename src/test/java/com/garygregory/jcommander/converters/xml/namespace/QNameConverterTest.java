@@ -35,8 +35,6 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  */
 public class QNameConverterTest extends AbstractStringConverterBasicTest<QName> {
 
-    private static final String EMPTY_STRING = "";
-
     public QNameConverterTest() {
         super(new QNameConverter(null));
     }

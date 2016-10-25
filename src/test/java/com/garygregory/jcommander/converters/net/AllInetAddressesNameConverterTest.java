@@ -19,33 +19,45 @@
 
 package com.garygregory.jcommander.converters.net;
 
-import java.net.URI;
+import static org.hamcrest.MatcherAssert.assertThat;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+import org.hamcrest.Matchers;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
 /**
- * Tests {@link URIConverter}.
+ * Tests {@link AllInetAddressesNameConverter}.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class URIConverterTest extends AbstractStringConverterBasicTest<URI> {
+public class AllInetAddressesNameConverterTest extends AbstractStringConverterBasicTest<InetAddress[]> {
 
-    public URIConverterTest() {
-        super(new URIConverter(null));
+    public AllInetAddressesNameConverterTest() {
+        super(new AllInetAddressesNameConverter(null));
     }
 
     @Override
     @Test
     public void testEmptyString() {
-        testRoundtrip(URI.create(EMPTY_STRING));
+        final InetAddress expected = InetAddress.getLoopbackAddress();
+        assertThat(convert(EMPTY_STRING), Matchers.hasItemInArray(expected));
     }
 
     @Test
-    public void testURI() {
-        testRoundtrip(URI.create("http://localhost"));
+    public void testInetAddressHostAddress() throws UnknownHostException {
+        final InetAddress expected = InetAddress.getLoopbackAddress();
+        assertThat(convert(expected.getHostName()), Matchers.hasItemInArray(expected));
+    }
+
+    @Test
+    public void testInetAddressHostName() throws UnknownHostException {
+        final InetAddress expected = InetAddress.getLoopbackAddress();
+        assertThat(convert(expected.getHostAddress()), Matchers.hasItemInArray(expected));
     }
 
 }
