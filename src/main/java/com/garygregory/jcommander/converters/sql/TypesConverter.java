@@ -130,6 +130,9 @@ public class TypesConverter extends AbstractBaseConverter<Integer> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public TypesConverter(final String optionName) {
         super(optionName, Integer.class);

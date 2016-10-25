@@ -39,6 +39,9 @@ public class ZoneIdConverter extends AbstractBaseConverter<ZoneId> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public ZoneIdConverter(final String optionName) {
         super(optionName, ZoneId.class);

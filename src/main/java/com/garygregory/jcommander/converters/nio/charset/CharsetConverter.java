@@ -39,6 +39,9 @@ public class CharsetConverter extends AbstractBaseConverter<Charset> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public CharsetConverter(final String optionName) {
         super(optionName, Charset.class);

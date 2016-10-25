@@ -39,6 +39,9 @@ public class InstantConverter extends AbstractBaseConverter<Instant> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public InstantConverter(final String optionName) {
         super(optionName, Instant.class);

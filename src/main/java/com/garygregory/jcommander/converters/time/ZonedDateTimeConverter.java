@@ -39,6 +39,9 @@ public class ZonedDateTimeConverter extends AbstractBaseConverter<ZonedDateTime>
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public ZonedDateTimeConverter(final String optionName) {
         super(optionName, ZonedDateTime.class);

@@ -40,6 +40,9 @@ public class DurationConverter extends AbstractBaseConverter<Duration> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public DurationConverter(final String optionName) {
         super(optionName, Duration.class);

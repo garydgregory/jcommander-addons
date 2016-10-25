@@ -39,6 +39,9 @@ public class BigIntegerConverter extends AbstractBaseConverter<BigInteger> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public BigIntegerConverter(final String optionName) {
         super(optionName, BigInteger.class);

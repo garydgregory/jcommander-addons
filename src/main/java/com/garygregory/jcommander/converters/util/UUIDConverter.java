@@ -39,6 +39,9 @@ public class UUIDConverter extends AbstractBaseConverter<UUID> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public UUIDConverter(final String optionName) {
         super(optionName, UUID.class);

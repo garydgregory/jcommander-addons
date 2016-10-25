@@ -40,6 +40,9 @@ public class CertPathValidatorConverter extends AbstractBaseConverter<CertPathVa
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public CertPathValidatorConverter(final String optionName) {
         super(optionName, CertPathValidator.class);

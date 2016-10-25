@@ -39,6 +39,9 @@ public class MonthDayConverter extends AbstractBaseConverter<MonthDay> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public MonthDayConverter(final String optionName) {
         super(optionName, MonthDay.class);

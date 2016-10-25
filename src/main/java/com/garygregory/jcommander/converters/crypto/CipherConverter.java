@@ -42,6 +42,9 @@ public class CipherConverter extends AbstractBaseConverter<Cipher> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public CipherConverter(final String optionName) {
         super(optionName, Cipher.class);

@@ -40,6 +40,9 @@ public class SignatureConverter extends AbstractBaseConverter<Signature> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public SignatureConverter(final String optionName) {
         super(optionName, Signature.class);

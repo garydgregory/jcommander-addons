@@ -38,6 +38,9 @@ public class LocaleConverter extends AbstractBaseConverter<Locale> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public LocaleConverter(final String optionName) {
         super(optionName, Locale.class);

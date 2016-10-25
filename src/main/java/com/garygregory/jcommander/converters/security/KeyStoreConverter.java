@@ -40,6 +40,9 @@ public class KeyStoreConverter extends AbstractBaseConverter<KeyStore> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public KeyStoreConverter(final String optionName) {
         super(optionName, KeyStore.class);

@@ -39,6 +39,9 @@ public class OffsetTimeConverter extends AbstractBaseConverter<OffsetTime> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public OffsetTimeConverter(final String optionName) {
         super(optionName, OffsetTime.class);

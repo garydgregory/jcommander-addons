@@ -40,6 +40,9 @@ public class CertificateFactoryConverter extends AbstractBaseConverter<Certifica
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public CertificateFactoryConverter(final String optionName) {
         super(optionName, CertificateFactory.class);

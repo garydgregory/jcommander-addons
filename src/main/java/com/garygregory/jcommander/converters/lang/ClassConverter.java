@@ -38,6 +38,9 @@ public class ClassConverter extends AbstractBaseConverter<Class> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public ClassConverter(final String optionName) {
         super(optionName, Class.class);

@@ -39,6 +39,9 @@ public class YearMonthConverter extends AbstractBaseConverter<YearMonth> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public YearMonthConverter(final String optionName) {
         super(optionName, YearMonth.class);

@@ -39,6 +39,9 @@ public class CurrencyConverter extends AbstractBaseConverter<Currency> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public CurrencyConverter(final String optionName) {
         super(optionName, Currency.class);

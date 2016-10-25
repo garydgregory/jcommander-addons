@@ -40,6 +40,9 @@ public class TimeZoneConverter extends AbstractBaseConverter<TimeZone> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public TimeZoneConverter(final String optionName) {
         super(optionName, TimeZone.class);

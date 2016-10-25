@@ -39,6 +39,9 @@ public class TimeConverter extends AbstractBaseConverter<Time> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public TimeConverter(final String optionName) {
         super(optionName, Time.class);

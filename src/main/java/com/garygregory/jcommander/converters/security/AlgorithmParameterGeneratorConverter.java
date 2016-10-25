@@ -40,6 +40,9 @@ public class AlgorithmParameterGeneratorConverter extends AbstractBaseConverter<
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public AlgorithmParameterGeneratorConverter(final String optionName) {
         super(optionName, AlgorithmParameterGenerator.class);

@@ -39,6 +39,9 @@ public class LocalDateConverter extends AbstractBaseConverter<LocalDate> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public LocalDateConverter(final String optionName) {
         super(optionName, LocalDate.class);

@@ -40,6 +40,9 @@ public class KeyFactoryConverter extends AbstractBaseConverter<KeyFactory> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public KeyFactoryConverter(final String optionName) {
         super(optionName, KeyFactory.class);

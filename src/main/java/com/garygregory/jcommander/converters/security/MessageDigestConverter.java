@@ -40,6 +40,9 @@ public class MessageDigestConverter extends AbstractBaseConverter<MessageDigest>
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public MessageDigestConverter(final String optionName) {
         super(optionName, MessageDigest.class);

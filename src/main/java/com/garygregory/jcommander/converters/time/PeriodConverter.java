@@ -39,6 +39,9 @@ public class PeriodConverter extends AbstractBaseConverter<Period> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public PeriodConverter(final String optionName) {
         super(optionName, Period.class);

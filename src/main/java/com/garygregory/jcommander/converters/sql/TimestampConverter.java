@@ -39,6 +39,9 @@ public class TimestampConverter extends AbstractBaseConverter<Timestamp> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public TimestampConverter(final String optionName) {
         super(optionName, Timestamp.class);

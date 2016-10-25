@@ -40,6 +40,9 @@ public class SecureRandomConverter extends AbstractBaseConverter<SecureRandom> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public SecureRandomConverter(final String optionName) {
         super(optionName, SecureRandom.class);

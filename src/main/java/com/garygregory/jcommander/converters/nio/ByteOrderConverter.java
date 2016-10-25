@@ -35,7 +35,10 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 public final class ByteOrderConverter extends AbstractBaseConverter<ByteOrder> {
 
     /**
-     * Constructs a converter with the given options
+     * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public ByteOrderConverter(final String optionName) {
         super(optionName, ByteOrder.class);

@@ -43,7 +43,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
      * Constructs a new instance.
      * 
      * @param optionName
-     *            may be null
+     *            The option name, may be null.
      * @param targetClass
      *            must not be null
      */
@@ -58,6 +58,8 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
      *            may be null
      * @param targetClass
      *            must not be null
+     * @param failOnNull
+     *            if true, the converter fails when the conversion results in a null value
      */
     public AbstractBaseConverter(final String optionName, final Class<T> targetClass, final boolean failOnNull) {
         super(optionName);

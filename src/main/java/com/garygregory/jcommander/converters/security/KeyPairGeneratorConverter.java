@@ -40,6 +40,9 @@ public class KeyPairGeneratorConverter extends AbstractBaseConverter<KeyPairGene
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public KeyPairGeneratorConverter(final String optionName) {
         super(optionName, KeyPairGenerator.class);

@@ -39,6 +39,9 @@ public class OracleTypesConverter extends AbstractBaseConverter<Integer> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public OracleTypesConverter(final String optionName) {
         super(optionName, Integer.class);

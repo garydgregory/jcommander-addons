@@ -41,6 +41,9 @@ public class ConnectionConverter extends AbstractBaseConverter<Connection> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public ConnectionConverter(final String optionName) {
         super(optionName, Connection.class);

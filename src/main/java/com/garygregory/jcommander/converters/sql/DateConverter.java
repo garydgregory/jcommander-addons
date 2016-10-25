@@ -39,6 +39,9 @@ public class DateConverter extends AbstractBaseConverter<Date> {
 
     /**
      * Constructs a converter.
+     * 
+     * @param optionName
+     *            The option name, may be null.
      */
     public DateConverter(final String optionName) {
         super(optionName, Date.class);
