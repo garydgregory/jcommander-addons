@@ -21,7 +21,88 @@
 The goal of the JCommander-Addons project is to provide any and all [JCommander](http://jcommander.org/) 
 converters and validators an advanced applications will need.
 
-Feel free to submit a pull-request. 
+Feel free to submit a pull-request.
+
+## Converters 
+Converters include:
+
+### Crypto Converters
+
+- crypto/CipherConverter
+
+### Lang  Converters
+- lang/ClassConverter
+
+### Math Converters
+
+- math/BigIntegerConverter
+
+### Net Converters
+
+- net/NetworkInterfaceIndexConverter
+- net/NetworkInterfaceNameConverter
+- net/URIConverter
+- net/URLConverter
+
+### NIO Converters
+
+- nio/ByteOrderConverter
+- nio/charset/CharsetConverter
+
+### Security Converters
+
+- security/AlgorithmParameterGeneratorConverter
+- security/AlgorithmParametersConverter
+- security/KeyFactoryConverter
+- security/KeyPairGeneratorConverter
+- security/KeyStoreConverter
+- security/MessageDigestConverter
+- security/ProviderConverter
+- security/SecureRandomConverter
+- security/SignatureConverter
+- security/cert/CertificateFactoryConverter
+- security/cert/CertPathValidatorConverter
+
+### SQL Converters
+ 
+- sql/ConnectionConverter
+- sql/DateConverter
+- sql/DriverConverter
+- sql/TimeConverter
+- sql/TimestampConverter
+- sql/TypesConverter
+- sql/microsoft/MicrosoftTypesConverter
+- sql/mysql/MysqlTypesConverter
+- sql/oracle/OracleTypesConverter
+
+### Time Converters
+
+- time/DurationConverter
+- time/InstantConverter
+- time/LocalDateConverter
+- time/LocalDateTimeConverter
+- time/LocalTimeConverter
+- time/MonthDayConverter
+- time/OffsetDateTimeConverter
+- time/OffsetTimeConverter
+- time/PeriodConverter
+- time/YearConverter
+- time/YearMonthConverter
+- time/ZonedDateTimeConverter
+- time/ZoneIdConverter
+- time/ZoneOffsetConverter
+
+### Util Converters
+
+- util/CurrencyConverter
+- util/LocaleConverter
+- util/TimeZoneConverter
+- util/UUIDConverter
+
+### XML Converters
+
+- xml/datatype/DurationConverter
+- xml/namespace/QNameConverter 
 
 ## Status
 
