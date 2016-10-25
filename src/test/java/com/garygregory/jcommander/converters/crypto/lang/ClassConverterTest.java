@@ -31,6 +31,7 @@ import com.garygregory.jcommander.converters.lang.ClassConverter;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
+@SuppressWarnings("rawtypes")
 public class ClassConverterTest extends AbstractStringConverterBasicTest<Class> {
 
     public ClassConverterTest() {
