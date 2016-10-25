@@ -23,6 +23,7 @@ import java.util.Objects;
 
 import com.beust.jcommander.ParameterException;
 import com.beust.jcommander.converters.BaseConverter;
+import com.beust.jcommander.converters.IntegerConverter;
 import com.garygregory.jcommander.converters.net.URIConverter;
 
 /**
@@ -89,6 +90,10 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
     protected ParameterException newParameterException(final String value, final Throwable t) {
         return new ParameterException(getErrorString(value), t);
+    }
+
+    protected int toInt(final String optionName, final String value) {
+        return new IntegerConverter(optionName).convert(value).intValue();
     }
 
     protected URI toURI(final String value) {
