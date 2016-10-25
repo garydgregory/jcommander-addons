@@ -103,4 +103,8 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         return new URIConverter(null).convert(value);
     }
 
+    protected String[] split(final String value) {
+        return value.split(ConverterConstants.VALUE_SEPARATOR);
+    }
+
 }

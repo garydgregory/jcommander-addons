@@ -20,6 +20,7 @@
 package com.garygregory.jcommander.converters.crypto;
 
 import java.security.NoSuchAlgorithmException;
+import java.security.Provider;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
@@ -28,6 +29,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.ConverterConstants;
 
 /**
  * Tests {@link CipherConverter}.
@@ -48,6 +50,17 @@ public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testCipherWithProvider() throws NoSuchAlgorithmException, NoSuchPaddingException {
+        final Cipher expected = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        Provider expectedProvider = expected.getProvider();
+        final Cipher actual = convert(
+                "DES/CBC/PKCS5Padding" + ConverterConstants.VALUE_SEPARATOR + expectedProvider.getName());
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
+        Assert.assertEquals(expectedProvider, actual.getProvider());
     }
 
 }

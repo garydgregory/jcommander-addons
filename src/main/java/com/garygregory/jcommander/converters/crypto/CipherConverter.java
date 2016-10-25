@@ -20,6 +20,8 @@
 package com.garygregory.jcommander.converters.crypto;
 
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.Provider;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
@@ -29,11 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 /**
  * Converts a {@link String} into a SQL {@link Cipher}.
  * <p>
- * For a description of the format, see {@link Cipher#getInstance(String)}.
+ * For a description of the transformation parameter format, see {@link Cipher#getInstance(String)}.
+ * </p>
+ * <p>
+ * To get a Cipher from a specific {@link Provider}, use the syntax {@code transformation:provider} as described by
+ * {@link Cipher#getInstance(String, String)}.
  * </p>
  * 
  * @see Cipher
  * @see Cipher#getInstance(String)
+ * @see Cipher#getInstance(String, String)
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
@@ -51,8 +58,11 @@ public class CipherConverter extends AbstractBaseConverter<Cipher> {
     }
 
     @Override
-    protected Cipher convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchPaddingException {
-        return Cipher.getInstance(value);
+    protected Cipher convertImpl(final String value)
+            throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
+        String[] split = split(value);
+        String transformation = split[0];
+        return split.length == 1 ? Cipher.getInstance(value) : Cipher.getInstance(transformation, split[1]);
     }
 
 }
