@@ -1,0 +1,17 @@
+com.garygregory.jcommander.converters
+com.garygregory.jcommander.converters.crypto
+com.garygregory.jcommander.converters.lang
+com.garygregory.jcommander.converters.math
+com.garygregory.jcommander.converters.net
+com.garygregory.jcommander.converters.nio
+com.garygregory.jcommander.converters.nio.charset
+com.garygregory.jcommander.converters.security
+com.garygregory.jcommander.converters.security.cert
+com.garygregory.jcommander.converters.sql
+com.garygregory.jcommander.converters.sql.microsoft
+com.garygregory.jcommander.converters.sql.mysql
+com.garygregory.jcommander.converters.sql.oracle
+com.garygregory.jcommander.converters.time
+com.garygregory.jcommander.converters.util
+com.garygregory.jcommander.converters.xml.datatype
+com.garygregory.jcommander.converters.xml.namespace
