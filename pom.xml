@@ -33,7 +33,12 @@
   <packaging>jar</packaging>
 
   <name>jcommander-addons</name>
-  <description>Provides missing services to the JCommander framework. Requires Java ${maven.compiler.target}.</description>
+  <description>
+    The goal of the JCommander-Addons project is to provide any and all JCommander converters and 
+    validators an advanced applications will need.
+
+    Feel free to submit a pull-request at https://github.com/garydgregory/jcommander-addons
+  </description>
   <url>https://github.com/garydgregory/jcommander-addons</url>
   <inceptionYear>2016</inceptionYear>
 
