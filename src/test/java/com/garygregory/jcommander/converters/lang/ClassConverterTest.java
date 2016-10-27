@@ -23,7 +23,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
-import com.garygregory.jcommander.converters.lang.ClassConverter;
 
 /**
  * Tests {@link ClassConverter}.

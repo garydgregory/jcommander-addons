@@ -24,7 +24,6 @@ import java.math.BigDecimal;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
-import com.garygregory.jcommander.converters.math.BigDecimalConverter;
 
 /**
  * Tests {@link BigDecimalConverter}.

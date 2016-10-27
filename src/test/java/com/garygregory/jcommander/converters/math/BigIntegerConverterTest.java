@@ -24,7 +24,6 @@ import java.math.BigInteger;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
-import com.garygregory.jcommander.converters.math.BigIntegerConverter;
 
 /**
  * Tests {@link BigIntegerConverter}.

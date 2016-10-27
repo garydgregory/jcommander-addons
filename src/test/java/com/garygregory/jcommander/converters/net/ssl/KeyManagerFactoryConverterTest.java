@@ -22,7 +22,6 @@ package com.garygregory.jcommander.converters.net.ssl;
 import java.security.NoSuchAlgorithmException;
 import java.security.Provider;
 
-import javax.crypto.NoSuchPaddingException;
 import javax.net.ssl.KeyManagerFactory;
 
 import org.junit.Assert;

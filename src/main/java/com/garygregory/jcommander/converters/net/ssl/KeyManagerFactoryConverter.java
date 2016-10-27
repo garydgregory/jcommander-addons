@@ -23,7 +23,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.Provider;
 
-import javax.crypto.Cipher;
 import javax.net.ssl.KeyManagerFactory;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
