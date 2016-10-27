@@ -33,15 +33,14 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class CertificateFactoryConverterTest
-        extends AbstractStringConverterBasicTest<CertificateFactory> {
+public class CertificateFactoryConverterTest extends AbstractStringConverterBasicTest<CertificateFactory> {
 
     public CertificateFactoryConverterTest() {
         super(new CertificateFactoryConverter(null));
     }
-    
+
     @Test
-    public void testCertificateFactory() throws CertificateException  {
+    public void testCertificateFactory() throws CertificateException {
         final CertificateFactory expected = CertificateFactory.getInstance("X.509");
         final CertificateFactory actual = convert("X.509");
         Assert.assertEquals(expected.getType(), actual.getType());

@@ -49,7 +49,7 @@ public class URLConverter extends AbstractBaseConverter<URL> {
     }
 
     @Override
-    protected URL convertImpl(final String value) throws MalformedURLException  {
+    protected URL convertImpl(final String value) throws MalformedURLException {
         return new URL(value);
     }
 

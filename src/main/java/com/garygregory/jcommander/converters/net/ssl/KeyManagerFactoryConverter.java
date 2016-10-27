@@ -33,8 +33,8 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link KeyManagerFactory#getInstance(String)}.
  * </p>
  * <p>
- * To get a KeyManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
- * {@link KeyManagerFactory#getInstance(String, String)}.
+ * To get a KeyManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described
+ * by {@link KeyManagerFactory#getInstance(String, String)}.
  * </p>
  * 
  * @see KeyManagerFactory
@@ -57,7 +57,7 @@ public class KeyManagerFactoryConverter extends AbstractBaseConverter<KeyManager
     }
 
     @Override
-    protected KeyManagerFactory convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException  {
+    protected KeyManagerFactory convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
         final String[] split = split(value);
         final String algorithm = split[0];
         return isSingle(split) ? KeyManagerFactory.getInstance(value) : KeyManagerFactory.getInstance(algorithm, split[1]);

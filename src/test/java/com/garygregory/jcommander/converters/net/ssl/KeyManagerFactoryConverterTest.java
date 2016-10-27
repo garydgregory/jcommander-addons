@@ -56,8 +56,7 @@ public class KeyManagerFactoryConverterTest extends AbstractStringConverterBasic
         final String algorithm = "SunX509";
         final KeyManagerFactory expected = KeyManagerFactory.getInstance(algorithm);
         final Provider expectedProvider = expected.getProvider();
-        final KeyManagerFactory actual = convert(
-                algorithm + ConverterConstants.VALUE_SEPARATOR + expectedProvider.getName());
+        final KeyManagerFactory actual = convert(algorithm + ConverterConstants.VALUE_SEPARATOR + expectedProvider.getName());
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expectedProvider, actual.getProvider());
     }

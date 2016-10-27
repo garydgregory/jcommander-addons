@@ -26,7 +26,6 @@ import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
 
-
 /**
  * Tests {@link ConnectionConverter}.
  * 

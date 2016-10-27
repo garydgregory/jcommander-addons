@@ -33,8 +33,8 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link TrustManagerFactory#getInstance(String)}.
  * </p>
  * <p>
- * To get a TrustManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
- * {@link TrustManagerFactory#getInstance(String, String)}.
+ * To get a TrustManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described
+ * by {@link TrustManagerFactory#getInstance(String, String)}.
  * </p>
  * 
  * @see TrustManagerFactory
@@ -57,7 +57,7 @@ public class TrustManagerFactoryConverter extends AbstractBaseConverter<TrustMan
     }
 
     @Override
-    protected TrustManagerFactory convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException  {
+    protected TrustManagerFactory convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
         final String[] split = split(value);
         final String algorithm = split[0];
         return isSingle(split) ? TrustManagerFactory.getInstance(value) : TrustManagerFactory.getInstance(algorithm, split[1]);
