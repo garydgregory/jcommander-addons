@@ -18,8 +18,16 @@
  */
 package com.garygregory.jcommander.converters;
 
+/**
+ * Constants used by converters.
+ * 
+ * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
+ */
 public class ConverterConstants {
 
+    /**
+     * The separator used to split a value into a pair.
+     */
     public static String VALUE_SEPARATOR = ":";
 
     private ConverterConstants() {

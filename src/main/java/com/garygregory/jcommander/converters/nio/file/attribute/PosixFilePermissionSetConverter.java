@@ -37,6 +37,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
+@SuppressWarnings("rawtypes")
 public class PosixFilePermissionSetConverter extends AbstractBaseConverter<Set> {
 
     /**
