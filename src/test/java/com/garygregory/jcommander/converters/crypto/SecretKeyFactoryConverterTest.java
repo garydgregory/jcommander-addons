@@ -22,8 +22,8 @@ package com.garygregory.jcommander.converters.crypto;
 import java.security.NoSuchAlgorithmException;
 import java.security.Provider;
 
-import javax.crypto.SecretKeyFactory;
 import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKeyFactory;
 
 import org.junit.Assert;
 import org.junit.Ignore;

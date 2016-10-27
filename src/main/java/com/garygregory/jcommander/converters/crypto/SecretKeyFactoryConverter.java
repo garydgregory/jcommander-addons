@@ -23,8 +23,8 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 import java.security.Provider;
 
-import javax.crypto.SecretKeyFactory;
 import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKeyFactory;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
