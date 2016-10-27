@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.crypto.math;
+package com.garygregory.jcommander.converters.math;
 
 import java.math.BigDecimal;
 

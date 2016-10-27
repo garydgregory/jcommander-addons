@@ -17,7 +17,7 @@
  *  limitations under the License.
  */
 
-package com.garygregory.jcommander.converters.crypto.lang;
+package com.garygregory.jcommander.converters.lang;
 
 import org.junit.Assert;
 import org.junit.Test;
