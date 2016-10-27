@@ -33,8 +33,9 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * <p>
  * Example:
  * </p>
+ * 
  * <pre>
- * <strong>&#64;Parameter</strong>(names = { "--cipher" }, <strong>converter = CipherConverter.class</strong>)
+ * <strong>&#64;Parameter</strong>(names = { "--cipher" }, <strong>converter</strong> = <strong>CipherConverter.class</strong>)
  * private <strong>Cipher</strong> cipher;
  * </pre>
  * <p>
