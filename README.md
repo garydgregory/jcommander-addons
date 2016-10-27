@@ -48,6 +48,7 @@ Converters include:
 
 - nio/ByteOrderConverter
 - nio/charset/CharsetConverter
+- nio/file/attribute/PosixFilePermissionSetConverter
 
 ### Security Converters
 
