@@ -30,6 +30,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.security.ProviderUtils;
 
 /**
  * Tests {@link KeyAgreementConverter}.
@@ -59,7 +60,7 @@ public class KeyAgreementConverterTest extends AbstractStringConverterBasicTest<
         final String transformation = "DiffieHellman";
         final KeyAgreement expected = KeyAgreement.getInstance(transformation);
         final Provider expectedProvider = expected.getProvider();
-        final KeyAgreement actual = convert(toArguments(transformation, expectedProvider));
+        final KeyAgreement actual = convert(ProviderUtils.toArguments(transformation, expectedProvider));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expectedProvider, actual.getProvider());
     }

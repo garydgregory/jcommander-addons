@@ -28,40 +28,51 @@ import javax.crypto.NoSuchPaddingException;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.beust.jcommander.Parameter;
+import com.garygregory.jcommander.converters.AbstractCommandLineValueParserTest;
+import com.garygregory.jcommander.converters.ConverterConstants;
 import com.garygregory.jcommander.converters.security.ProviderUtils;
 
 /**
- * Tests {@link CipherConverter}.
+ * Tests converters.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher> {
+public class CipherConverterCommandLineValueParserTest extends AbstractCommandLineValueParserTest {
 
-    static final String VALUE = "DES/CBC/PKCS5Padding";
+    static class CommandLineArguments {
 
-    public CipherConverterTest() {
-        super(new CipherConverter(null));
+        @Parameter(names = { "--cipher" }, converter = CipherConverter.class)
+        private Cipher cipher;
+
+        public Cipher getCipher() {
+            return cipher;
+        }
+
     }
 
     @Test
-    public void testCipher() throws NoSuchAlgorithmException, NoSuchPaddingException {
-        final Cipher expected = Cipher.getInstance(VALUE);
-        final Cipher actual = convert(VALUE);
-        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
-        Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
-        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    public void testCipher() {
+        testParseCommandLineValue(CipherConverterTest.VALUE);
     }
 
     @Test
     public void testCipherWithProvider() throws NoSuchAlgorithmException, NoSuchPaddingException {
-        final Cipher expected = Cipher.getInstance(VALUE);
+        final Cipher expected = Cipher.getInstance(CipherConverterTest.VALUE);
         final Provider expectedProvider = expected.getProvider();
-        final Cipher actual = convert(ProviderUtils.toArguments(VALUE, expectedProvider));
-        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
-        Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
-        Assert.assertEquals(expectedProvider, actual.getProvider());
+        testParseCommandLineValue(ProviderUtils.toArguments(CipherConverterTest.VALUE, expectedProvider));
+    }
+
+    @Override
+    protected void testParseCommandLineValue(final String value) {
+        final CommandLineArguments commandLineArgs = parse(new CommandLineArguments(), "--cipher", value);
+        if (value.contains(ConverterConstants.VALUE_SEPARATOR)) {
+            Assert.assertEquals(value,
+                    ProviderUtils.toArguments(commandLineArgs.getCipher().getAlgorithm(), commandLineArgs.getCipher().getProvider()));
+        } else {
+            Assert.assertEquals(value, commandLineArgs.getCipher().getAlgorithm());
+        }
     }
 
 }

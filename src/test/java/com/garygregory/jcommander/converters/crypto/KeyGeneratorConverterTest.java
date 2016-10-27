@@ -30,6 +30,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.security.ProviderUtils;
 
 /**
  * Tests {@link KeyGeneratorConverter}.
@@ -59,7 +60,7 @@ public class KeyGeneratorConverterTest extends AbstractStringConverterBasicTest<
         final String transformation = "AES";
         final KeyGenerator expected = KeyGenerator.getInstance(transformation);
         final Provider expectedProvider = expected.getProvider();
-        final KeyGenerator actual = convert(toArguments(transformation, expectedProvider));
+        final KeyGenerator actual = convert(ProviderUtils.toArguments(transformation, expectedProvider));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expectedProvider, actual.getProvider());
     }

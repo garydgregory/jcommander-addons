@@ -30,6 +30,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.security.ProviderUtils;
 
 /**
  * Tests {@link MacConverter}.
@@ -59,7 +60,7 @@ public class MacConverterTest extends AbstractStringConverterBasicTest<Mac> {
         final String transformation = "HmacSHA1";
         final Mac expected = Mac.getInstance(transformation);
         final Provider expectedProvider = expected.getProvider();
-        final Mac actual = convert(toArguments(transformation, expectedProvider));
+        final Mac actual = convert(ProviderUtils.toArguments(transformation, expectedProvider));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expectedProvider, actual.getProvider());
     }

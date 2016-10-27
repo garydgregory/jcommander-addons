@@ -52,7 +52,7 @@ public class MessageDigestConverterTest extends AbstractStringConverterBasicTest
     public void testMessageDigestWithProvider() throws NoSuchAlgorithmException {
         final String algorithm = "MD5";
         final MessageDigest expected = MessageDigest.getInstance(algorithm);
-        final MessageDigest actual = convert(toArguments(algorithm, expected.getProvider()));
+        final MessageDigest actual = convert(ProviderUtils.toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }

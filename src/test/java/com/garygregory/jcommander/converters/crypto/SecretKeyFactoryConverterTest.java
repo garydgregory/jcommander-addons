@@ -30,6 +30,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.security.ProviderUtils;
 
 /**
  * Tests {@link SecretKeyFactoryConverter}.
@@ -59,7 +60,7 @@ public class SecretKeyFactoryConverterTest extends AbstractStringConverterBasicT
         final String transformation = "AES";
         final SecretKeyFactory expected = SecretKeyFactory.getInstance(transformation);
         final Provider expectedProvider = expected.getProvider();
-        final SecretKeyFactory actual = convert(toArguments(transformation, expectedProvider));
+        final SecretKeyFactory actual = convert(ProviderUtils.toArguments(transformation, expectedProvider));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expectedProvider, actual.getProvider());
     }

@@ -24,52 +24,37 @@ import java.nio.ByteOrder;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
+import com.garygregory.jcommander.converters.AbstractCommandLineValueParserTest;
 
 /**
- * Tests {@link ByteOrderConverter}.
+ * Tests converters.
  * 
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class ByteOrderConverterJCommanderTest {
+public class ByteOrderConverterCommandLineValueParserTest extends AbstractCommandLineValueParserTest {
 
-    class CommandLineArguments {
+    static class CommandLineArguments {
 
         @Parameter(names = { "--byteOrder" }, converter = ByteOrderConverter.class)
         protected ByteOrder byteOrder;
 
     }
 
-    private void test(final ByteOrder byteOrder) {
-        testJCommander(byteOrder.toString());
-    }
-
-    public void testBadInput() {
-        testJCommander("X");
-    }
-
     @Test
     public void testBigEndian() {
-        test(ByteOrder.BIG_ENDIAN);
+        testParseCommandLineValue(ByteOrder.BIG_ENDIAN.toString());
     }
 
-    @Test(expected = ParameterException.class)
-    public void testEmptyString() {
-        testJCommander("X");
-    }
-
-    private void testJCommander(final String byteOrder) {
-        final CommandLineArguments commandLineArgs = new CommandLineArguments();
-        final String[] argv = { "--byteOrder", byteOrder };
-        new JCommander(commandLineArgs, argv);
+    protected void testParseCommandLineValue(final String byteOrder) {
+        final CommandLineArguments commandLineArgs = parse(new CommandLineArguments(), "--byteOrder", byteOrder);
         Assert.assertEquals(commandLineArgs.byteOrder.toString(), byteOrder);
     }
 
     @Test
     public void testLittleEndian() {
-        test(ByteOrder.LITTLE_ENDIAN);
+        testParseCommandLineValue(ByteOrder.LITTLE_ENDIAN.toString());
     }
 }

@@ -52,7 +52,7 @@ public class KeyPairGeneratorConverterTest extends AbstractStringConverterBasicT
     public void testKeyPairGeneratorWithProvider() throws NoSuchAlgorithmException {
         final String algorithm = "DiffieHellman";
         final KeyPairGenerator expected = KeyPairGenerator.getInstance(algorithm);
-        final KeyPairGenerator actual = convert(toArguments(algorithm, expected.getProvider()));
+        final KeyPairGenerator actual = convert(ProviderUtils.toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }

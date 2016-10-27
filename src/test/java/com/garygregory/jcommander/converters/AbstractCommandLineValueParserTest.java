@@ -21,29 +21,35 @@ package com.garygregory.jcommander.converters;
 
 import org.junit.Test;
 
-import com.beust.jcommander.IStringConverter;
+import com.beust.jcommander.JCommander;
 import com.beust.jcommander.ParameterException;
+import com.garygregory.jcommander.converters.nio.ByteOrderConverter;
 
-public abstract class AbstractStringConverterBasicTest<T> extends AbstractStringConverterTestWrapper<T> {
+/**
+ * Tests {@link ByteOrderConverter}.
+ * 
+ * @since 1.0.0
+ * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
+ */
+public abstract class AbstractCommandLineValueParserTest {
+    protected <T> T parse(final T commandLineArguments, final String paramName, final String argument) {
+        new JCommander(commandLineArguments, new String[] { paramName, argument });
+        return commandLineArguments;
+    }
 
-    protected static final String EMPTY_STRING = "";
-
-    public AbstractStringConverterBasicTest(final IStringConverter<T> stringConverter) {
-        super(stringConverter);
+    public void testBadInput() {
+        testParseCommandLineValue("X");
     }
 
     @Test(expected = ParameterException.class)
-    public void testBadInput() {
-        convert("{ BAD INPUT ");
-    }
-
     public void testBlankString() {
-        convert(" ");
+        testParseCommandLineValue("  ");
     }
 
     @Test(expected = ParameterException.class)
     public void testEmptyString() {
-        convert(EMPTY_STRING);
+        testParseCommandLineValue("X");
     }
 
+    protected abstract void testParseCommandLineValue(String value);
 }

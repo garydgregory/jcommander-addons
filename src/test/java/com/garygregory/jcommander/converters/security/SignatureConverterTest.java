@@ -52,7 +52,7 @@ public class SignatureConverterTest extends AbstractStringConverterBasicTest<Sig
     public void testSignatureWithProvider() throws NoSuchAlgorithmException {
         final String algorithm = "SHA1withRSA";
         final Signature expected = Signature.getInstance(algorithm);
-        final Signature actual = convert(toArguments(algorithm, expected.getProvider()));
+        final Signature actual = convert(ProviderUtils.toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }

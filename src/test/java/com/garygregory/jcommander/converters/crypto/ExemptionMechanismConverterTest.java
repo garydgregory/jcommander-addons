@@ -30,6 +30,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
+import com.garygregory.jcommander.converters.security.ProviderUtils;
 
 /**
  * Tests {@link ExemptionMechanismConverter}.
@@ -59,7 +60,7 @@ public class ExemptionMechanismConverterTest extends AbstractStringConverterBasi
         final String transformation = "KeyEscrow";
         final ExemptionMechanism expected = ExemptionMechanism.getInstance(transformation);
         final Provider expectedProvider = expected.getProvider();
-        final ExemptionMechanism actual = convert(toArguments(transformation, expectedProvider));
+        final ExemptionMechanism actual = convert(ProviderUtils.toArguments(transformation, expectedProvider));
         Assert.assertEquals(expected.getName(), actual.getName());
         Assert.assertEquals(expectedProvider, actual.getProvider());
     }

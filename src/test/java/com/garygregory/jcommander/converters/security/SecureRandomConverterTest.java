@@ -52,7 +52,7 @@ public class SecureRandomConverterTest extends AbstractStringConverterBasicTest<
     public void testSecureRandomWithProvider() throws NoSuchAlgorithmException {
         final String algorithm = "SHA1PRNG";
         final SecureRandom expected = SecureRandom.getInstance(algorithm);
-        final SecureRandom actual = convert(toArguments(algorithm, expected.getProvider()));
+        final SecureRandom actual = convert(ProviderUtils.toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }

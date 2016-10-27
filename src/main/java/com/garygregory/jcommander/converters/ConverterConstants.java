@@ -30,8 +30,4 @@ public class ConverterConstants {
      */
     public static String VALUE_SEPARATOR = ":";
 
-    private ConverterConstants() {
-        // nothing
-    }
-
 }

@@ -52,7 +52,7 @@ public class KeyFactoryConverterTest extends AbstractStringConverterBasicTest<Ke
     public void testKeyFactoryWithProvider() throws NoSuchAlgorithmException {
         final String algorithm = "DiffieHellman";
         final KeyFactory expected = KeyFactory.getInstance(algorithm);
-        final KeyFactory actual = convert(toArguments(algorithm, expected.getProvider()));
+        final KeyFactory actual = convert(ProviderUtils.toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }

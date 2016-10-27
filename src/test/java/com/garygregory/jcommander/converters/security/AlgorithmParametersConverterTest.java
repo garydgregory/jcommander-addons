@@ -52,7 +52,7 @@ public class AlgorithmParametersConverterTest extends AbstractStringConverterBas
     public void testAlgorithmParametersWithProvider() throws NoSuchAlgorithmException {
         final String algorithm = "AES";
         final AlgorithmParameters expected = AlgorithmParameters.getInstance(algorithm);
-        final AlgorithmParameters actual = convert(toArguments(algorithm, expected.getProvider()));
+        final AlgorithmParameters actual = convert(ProviderUtils.toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }

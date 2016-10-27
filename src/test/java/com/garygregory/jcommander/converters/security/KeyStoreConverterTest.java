@@ -51,7 +51,7 @@ public class KeyStoreConverterTest extends AbstractStringConverterBasicTest<KeyS
     public void testKeyStoreWithProvider() throws KeyStoreException {
         final String type = "JKS";
         final KeyStore expected = KeyStore.getInstance(type);
-        final KeyStore actual = convert(toArguments(type, expected.getProvider()));
+        final KeyStore actual = convert(ProviderUtils.toArguments(type, expected.getProvider()));
         Assert.assertEquals(expected.getType(), actual.getType());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
