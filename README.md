@@ -21,7 +21,7 @@
 The goal of the JCommander-Addons project is to provide any and all [JCommander](http://jcommander.org/) 
 converters and validators an advanced applications will need.
 
-Feel free to submit a pull-request.
+Feel free to submit a pull-request and examine the [build site](https://garydgregory.github.io/jcommander-addons/).
 
 ## Converters 
 Converters include:
@@ -117,3 +117,5 @@ Converters include:
 [![Build Status](https://travis-ci.org/garydgregory/jcommander-addons.svg?branch=master)](https://travis-ci.org/garydgregory/jcommander-addons)
 [![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons)
+
+
