@@ -6,6 +6,7 @@ com.garygregory.jcommander.converters.net
 com.garygregory.jcommander.converters.net.ssl
 com.garygregory.jcommander.converters.nio
 com.garygregory.jcommander.converters.nio.charset
+com.garygregory.jcommander.converters.nio.file
 com.garygregory.jcommander.converters.nio.file.attribute
 com.garygregory.jcommander.converters.security
 com.garygregory.jcommander.converters.security.cert
@@ -15,5 +16,6 @@ com.garygregory.jcommander.converters.sql.mysql
 com.garygregory.jcommander.converters.sql.oracle
 com.garygregory.jcommander.converters.time
 com.garygregory.jcommander.converters.util
+com.garygregory.jcommander.converters.xml
 com.garygregory.jcommander.converters.xml.datatype
 com.garygregory.jcommander.converters.xml.namespace
