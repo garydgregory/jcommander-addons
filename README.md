@@ -44,6 +44,7 @@ Converters include:
 - net/URIConverter
 - net/URLConverter
 - net/ssl/KeyManagerFactoryConverter
+- net/ssl/TrustManagerFactoryConverter
 
 ### NIO Converters
 
