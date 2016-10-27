@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the transformation parameter format, see {@link SecretKeyFactory#getInstance(String)}.
  * </p>
  * <p>
- * To get a SecretKeyFactory from a specific {@link Provider}, use the syntax {@code transformation:provider} as
+ * To get a SecretKeyFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as
  * described by {@link SecretKeyFactory#getInstance(String, String)}.
  * </p>
  * 
@@ -61,8 +61,8 @@ public class SecretKeyFactoryConverter extends AbstractBaseConverter<SecretKeyFa
     protected SecretKeyFactory convertImpl(final String value)
             throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
         final String[] split = split(value);
-        final String transformation = split[0];
-        return isSingle(split) ? SecretKeyFactory.getInstance(value) : SecretKeyFactory.getInstance(transformation, split[1]);
+        final String algorithm = split[0];
+        return isSingle(split) ? SecretKeyFactory.getInstance(value) : SecretKeyFactory.getInstance(algorithm, split[1]);
     }
 
 }

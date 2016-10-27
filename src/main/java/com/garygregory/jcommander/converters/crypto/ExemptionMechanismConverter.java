@@ -31,10 +31,10 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 /**
  * Converts a {@link String} into a {@link ExemptionMechanism}.
  * <p>
- * For a description of the transformation parameter format, see {@link ExemptionMechanism#getInstance(String)}.
+ * For a description of the algorithm parameter format, see {@link ExemptionMechanism#getInstance(String)}.
  * </p>
  * <p>
- * To get a ExemptionMechanism from a specific {@link Provider}, use the syntax {@code transformation:provider} as
+ * To get a ExemptionMechanism from a specific {@link Provider}, use the syntax {@code algorithm:provider} as
  * described by {@link ExemptionMechanism#getInstance(String, String)}.
  * </p>
  * 
@@ -61,8 +61,8 @@ public class ExemptionMechanismConverter extends AbstractBaseConverter<Exemption
     protected ExemptionMechanism convertImpl(final String value)
             throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
         final String[] split = split(value);
-        final String transformation = split[0];
-        return isSingle(split) ? ExemptionMechanism.getInstance(value) : ExemptionMechanism.getInstance(transformation, split[1]);
+        final String algorithm = split[0];
+        return isSingle(split) ? ExemptionMechanism.getInstance(value) : ExemptionMechanism.getInstance(algorithm, split[1]);
     }
 
 }
