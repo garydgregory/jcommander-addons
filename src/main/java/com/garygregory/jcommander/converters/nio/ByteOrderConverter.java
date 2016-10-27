@@ -24,7 +24,7 @@ import java.nio.ByteOrder;
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
 /**
- * Converts a String to a {@link ByteOrder}. Values are {@code "BIG_ENDIAN"} and {@code "LITTLE_ENDIAN"}.
+ * Converts a String to a {@link ByteOrder}. Valid values are {@code "BIG_ENDIAN"} and {@code "LITTLE_ENDIAN"}.
  * 
  * @see ByteOrder
  * @see ByteOrder#BIG_ENDIAN
