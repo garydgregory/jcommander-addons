@@ -41,7 +41,7 @@ public class AlgorithmParameterGeneratorConverterTest extends AbstractStringConv
 
     @Test
     public void testAlgorithmParameterGenerator() throws NoSuchAlgorithmException {
-        String algorithm = "DiffieHellman";
+        final String algorithm = "DiffieHellman";
         final AlgorithmParameterGenerator expected = AlgorithmParameterGenerator.getInstance(algorithm);
         final AlgorithmParameterGenerator actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
@@ -49,7 +49,7 @@ public class AlgorithmParameterGeneratorConverterTest extends AbstractStringConv
 
     @Test
     public void testAlgorithmParameterGeneratorWithProvider() throws NoSuchAlgorithmException {
-        String algorithm = "DiffieHellman";
+        final String algorithm = "DiffieHellman";
         final AlgorithmParameterGenerator expected = AlgorithmParameterGenerator.getInstance(algorithm);
         final AlgorithmParameterGenerator actual = convert(toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());

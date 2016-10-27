@@ -21,7 +21,6 @@ package com.garygregory.jcommander.converters.security;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
-import java.security.SecureRandom;
 import java.security.Signature;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;

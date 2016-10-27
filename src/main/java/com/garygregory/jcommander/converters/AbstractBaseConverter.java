@@ -87,6 +87,10 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
                 + " for option " + getOptionName();
     }
 
+    protected boolean isSingle(final String[] split) {
+        return split.length == 1;
+    }
+
     protected ParameterException newParameterException(final String value) {
         return new ParameterException(getErrorString(value));
     }
@@ -105,10 +109,6 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
     protected URI toURI(final String value) {
         return new URIConverter(null).convert(value);
-    }
-
-    protected boolean isSingle(final String[] split) {
-        return split.length == 1;
     }
 
 }
