@@ -33,8 +33,7 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class AlgorithmParameterGeneratorConverterTest
-        extends AbstractStringConverterBasicTest<AlgorithmParameterGenerator> {
+public class AlgorithmParameterGeneratorConverterTest extends AbstractStringConverterBasicTest<AlgorithmParameterGenerator> {
 
     public AlgorithmParameterGeneratorConverterTest() {
         super(new AlgorithmParameterGeneratorConverter(null));
@@ -42,8 +41,17 @@ public class AlgorithmParameterGeneratorConverterTest
 
     @Test
     public void testAlgorithmParameterGenerator() throws NoSuchAlgorithmException {
-        final AlgorithmParameterGenerator expected = AlgorithmParameterGenerator.getInstance("DiffieHellman");
-        final AlgorithmParameterGenerator actual = convert("DiffieHellman");
+        String algorithm = "DiffieHellman";
+        final AlgorithmParameterGenerator expected = AlgorithmParameterGenerator.getInstance(algorithm);
+        final AlgorithmParameterGenerator actual = convert(algorithm);
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+    }
+
+    @Test
+    public void testAlgorithmParameterGeneratorWithProvider() throws NoSuchAlgorithmException {
+        String algorithm = "DiffieHellman";
+        final AlgorithmParameterGenerator expected = AlgorithmParameterGenerator.getInstance(algorithm);
+        final AlgorithmParameterGenerator actual = convert(toArguments(algorithm, expected.getProvider()));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
     }
 

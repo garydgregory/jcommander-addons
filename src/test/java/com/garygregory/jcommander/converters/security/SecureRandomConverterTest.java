@@ -33,18 +33,28 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class SecureRandomConverterTest
-        extends AbstractStringConverterBasicTest<SecureRandom> {
+public class SecureRandomConverterTest extends AbstractStringConverterBasicTest<SecureRandom> {
 
     public SecureRandomConverterTest() {
         super(new SecureRandomConverter(null));
     }
-    
+
     @Test
-    public void testSecureRandom() throws NoSuchAlgorithmException  {
-        final SecureRandom expected = SecureRandom.getInstance("SHA1PRNG");
-        final SecureRandom actual = convert("SHA1PRNG");
+    public void testSecureRandom() throws NoSuchAlgorithmException {
+        final String algorithm = "SHA1PRNG";
+        final SecureRandom expected = SecureRandom.getInstance(algorithm);
+        final SecureRandom actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testSecureRandomWithProvider() throws NoSuchAlgorithmException {
+        final String algorithm = "SHA1PRNG";
+        final SecureRandom expected = SecureRandom.getInstance(algorithm);
+        final SecureRandom actual = convert(toArguments(algorithm, expected.getProvider()));
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

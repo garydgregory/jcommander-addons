@@ -21,6 +21,7 @@ package com.garygregory.jcommander.converters.security;
 
 import java.security.KeyStore;
 import java.security.KeyStoreException;
+import java.security.NoSuchProviderException;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
@@ -49,8 +50,10 @@ public class KeyStoreConverter extends AbstractBaseConverter<KeyStore> {
     }
 
     @Override
-    protected KeyStore convertImpl(final String value) throws KeyStoreException  {
-        return KeyStore.getInstance(value);
+    protected KeyStore convertImpl(final String value) throws KeyStoreException, NoSuchProviderException {
+        final String[] split = split(value);
+        final String algorithm = split[0];
+        return isSingle(split) ? KeyStore.getInstance(value) : KeyStore.getInstance(algorithm, split[1]);
     }
 
 }

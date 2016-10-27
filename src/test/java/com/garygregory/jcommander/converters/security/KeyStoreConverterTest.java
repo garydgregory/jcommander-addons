@@ -33,18 +33,27 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class KeyStoreConverterTest
-        extends AbstractStringConverterBasicTest<KeyStore> {
+public class KeyStoreConverterTest extends AbstractStringConverterBasicTest<KeyStore> {
 
     public KeyStoreConverterTest() {
         super(new KeyStoreConverter(null));
     }
-    
+
     @Test
     public void testKeyStore() throws KeyStoreException {
-        final KeyStore expected = KeyStore.getInstance("JKS");
-        final KeyStore actual = convert("JKS");
+        final String type = "JKS";
+        final KeyStore expected = KeyStore.getInstance(type);
+        final KeyStore actual = convert(type);
         Assert.assertEquals(expected.getType(), actual.getType());
+    }
+
+    @Test
+    public void testKeyStoreWithProvider() throws KeyStoreException {
+        final String type = "JKS";
+        final KeyStore expected = KeyStore.getInstance(type);
+        final KeyStore actual = convert(toArguments(type, expected.getProvider()));
+        Assert.assertEquals(expected.getType(), actual.getType());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

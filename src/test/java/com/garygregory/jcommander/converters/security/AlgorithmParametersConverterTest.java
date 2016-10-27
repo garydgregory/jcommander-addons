@@ -33,18 +33,28 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class AlgorithmParametersConverterTest
-        extends AbstractStringConverterBasicTest<AlgorithmParameters> {
+public class AlgorithmParametersConverterTest extends AbstractStringConverterBasicTest<AlgorithmParameters> {
 
     public AlgorithmParametersConverterTest() {
         super(new AlgorithmParametersConverter(null));
     }
-    
+
     @Test
     public void testAlgorithmParameters() throws NoSuchAlgorithmException {
-        final AlgorithmParameters expected = AlgorithmParameters.getInstance("AES");
-        final AlgorithmParameters actual = convert("AES");
+        final String algorithm = "AES";
+        final AlgorithmParameters expected = AlgorithmParameters.getInstance(algorithm);
+        final AlgorithmParameters actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testAlgorithmParametersWithProvider() throws NoSuchAlgorithmException {
+        final String algorithm = "AES";
+        final AlgorithmParameters expected = AlgorithmParameters.getInstance(algorithm);
+        final AlgorithmParameters actual = convert(toArguments(algorithm, expected.getProvider()));
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

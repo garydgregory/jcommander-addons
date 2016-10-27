@@ -29,7 +29,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
-import com.garygregory.jcommander.converters.ConverterConstants;
 
 /**
  * Tests {@link CipherConverter}.
@@ -45,8 +44,9 @@ public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher
 
     @Test
     public void testCipher() throws NoSuchAlgorithmException, NoSuchPaddingException {
-        final Cipher expected = Cipher.getInstance("DES/CBC/PKCS5Padding");
-        final Cipher actual = convert("DES/CBC/PKCS5Padding");
+        final String transformation = "DES/CBC/PKCS5Padding";
+        final Cipher expected = Cipher.getInstance(transformation);
+        final Cipher actual = convert(transformation);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
         Assert.assertEquals(expected.getProvider(), actual.getProvider());
@@ -54,10 +54,10 @@ public class CipherConverterTest extends AbstractStringConverterBasicTest<Cipher
 
     @Test
     public void testCipherWithProvider() throws NoSuchAlgorithmException, NoSuchPaddingException {
-        final Cipher expected = Cipher.getInstance("DES/CBC/PKCS5Padding");
+        final String transformation = "DES/CBC/PKCS5Padding";
+        final Cipher expected = Cipher.getInstance(transformation);
         final Provider expectedProvider = expected.getProvider();
-        final Cipher actual = convert(
-                "DES/CBC/PKCS5Padding" + ConverterConstants.VALUE_SEPARATOR + expectedProvider.getName());
+        final Cipher actual = convert(toArguments(transformation, expectedProvider));
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
         Assert.assertEquals(expected.getBlockSize(), actual.getBlockSize());
         Assert.assertEquals(expectedProvider, actual.getProvider());

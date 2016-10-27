@@ -33,18 +33,28 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class MessageDigestConverterTest
-        extends AbstractStringConverterBasicTest<MessageDigest> {
+public class MessageDigestConverterTest extends AbstractStringConverterBasicTest<MessageDigest> {
 
     public MessageDigestConverterTest() {
         super(new MessageDigestConverter(null));
     }
-    
+
     @Test
-    public void testMessageDigest() throws NoSuchAlgorithmException  {
-        final MessageDigest expected = MessageDigest.getInstance("MD5");
-        final MessageDigest actual = convert("MD5");
+    public void testMessageDigest() throws NoSuchAlgorithmException {
+        final String algorithm = "MD5";
+        final MessageDigest expected = MessageDigest.getInstance(algorithm);
+        final MessageDigest actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testMessageDigestWithProvider() throws NoSuchAlgorithmException {
+        final String algorithm = "MD5";
+        final MessageDigest expected = MessageDigest.getInstance(algorithm);
+        final MessageDigest actual = convert(toArguments(algorithm, expected.getProvider()));
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

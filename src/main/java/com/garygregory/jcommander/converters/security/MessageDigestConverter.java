@@ -21,6 +21,7 @@ package com.garygregory.jcommander.converters.security;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
@@ -49,8 +50,10 @@ public class MessageDigestConverter extends AbstractBaseConverter<MessageDigest>
     }
 
     @Override
-    protected MessageDigest convertImpl(final String value) throws NoSuchAlgorithmException {
-        return MessageDigest.getInstance(value);
+    protected MessageDigest convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
+        final String[] split = split(value);
+        final String algorithm = split[0];
+        return isSingle(split) ? MessageDigest.getInstance(value) : MessageDigest.getInstance(algorithm, split[1]);
     }
 
 }

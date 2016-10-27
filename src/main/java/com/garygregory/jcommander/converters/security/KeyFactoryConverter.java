@@ -21,6 +21,7 @@ package com.garygregory.jcommander.converters.security;
 
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
@@ -49,8 +50,10 @@ public class KeyFactoryConverter extends AbstractBaseConverter<KeyFactory> {
     }
 
     @Override
-    protected KeyFactory convertImpl(final String value) throws NoSuchAlgorithmException  {
-        return KeyFactory.getInstance(value);
+    protected KeyFactory convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
+        final String[] split = split(value);
+        final String algorithm = split[0];
+        return isSingle(split) ? KeyFactory.getInstance(value) : KeyFactory.getInstance(algorithm, split[1]);
     }
 
 }

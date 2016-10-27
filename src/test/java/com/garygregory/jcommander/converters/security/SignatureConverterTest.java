@@ -33,18 +33,28 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class SignatureConverterTest
-        extends AbstractStringConverterBasicTest<Signature> {
+public class SignatureConverterTest extends AbstractStringConverterBasicTest<Signature> {
 
     public SignatureConverterTest() {
         super(new SignatureConverter(null));
     }
-    
+
     @Test
-    public void testSignature() throws NoSuchAlgorithmException  {
-        final Signature expected = Signature.getInstance("NONEwithRSA");
-        final Signature actual = convert("NONEwithRSA");
+    public void testSignature() throws NoSuchAlgorithmException {
+        final String algorithm = "SHA1withRSA";
+        final Signature expected = Signature.getInstance(algorithm);
+        final Signature actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testSignatureWithProvider() throws NoSuchAlgorithmException {
+        final String algorithm = "SHA1withRSA";
+        final Signature expected = Signature.getInstance(algorithm);
+        final Signature actual = convert(toArguments(algorithm, expected.getProvider()));
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

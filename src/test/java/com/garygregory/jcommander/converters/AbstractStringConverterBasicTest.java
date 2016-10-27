@@ -19,6 +19,8 @@
 
 package com.garygregory.jcommander.converters;
 
+import java.security.Provider;
+
 import org.junit.Test;
 
 import com.beust.jcommander.IStringConverter;
@@ -44,6 +46,10 @@ public abstract class AbstractStringConverterBasicTest<T> extends AbstractString
     @Test(expected = ParameterException.class)
     public void testEmptyString() {
         convert(EMPTY_STRING);
+    }
+
+    protected String toArguments(final String arg0, final Provider expectedProvider) {
+        return arg0 + ConverterConstants.VALUE_SEPARATOR + expectedProvider.getName();
     }
 
 }

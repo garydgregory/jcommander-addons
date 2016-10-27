@@ -19,7 +19,9 @@
 
 package com.garygregory.jcommander.converters.security;
 
+import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.security.SecureRandom;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
@@ -49,8 +51,10 @@ public class SecureRandomConverter extends AbstractBaseConverter<SecureRandom> {
     }
 
     @Override
-    protected SecureRandom convertImpl(final String value) throws NoSuchAlgorithmException {
-        return SecureRandom.getInstance(value);
+    protected SecureRandom convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
+        final String[] split = split(value);
+        final String algorithm = split[0];
+        return isSingle(split) ? SecureRandom.getInstance(value) : SecureRandom.getInstance(algorithm, split[1]);
     }
 
 }

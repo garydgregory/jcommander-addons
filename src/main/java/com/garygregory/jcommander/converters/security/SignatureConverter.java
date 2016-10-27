@@ -20,6 +20,8 @@
 package com.garygregory.jcommander.converters.security;
 
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.SecureRandom;
 import java.security.Signature;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
@@ -49,8 +51,10 @@ public class SignatureConverter extends AbstractBaseConverter<Signature> {
     }
 
     @Override
-    protected Signature convertImpl(final String value) throws NoSuchAlgorithmException {
-        return Signature.getInstance(value);
+    protected Signature convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
+        final String[] split = split(value);
+        final String algorithm = split[0];
+        return isSingle(split) ? Signature.getInstance(value) : Signature.getInstance(algorithm, split[1]);
     }
 
 }

@@ -33,18 +33,28 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class KeyPairGeneratorConverterTest
-        extends AbstractStringConverterBasicTest<KeyPairGenerator> {
+public class KeyPairGeneratorConverterTest extends AbstractStringConverterBasicTest<KeyPairGenerator> {
 
     public KeyPairGeneratorConverterTest() {
         super(new KeyPairGeneratorConverter(null));
     }
-    
+
     @Test
     public void testKeyPairGenerator() throws NoSuchAlgorithmException {
-        final KeyPairGenerator expected = KeyPairGenerator.getInstance("DiffieHellman");
-        final KeyPairGenerator actual = convert("DiffieHellman");
+        final String algorithm = "DiffieHellman";
+        final KeyPairGenerator expected = KeyPairGenerator.getInstance(algorithm);
+        final KeyPairGenerator actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testKeyPairGeneratorWithProvider() throws NoSuchAlgorithmException {
+        final String algorithm = "DiffieHellman";
+        final KeyPairGenerator expected = KeyPairGenerator.getInstance(algorithm);
+        final KeyPairGenerator actual = convert(toArguments(algorithm, expected.getProvider()));
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

@@ -107,4 +107,8 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         return new URIConverter(null).convert(value);
     }
 
+    protected boolean isSingle(final String[] split) {
+        return split.length == 1;
+    }
+
 }

@@ -33,18 +33,28 @@ import com.garygregory.jcommander.converters.AbstractStringConverterBasicTest;
  * @since 1.0.0
  * @author <a href="mailto:ggregory@garygregory.com">Gary Gregory</a>
  */
-public class KeyFactoryConverterTest
-        extends AbstractStringConverterBasicTest<KeyFactory> {
+public class KeyFactoryConverterTest extends AbstractStringConverterBasicTest<KeyFactory> {
 
     public KeyFactoryConverterTest() {
         super(new KeyFactoryConverter(null));
     }
-    
+
     @Test
     public void testKeyFactory() throws NoSuchAlgorithmException {
-        final KeyFactory expected = KeyFactory.getInstance("DiffieHellman");
-        final KeyFactory actual = convert("DiffieHellman");
+        final String algorithm = "DiffieHellman";
+        final KeyFactory expected = KeyFactory.getInstance(algorithm);
+        final KeyFactory actual = convert(algorithm);
         Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
+    }
+
+    @Test
+    public void testKeyFactoryWithProvider() throws NoSuchAlgorithmException {
+        final String algorithm = "DiffieHellman";
+        final KeyFactory expected = KeyFactory.getInstance(algorithm);
+        final KeyFactory actual = convert(toArguments(algorithm, expected.getProvider()));
+        Assert.assertEquals(expected.getAlgorithm(), actual.getAlgorithm());
+        Assert.assertEquals(expected.getProvider(), actual.getProvider());
     }
 
 }

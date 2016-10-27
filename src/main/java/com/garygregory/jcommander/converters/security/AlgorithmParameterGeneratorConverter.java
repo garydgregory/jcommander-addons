@@ -21,6 +21,7 @@ package com.garygregory.jcommander.converters.security;
 
 import java.security.AlgorithmParameterGenerator;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 
 import com.garygregory.jcommander.converters.AbstractBaseConverter;
 
@@ -49,8 +50,11 @@ public class AlgorithmParameterGeneratorConverter extends AbstractBaseConverter<
     }
 
     @Override
-    protected AlgorithmParameterGenerator convertImpl(final String value) throws NoSuchAlgorithmException {
-        return AlgorithmParameterGenerator.getInstance(value);
+    protected AlgorithmParameterGenerator convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException {
+        final String[] split = split(value);
+        final String algorithm = split[0];
+        return isSingle(split) ? AlgorithmParameterGenerator.getInstance(value)
+                : AlgorithmParameterGenerator.getInstance(algorithm, split[1]);
     }
 
 }
