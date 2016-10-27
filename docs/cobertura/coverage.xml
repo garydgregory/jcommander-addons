@@ -1,103 +1,117 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9919786096256684" branch-rate="0.7526690391459074" lines-covered="371" lines-valid="374" branches-covered="423" branches-valid="562" complexity="3.361344537815126" version="2.1.1" timestamp="1477510977551">
+<coverage line-rate="0.9931506849315068" branch-rate="0.7575757575757576" lines-covered="435" lines-valid="438" branches-covered="450" branches-valid="594" complexity="3.176470588235294" version="2.1.1" timestamp="1477545420381">
 	<sources>
 		<source>--source</source>
 		<source>E:/vcs/git/github/garydgregory/jcommander-addons/target/generated-sources/annotations</source>
 		<source>E:/vcs/git/github/garydgregory/jcommander-addons/src/main/java</source>
 	</sources>
 	<packages>
-		<package name="com.garygregory.jcommander.converters" line-rate="0.8636363636363636" branch-rate="0.75" complexity="1.5454545454545454">
+		<package name="com.garygregory.jcommander.converters" line-rate="0.8695652173913043" branch-rate="0.8333333333333334" complexity="1.5">
 			<classes>
-				<class name="com.garygregory.jcommander.converters.AbstractBaseConverter" filename="com/garygregory/jcommander/converters/AbstractBaseConverter.java" line-rate="0.9473684210526315" branch-rate="0.75" complexity="1.6">
+				<class name="com.garygregory.jcommander.converters.AbstractBaseConverter" filename="com/garygregory/jcommander/converters/AbstractBaseConverter.java" line-rate="0.95" branch-rate="0.8333333333333334" complexity="1.5454545454545454">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Class;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="51" hits="313" branch="false"/>
-								<line number="52" hits="313" branch="false"/>
+								<line number="51" hits="342" branch="false"/>
+								<line number="52" hits="342" branch="false"/>
 							</lines>
 						</method>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;Ljava/lang/Class;Z)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="65" hits="313" branch="false"/>
-								<line number="66" hits="313" branch="false"/>
-								<line number="67" hits="313" branch="false"/>
-								<line number="68" hits="313" branch="false"/>
+								<line number="65" hits="342" branch="false"/>
+								<line number="66" hits="342" branch="false"/>
+								<line number="67" hits="342" branch="false"/>
+								<line number="68" hits="342" branch="false"/>
 							</lines>
 						</method>
 						<method name="convert" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="0.75" complexity="0">
 							<lines>
-								<line number="73" hits="313" branch="false"/>
-								<line number="74" hits="216" branch="true" condition-coverage="75% (3/4)">
+								<line number="73" hits="342" branch="false"/>
+								<line number="74" hits="229" branch="true" condition-coverage="75% (3/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 										<condition number="1" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
 								<line number="75" hits="4" branch="false"/>
-								<line number="77" hits="212" branch="false"/>
-								<line number="78" hits="101" branch="false"/>
-								<line number="79" hits="101" branch="false"/>
+								<line number="77" hits="225" branch="false"/>
+								<line number="78" hits="117" branch="false"/>
+								<line number="79" hits="117" branch="false"/>
 							</lines>
 						</method>
 						<method name="getErrorString" signature="(Ljava/lang/String;)Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="86" hits="210" branch="false"/>
-								<line number="87" hits="105" branch="false"/>
+								<line number="86" hits="242" branch="false"/>
+								<line number="87" hits="121" branch="false"/>
+							</lines>
+						</method>
+						<method name="isSingle" signature="([Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="91" hits="54" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 						<method name="newParameterException" signature="(Ljava/lang/String;)Lcom/beust/jcommander/ParameterException;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="91" hits="4" branch="false"/>
+								<line number="95" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="newParameterException" signature="(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/beust/jcommander/ParameterException;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="95" hits="101" branch="false"/>
+								<line number="99" hits="117" branch="false"/>
 							</lines>
 						</method>
 						<method name="split" signature="(Ljava/lang/String;)[Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="99" hits="4" branch="false"/>
+								<line number="103" hits="54" branch="false"/>
 							</lines>
 						</method>
 						<method name="toInt" signature="(Ljava/lang/String;Ljava/lang/String;)I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="103" hits="3" branch="false"/>
+								<line number="107" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="toURI" signature="(Ljava/lang/String;)Ljava/net/URI;" line-rate="0.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="107" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="51" hits="313" branch="false"/>
-						<line number="52" hits="313" branch="false"/>
-						<line number="65" hits="313" branch="false"/>
-						<line number="66" hits="313" branch="false"/>
-						<line number="67" hits="313" branch="false"/>
-						<line number="68" hits="313" branch="false"/>
-						<line number="73" hits="313" branch="false"/>
-						<line number="74" hits="216" branch="true" condition-coverage="75% (3/4)">
+						<line number="51" hits="342" branch="false"/>
+						<line number="52" hits="342" branch="false"/>
+						<line number="65" hits="342" branch="false"/>
+						<line number="66" hits="342" branch="false"/>
+						<line number="67" hits="342" branch="false"/>
+						<line number="68" hits="342" branch="false"/>
+						<line number="73" hits="342" branch="false"/>
+						<line number="74" hits="229" branch="true" condition-coverage="75% (3/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
 						<line number="75" hits="4" branch="false"/>
-						<line number="77" hits="212" branch="false"/>
-						<line number="78" hits="101" branch="false"/>
-						<line number="79" hits="101" branch="false"/>
-						<line number="86" hits="210" branch="false"/>
-						<line number="87" hits="105" branch="false"/>
-						<line number="91" hits="4" branch="false"/>
-						<line number="95" hits="101" branch="false"/>
-						<line number="99" hits="4" branch="false"/>
-						<line number="103" hits="3" branch="false"/>
-						<line number="107" hits="0" branch="false"/>
+						<line number="77" hits="225" branch="false"/>
+						<line number="78" hits="117" branch="false"/>
+						<line number="79" hits="117" branch="false"/>
+						<line number="86" hits="242" branch="false"/>
+						<line number="87" hits="121" branch="false"/>
+						<line number="91" hits="54" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="95" hits="4" branch="false"/>
+						<line number="99" hits="117" branch="false"/>
+						<line number="103" hits="54" branch="false"/>
+						<line number="107" hits="3" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
 					</lines>
 				</class>
 				<class name="com.garygregory.jcommander.converters.ConverterConstants" filename="com/garygregory/jcommander/converters/ConverterConstants.java" line-rate="0.3333333333333333" branch-rate="1.0" complexity="1.0">
@@ -122,7 +136,7 @@
 				</class>
 			</classes>
 		</package>
-		<package name="com.garygregory.jcommander.converters.crypto" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+		<package name="com.garygregory.jcommander.converters.crypto" line-rate="1.0" branch-rate="0.5833333333333334" complexity="1.5">
 			<classes>
 				<class name="com.garygregory.jcommander.converters.crypto.CipherConverter" filename="com/garygregory/jcommander/converters/crypto/CipherConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
@@ -139,9 +153,9 @@
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/crypto/Cipher;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
+								<line number="62" hits="4" branch="false"/>
 								<line number="63" hits="4" branch="false"/>
-								<line number="64" hits="4" branch="false"/>
-								<line number="65" hits="4" branch="true" condition-coverage="100% (2/2)">
+								<line number="64" hits="4" branch="true" condition-coverage="100% (2/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 									</conditions>
@@ -153,11 +167,201 @@
 						<line number="48" hits="4" branch="false"/>
 						<line number="57" hits="4" branch="false"/>
 						<line number="58" hits="4" branch="false"/>
+						<line number="62" hits="4" branch="false"/>
 						<line number="63" hits="4" branch="false"/>
-						<line number="64" hits="4" branch="false"/>
-						<line number="65" hits="4" branch="true" condition-coverage="100% (2/2)">
+						<line number="64" hits="4" branch="true" condition-coverage="100% (2/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.garygregory.jcommander.converters.crypto.ExemptionMechanismConverter" filename="com/garygregory/jcommander/converters/crypto/ExemptionMechanismConverter.java" line-rate="1.0" branch-rate="0.5" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="57" hits="2" branch="false"/>
+								<line number="58" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/crypto/ExemptionMechanism;" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="63" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="48" hits="2" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.garygregory.jcommander.converters.crypto.KeyAgreementConverter" filename="com/garygregory/jcommander/converters/crypto/KeyAgreementConverter.java" line-rate="1.0" branch-rate="0.5" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="57" hits="2" branch="false"/>
+								<line number="58" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/crypto/KeyAgreement;" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="63" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="48" hits="2" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.garygregory.jcommander.converters.crypto.KeyGeneratorConverter" filename="com/garygregory/jcommander/converters/crypto/KeyGeneratorConverter.java" line-rate="1.0" branch-rate="0.5" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="57" hits="2" branch="false"/>
+								<line number="58" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="63" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="48" hits="2" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.garygregory.jcommander.converters.crypto.MacConverter" filename="com/garygregory/jcommander/converters/crypto/MacConverter.java" line-rate="1.0" branch-rate="0.5" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="57" hits="2" branch="false"/>
+								<line number="58" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/crypto/Mac;" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="63" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="48" hits="2" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.garygregory.jcommander.converters.crypto.SecretKeyFactoryConverter" filename="com/garygregory/jcommander/converters/crypto/SecretKeyFactoryConverter.java" line-rate="1.0" branch-rate="0.5" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="57" hits="2" branch="false"/>
+								<line number="58" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;" line-rate="1.0" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="63" hits="2" branch="false"/>
+								<line number="64" hits="2" branch="false"/>
+								<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="48" hits="2" branch="false"/>
+						<line number="57" hits="2" branch="false"/>
+						<line number="58" hits="2" branch="false"/>
+						<line number="63" hits="2" branch="false"/>
+						<line number="64" hits="2" branch="false"/>
+						<line number="65" hits="2" branch="true" condition-coverage="50% (1/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
 					</lines>
@@ -410,6 +614,86 @@
 				</class>
 			</classes>
 		</package>
+		<package name="com.garygregory.jcommander.converters.net.ssl" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+			<classes>
+				<class name="com.garygregory.jcommander.converters.net.ssl.KeyManagerFactoryConverter" filename="com/garygregory/jcommander/converters/net/ssl/KeyManagerFactoryConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="56" hits="4" branch="false"/>
+								<line number="57" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="47" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/net/ssl/KeyManagerFactory;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="4" branch="false"/>
+								<line number="62" hits="4" branch="false"/>
+								<line number="63" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="47" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="false"/>
+						<line number="57" hits="4" branch="false"/>
+						<line number="61" hits="4" branch="false"/>
+						<line number="62" hits="4" branch="false"/>
+						<line number="63" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+				<class name="com.garygregory.jcommander.converters.net.ssl.TrustManagerFactoryConverter" filename="com/garygregory/jcommander/converters/net/ssl/TrustManagerFactoryConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="56" hits="4" branch="false"/>
+								<line number="57" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="47" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="4" branch="false"/>
+								<line number="62" hits="4" branch="false"/>
+								<line number="63" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="47" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="false"/>
+						<line number="57" hits="4" branch="false"/>
+						<line number="61" hits="4" branch="false"/>
+						<line number="62" hits="4" branch="false"/>
+						<line number="63" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+					</lines>
+				</class>
+			</classes>
+		</package>
 		<package name="com.garygregory.jcommander.converters.nio" line-rate="1.0" branch-rate="1.0" complexity="3.5">
 			<classes>
 				<class name="com.garygregory.jcommander.converters.nio.ByteOrderConverter" filename="com/garygregory/jcommander/converters/nio/ByteOrderConverter.java" line-rate="1.0" branch-rate="1.0" complexity="3.5">
@@ -494,162 +778,266 @@
 				</class>
 			</classes>
 		</package>
-		<package name="com.garygregory.jcommander.converters.security" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+		<package name="com.garygregory.jcommander.converters.nio.file.attribute" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 			<classes>
-				<class name="com.garygregory.jcommander.converters.security.AlgorithmParameterGeneratorConverter" filename="com/garygregory/jcommander/converters/security/AlgorithmParameterGeneratorConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.nio.file.attribute.PosixFilePermissionSetConverter" filename="com/garygregory/jcommander/converters/nio/file/attribute/PosixFilePermissionSetConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
 								<line number="49" hits="3" branch="false"/>
+								<line number="50" hits="3" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="3" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/util/Set;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="54" hits="3" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="40" hits="3" branch="false"/>
+						<line number="49" hits="3" branch="false"/>
+						<line number="50" hits="3" branch="false"/>
+						<line number="54" hits="3" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="com.garygregory.jcommander.converters.security" line-rate="1.0" branch-rate="1.0" complexity="1.4444444444444444">
+			<classes>
+				<class name="com.garygregory.jcommander.converters.security.AlgorithmParameterGeneratorConverter" filename="com/garygregory/jcommander/converters/security/AlgorithmParameterGeneratorConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/AlgorithmParameterGenerator;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="6" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="57" hits="1" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="6" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="57" hits="1" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.AlgorithmParametersConverter" filename="com/garygregory/jcommander/converters/security/AlgorithmParametersConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.AlgorithmParametersConverter" filename="com/garygregory/jcommander/converters/security/AlgorithmParametersConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/AlgorithmParameters;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.KeyFactoryConverter" filename="com/garygregory/jcommander/converters/security/KeyFactoryConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.KeyFactoryConverter" filename="com/garygregory/jcommander/converters/security/KeyFactoryConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/KeyFactory;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.KeyPairGeneratorConverter" filename="com/garygregory/jcommander/converters/security/KeyPairGeneratorConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.KeyPairGeneratorConverter" filename="com/garygregory/jcommander/converters/security/KeyPairGeneratorConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/KeyPairGenerator;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.KeyStoreConverter" filename="com/garygregory/jcommander/converters/security/KeyStoreConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.KeyStoreConverter" filename="com/garygregory/jcommander/converters/security/KeyStoreConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/KeyStore;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.MessageDigestConverter" filename="com/garygregory/jcommander/converters/security/MessageDigestConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.MessageDigestConverter" filename="com/garygregory/jcommander/converters/security/MessageDigestConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/MessageDigest;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
 				<class name="com.garygregory.jcommander.converters.security.ProviderConverter" filename="com/garygregory/jcommander/converters/security/ProviderConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
@@ -678,56 +1066,80 @@
 						<line number="54" hits="3" branch="false"/>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.SecureRandomConverter" filename="com/garygregory/jcommander/converters/security/SecureRandomConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.SecureRandomConverter" filename="com/garygregory/jcommander/converters/security/SecureRandomConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/SecureRandom;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
-				<class name="com.garygregory.jcommander.converters.security.SignatureConverter" filename="com/garygregory/jcommander/converters/security/SignatureConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+				<class name="com.garygregory.jcommander.converters.security.SignatureConverter" filename="com/garygregory/jcommander/converters/security/SignatureConverter.java" line-rate="1.0" branch-rate="1.0" complexity="1.5">
 					<methods>
 						<method name="&lt;init&gt;" signature="(Ljava/lang/String;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="48" hits="3" branch="false"/>
-								<line number="49" hits="3" branch="false"/>
+								<line number="49" hits="4" branch="false"/>
+								<line number="50" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="39" hits="3" branch="false"/>
+								<line number="40" hits="4" branch="false"/>
 							</lines>
 						</method>
 						<method name="convertImpl" signature="(Ljava/lang/String;)Ljava/security/Signature;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="53" hits="3" branch="false"/>
+								<line number="54" hits="4" branch="false"/>
+								<line number="55" hits="4" branch="false"/>
+								<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="39" hits="3" branch="false"/>
-						<line number="48" hits="3" branch="false"/>
-						<line number="49" hits="3" branch="false"/>
-						<line number="53" hits="3" branch="false"/>
+						<line number="40" hits="4" branch="false"/>
+						<line number="49" hits="4" branch="false"/>
+						<line number="50" hits="4" branch="false"/>
+						<line number="54" hits="4" branch="false"/>
+						<line number="55" hits="4" branch="false"/>
+						<line number="56" hits="4" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
 					</lines>
 				</class>
 			</classes>

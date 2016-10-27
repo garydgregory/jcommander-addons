@@ -1,10 +1,12 @@
 com.garygregory.jcommander.converters
 com.garygregory.jcommander.converters.crypto
-com.garygregory.jcommander.converters.crypto.lang
-com.garygregory.jcommander.converters.crypto.math
+com.garygregory.jcommander.converters.lang
+com.garygregory.jcommander.converters.math
 com.garygregory.jcommander.converters.net
+com.garygregory.jcommander.converters.net.ssl
 com.garygregory.jcommander.converters.nio
 com.garygregory.jcommander.converters.nio.charset
+com.garygregory.jcommander.converters.nio.file.attribute
 com.garygregory.jcommander.converters.security
 com.garygregory.jcommander.converters.security.cert
 com.garygregory.jcommander.converters.sql
