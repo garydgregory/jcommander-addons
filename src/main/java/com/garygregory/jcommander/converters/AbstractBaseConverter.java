@@ -36,11 +36,18 @@ import com.garygregory.jcommander.converters.net.URIConverter;
  */
 public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
 
+    /**
+     * The target class to convert strings.
+     */
     protected final Class<T> targetClass;
+
+    /**
+     * Whether or not a null conversion failure throws a ParameterException.
+     */
     protected final boolean failOnNull;
 
     /**
-     * Constructs a new instance.
+     * Constructs a new instance for the given option and target class.
      * 
      * @param optionName
      *            The option name, may be null.
@@ -52,7 +59,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
     }
 
     /**
-     * Constructs a new instance.
+     * Constructs a new instance for the given option, target class and fail-on-null.
      * 
      * @param optionName
      *            may be null
@@ -67,6 +74,15 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         this.targetClass = Objects.requireNonNull(targetClass, "targetClass for " + getClass());
     }
 
+    /**
+     * Converts the given value or throws a {@link ParameterException}. Delegates the actual conversion to subclasses
+     * with {@link #convertImpl(String)}.
+     * 
+     * @param value
+     *            the value to convert.
+     * @throws ParameterException
+     *             for a conversion problem
+     */
     @Override
     public T convert(final String value) {
         try {
@@ -80,34 +96,100 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
         }
     }
 
+    /**
+     * Converts a value.
+     * 
+     * @param value
+     *            the value to convert
+     * @return the converted value
+     * @throws Exception
+     *             subclasses can throw any Exception
+     */
     protected abstract T convertImpl(String value) throws Exception;
 
+    /**
+     * Builds an error message for the given value in error
+     * 
+     * @param value
+     *            the value that cause the error
+     * @return an error message
+     */
     protected String getErrorString(final String value) {
         return getClass().getName() + " could not convert \"" + value + "\" to an instance of " + targetClass + " for option "
                 + getOptionName();
     }
 
+    /**
+     * Returns true if the array is of size 1, false otherwise.
+     * 
+     * @param split
+     *            an array
+     * @return true if the array is of size 1, false otherwise.
+     */
     protected boolean isSingle(final String[] split) {
         return split.length == 1;
     }
 
+    /**
+     * Creates a new {@link ParameterException} for the given value.
+     * 
+     * @param value
+     *            the value in error
+     * @return a new ParameterException
+     */
     protected ParameterException newParameterException(final String value) {
         return new ParameterException(getErrorString(value));
     }
 
+    /**
+     * Creates a new {@link ParameterException} for the given value and throwable
+     * 
+     * @param value
+     *            the value in error
+     * @param t
+     *            the throwable
+     * @return a new ParameterException
+     */
     protected ParameterException newParameterException(final String value, final Throwable t) {
         return new ParameterException(getErrorString(value), t);
     }
 
+    /**
+     * Splits the given string using {@link ConverterConstants#VALUE_SEPARATOR} as the boundary.
+     * 
+     * @param value
+     *            the string to split
+     * @return the split array result
+     */
     protected String[] split(final String value) {
         return value.split(ConverterConstants.VALUE_SEPARATOR);
     }
 
+    /**
+     * Converts the given value to an int for the given option.
+     * 
+     * @param optionName
+     *            the option name
+     * @param value
+     *            the value to parse
+     * @return the int result
+     */
     protected int toInt(final String optionName, final String value) {
         return new IntegerConverter(optionName).convert(value).intValue();
     }
 
-    protected URI toURI(final String value) {
+    /**
+     * Converts the given string into a URI
+     * 
+     * @param optionName
+     *            the option name
+     * @param value
+     *            a string
+     * 
+     * @return a new URI
+     * @see java.net.URI
+     */
+    protected URI toURI(String optionName, final String value) {
         return new URIConverter(null).convert(value);
     }
 
