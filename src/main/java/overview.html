@@ -21,6 +21,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
   <img src="https://github.com/garydgregory/jcommander-addons/raw/master/src/site/resources/images/logo.png" />
 
   <p>
@@ -32,5 +33,13 @@
     Feel free to submit a pull-request and examine the <a href="https://garydgregory.github.io/jcommander-addons/">build site</a>.
   </p>
   
+  <h2>Using JCommander-Addons Converters</h2>
+  
+  To use a converter, specify the <code>converter</code> attribue with a class value:
+   
+<pre class="prettyprint"><code class="language-java">&#64;Parameter(names = { "--cipher" }, converter = CipherConverter.class)
+private Cipher cipher;
+</code></pre>
+
 </body>
 </html>
