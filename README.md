@@ -29,6 +29,11 @@ Converters include:
 ### Crypto Converters
 
 - crypto/CipherConverter
+- crypto/ExemptionMechanismConverter
+- crypto/KeyAgreementConverter
+- crypto/KeyGeneratorConverter
+- crypto/MacConverter
+- crypto/SecretKeyFactoryConverter
 
 ### Lang  Converters
 - lang/ClassConverter
