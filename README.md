@@ -43,6 +43,7 @@ Converters include:
 - net/NetworkInterfaceNameConverter
 - net/URIConverter
 - net/URLConverter
+- net/ssl/KeyManagerFactoryConverter
 
 ### NIO Converters
 
