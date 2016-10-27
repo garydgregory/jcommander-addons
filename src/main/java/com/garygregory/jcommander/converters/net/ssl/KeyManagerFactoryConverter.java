@@ -60,7 +60,7 @@ public class KeyManagerFactoryConverter extends AbstractBaseConverter<KeyManager
     protected KeyManagerFactory convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchProviderException  {
         final String[] split = split(value);
         final String algorithm = split[0];
-        return split.length == 1 ? KeyManagerFactory.getInstance(value) : KeyManagerFactory.getInstance(algorithm, split[1]);
+        return isSingle(split) ? KeyManagerFactory.getInstance(value) : KeyManagerFactory.getInstance(algorithm, split[1]);
     }
 
 }

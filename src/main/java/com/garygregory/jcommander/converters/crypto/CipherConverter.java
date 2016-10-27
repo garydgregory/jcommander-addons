@@ -62,7 +62,7 @@ public class CipherConverter extends AbstractBaseConverter<Cipher> {
             throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
         final String[] split = split(value);
         final String transformation = split[0];
-        return split.length == 1 ? Cipher.getInstance(value) : Cipher.getInstance(transformation, split[1]);
+        return isSingle(split) ? Cipher.getInstance(value) : Cipher.getInstance(transformation, split[1]);
     }
 
 }
