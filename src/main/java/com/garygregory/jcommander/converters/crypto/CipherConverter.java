@@ -31,14 +31,6 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 /**
  * Converts a {@link String} into a {@link Cipher}.
  * <p>
- * Example:
- * </p>
- * 
- * <pre>
- * <strong>&#64;Parameter</strong>(names = { "--cipher" }, <strong>converter</strong> = <strong>CipherConverter.class</strong>)
- * private <strong>Cipher</strong> cipher;
- * </pre>
- * <p>
  * For a description of the transformation parameter format, see {@link Cipher#getInstance(String)}.
  * </p>
  * <p>
