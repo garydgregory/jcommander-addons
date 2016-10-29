@@ -33,8 +33,8 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link TrustManagerFactory#getInstance(String)}.
  * </p>
  * <p>
- * To get a TrustManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described
- * by {@link TrustManagerFactory#getInstance(String, String)}.
+ * To get a TrustManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
+ * {@link TrustManagerFactory#getInstance(String, String)}.
  * </p>
  * 
  * <p>

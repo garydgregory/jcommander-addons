@@ -33,8 +33,8 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link KeyManagerFactory#getInstance(String)}.
  * </p>
  * <p>
- * To get a KeyManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described
- * by {@link KeyManagerFactory#getInstance(String, String)}.
+ * To get a KeyManagerFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
+ * {@link KeyManagerFactory#getInstance(String, String)}.
  * </p>
  * 
  * <p>

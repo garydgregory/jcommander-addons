@@ -75,8 +75,8 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
     }
 
     /**
-     * Converts the given value or throws a {@link ParameterException}. Delegates the actual conversion to subclasses
-     * with {@link #convertImpl(String)}.
+     * Converts the given value or throws a {@link ParameterException}. Delegates the actual conversion to subclasses with
+     * {@link #convertImpl(String)}.
      * 
      * @param value
      *            the value to convert.

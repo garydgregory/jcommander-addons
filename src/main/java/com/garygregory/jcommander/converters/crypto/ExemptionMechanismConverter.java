@@ -34,8 +34,8 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the algorithm parameter format, see {@link ExemptionMechanism#getInstance(String)}.
  * </p>
  * <p>
- * To get a ExemptionMechanism from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described
- * by {@link ExemptionMechanism#getInstance(String, String)}.
+ * To get a ExemptionMechanism from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
+ * {@link ExemptionMechanism#getInstance(String, String)}.
  * </p>
  * 
  * <p>
