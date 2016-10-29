@@ -30,13 +30,6 @@
   </bannerLeft>
 
   <body>
-    <links>
-      <item name="Books" href="https://www.amazon.com/author/garygregory/" />
-      <item name="LinkedIn" href="https://www.linkedin.com/in/garydgregory/" />
-      <item name="Blog" href="https://garygregory.wordpress.com" />
-      <item name="Apache" href="https://people.apache.org/~ggregory/" />
-      <item name="GitHub" href="https://github.com/garydgregory" />
-    </links>
     <menu name="User Guide">
       <item href="README.html" name="Read Me" />
     </menu>
