@@ -25,7 +25,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.beust.jcommander.Parameter;
-import com.beust.jcommander.ParameterException;
 import com.garygregory.jcommander.converters.AbstractCommandLineValueParserTest;
 
 /**
@@ -48,13 +47,14 @@ public class ByteOrderConverterCommandLineValueParserTest extends AbstractComman
         testParseCommandLineValue(ByteOrder.BIG_ENDIAN.toString());
     }
 
-    protected void testParseCommandLineValue(final String byteOrder) {
-        final CommandLineArguments commandLineArgs = parse(new CommandLineArguments(), "--byteOrder", byteOrder);
-        Assert.assertEquals(commandLineArgs.byteOrder.toString(), byteOrder);
-    }
-
     @Test
     public void testLittleEndian() {
         testParseCommandLineValue(ByteOrder.LITTLE_ENDIAN.toString());
+    }
+
+    @Override
+    protected void testParseCommandLineValue(final String byteOrder) {
+        final CommandLineArguments commandLineArgs = parse(new CommandLineArguments(), "--byteOrder", byteOrder);
+        Assert.assertEquals(commandLineArgs.byteOrder.toString(), byteOrder);
     }
 }

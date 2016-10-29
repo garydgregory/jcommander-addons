@@ -189,7 +189,7 @@ public abstract class AbstractBaseConverter<T> extends BaseConverter<T> {
      * @return a new URI
      * @see java.net.URI
      */
-    protected URI toURI(String optionName, final String value) {
+    protected URI toURI(final String optionName, final String value) {
         return new URIConverter(null).convert(value);
     }
 
