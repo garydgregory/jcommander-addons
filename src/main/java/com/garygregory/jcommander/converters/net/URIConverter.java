@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = URIConverter.class)
- * private URI paramname;</code>
+ * private URI uRI;</code>
  * </pre>
  * <p>
  * 

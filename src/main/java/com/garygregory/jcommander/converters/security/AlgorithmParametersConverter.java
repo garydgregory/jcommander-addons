@@ -37,7 +37,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = AlgorithmParametersConverter.class)
- * private AlgorithmParameters paramname;</code>
+ * private AlgorithmParameters algorithmParameters;</code>
  * </pre>
  * <p>
  * 

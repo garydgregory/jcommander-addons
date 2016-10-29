@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ZoneIdConverter.class)
- * private ZoneId paramname;</code>
+ * private ZoneId zoneId;</code>
  * </pre>
  * <p>
  * 

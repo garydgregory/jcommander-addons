@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ZoneOffsetConverter.class)
- * private ZoneOffset paramname;</code>
+ * private ZoneOffset zoneOffset;</code>
  * </pre>
  * <p>
  * 

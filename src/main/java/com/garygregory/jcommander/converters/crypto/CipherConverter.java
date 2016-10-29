@@ -44,7 +44,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CipherConverter.class)
- * private Cipher paramname;</code>
+ * private Cipher cipher;</code>
  * </pre>
  * <p>
  * 

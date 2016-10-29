@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ZonedDateTimeConverter.class)
- * private ZonedDateTime paramname;</code>
+ * private ZonedDateTime zonedDateTime;</code>
  * </pre>
  * <p>
  * 

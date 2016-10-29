@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CurrencyConverter.class)
- * private Currency paramname;</code>
+ * private Currency currency;</code>
  * </pre>
  * <p>
  * 

@@ -33,7 +33,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ClassConverter.class)
- * private Class paramname;</code>
+ * private Class class;</code>
  * </pre>
  * <p>
  * 

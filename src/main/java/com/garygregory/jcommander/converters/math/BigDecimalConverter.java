@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = BigDecimalConverter.class)
- * private BigDecimal paramname;</code>
+ * private BigDecimal bigDecimal;</code>
  * </pre>
  * <p>
  * 

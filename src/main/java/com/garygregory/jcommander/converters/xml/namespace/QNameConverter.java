@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = QNameConverter.class)
- * private QName paramname;</code>
+ * private QName qName;</code>
  * </pre>
  * <p>
  * 

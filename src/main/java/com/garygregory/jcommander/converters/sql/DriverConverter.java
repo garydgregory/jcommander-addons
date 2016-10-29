@@ -37,7 +37,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = DriverConverter.class)
- * private Driver paramname;</code>
+ * private Driver driver;</code>
  * </pre>
  * <p>
  * 

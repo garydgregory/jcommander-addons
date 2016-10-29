@@ -32,7 +32,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ByteOrderConverter.class)
- * private ByteOrder paramname;</code>
+ * private ByteOrder byteOrder;</code>
  * </pre>
  * <p>
  * 

@@ -43,7 +43,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = TrustManagerFactoryConverter.class)
- * private TrustManagerFactory paramname;</code>
+ * private TrustManagerFactory trustManagerFactory;</code>
  * </pre>
  * <p>
  * 

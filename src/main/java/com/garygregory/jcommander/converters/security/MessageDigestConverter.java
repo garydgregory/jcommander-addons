@@ -37,7 +37,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = MessageDigestConverter.class)
- * private MessageDigest paramname;</code>
+ * private MessageDigest messageDigest;</code>
  * </pre>
  * <p>
  * 

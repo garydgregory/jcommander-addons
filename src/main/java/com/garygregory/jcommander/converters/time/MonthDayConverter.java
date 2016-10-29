@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = MonthDayConverter.class)
- * private MonthDay paramname;</code>
+ * private MonthDay monthDay;</code>
  * </pre>
  * <p>
  * 

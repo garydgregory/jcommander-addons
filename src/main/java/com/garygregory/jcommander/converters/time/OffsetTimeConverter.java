@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = OffsetTimeConverter.class)
- * private OffsetTime paramname;</code>
+ * private OffsetTime offsetTime;</code>
  * </pre>
  * <p>
  * 

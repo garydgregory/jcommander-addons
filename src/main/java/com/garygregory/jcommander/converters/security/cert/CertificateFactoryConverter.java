@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CertificateFactoryConverter.class)
- * private CertificateFactory paramname;</code>
+ * private CertificateFactory certificateFactory;</code>
  * </pre>
  * <p>
  * 

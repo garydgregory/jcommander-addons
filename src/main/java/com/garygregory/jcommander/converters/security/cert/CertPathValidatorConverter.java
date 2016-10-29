@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CertPathValidatorConverter.class)
- * private CertPathValidator paramname;</code>
+ * private CertPathValidator certPathValidator;</code>
  * </pre>
  * <p>
  * 

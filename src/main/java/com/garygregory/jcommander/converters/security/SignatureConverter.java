@@ -37,7 +37,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = SignatureConverter.class)
- * private Signature paramname;</code>
+ * private Signature signature;</code>
  * </pre>
  * <p>
  * 

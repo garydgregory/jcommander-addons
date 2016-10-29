@@ -43,7 +43,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = KeyManagerFactoryConverter.class)
- * private KeyManagerFactory paramname;</code>
+ * private KeyManagerFactory keyManagerFactory;</code>
  * </pre>
  * <p>
  * 

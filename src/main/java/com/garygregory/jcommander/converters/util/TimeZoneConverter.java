@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = TimeZoneConverter.class)
- * private TimeZone paramname;</code>
+ * private TimeZone timeZone;</code>
  * </pre>
  * <p>
  * 

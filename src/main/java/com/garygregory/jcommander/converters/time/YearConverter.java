@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = YearConverter.class)
- * private Year paramname;</code>
+ * private Year year;</code>
  * </pre>
  * <p>
  * 

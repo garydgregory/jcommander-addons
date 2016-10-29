@@ -44,7 +44,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = KeyGeneratorConverter.class)
- * private KeyGenerator paramname;</code>
+ * private KeyGenerator keyGenerator;</code>
  * </pre>
  * <p>
  * 

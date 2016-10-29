@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = InetAddressConverter.class)
- * private InetAddress paramname;</code>
+ * private InetAddress inetAddress;</code>
  * </pre>
  * <p>
  * 

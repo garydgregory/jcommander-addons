@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = DurationConverter.class)
- * private Duration paramname;</code>
+ * private Duration duration;</code>
  * </pre>
  * <p>
  * 

@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = InstantConverter.class)
- * private Instant paramname;</code>
+ * private Instant instant;</code>
  * </pre>
  * <p>
  * 
