@@ -54,6 +54,9 @@ Converters include:
 - net/NetworkInterfaceNameConverter
 - net/URIConverter
 - net/URLConverter
+
+### Net SSL Converters
+
 - net/ssl/KeyManagerFactoryConverter
 - net/ssl/TrustManagerFactoryConverter
 
@@ -74,6 +77,9 @@ Converters include:
 - security/ProviderConverter
 - security/SecureRandomConverter
 - security/SignatureConverter
+
+### Security Certificate Converters
+
 - security/cert/CertificateFactoryConverter
 - security/cert/CertPathValidatorConverter
 
