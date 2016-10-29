@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link SecureRandom#getInstance(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = SecureRandomConverter.class)
+ * private SecureRandom paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see SecureRandom
  * @see SecureRandom#getInstance(String)
  * 

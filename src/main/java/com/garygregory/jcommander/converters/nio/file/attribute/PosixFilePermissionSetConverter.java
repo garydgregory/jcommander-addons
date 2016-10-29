@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link PosixFilePermissions#fromString(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = PosixFilePermissionConverter.class)
+ * private PosixFilePermission paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see PosixFilePermission
  * @see PosixFilePermissions#fromString(String)
  * 

@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link OffsetTime#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = OffsetTimeConverter.class)
+ * private OffsetTime paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see OffsetTime
  * @see OffsetTime#parse(CharSequence)
  * 

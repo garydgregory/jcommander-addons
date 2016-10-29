@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link MessageDigest#getInstance(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = MessageDigestConverter.class)
+ * private MessageDigest paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see MessageDigest
  * @see MessageDigest#getInstance(String)
  * 

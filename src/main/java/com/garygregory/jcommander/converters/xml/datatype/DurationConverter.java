@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link DatatypeFactory#newDuration(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = DurationConverter.class)
+ * private Duration paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Duration
  * @see DatatypeFactory#newDuration(String)
  * 

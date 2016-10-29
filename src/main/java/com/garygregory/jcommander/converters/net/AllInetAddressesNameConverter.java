@@ -30,6 +30,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link InetAddress#getAllByName(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = InetAddressConverter.class)
+ * private InetAddress paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see InetAddress
  * @see InetAddress#getAllByName(String)
  * 

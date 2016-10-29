@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link Period#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = PeriodConverter.class)
+ * private Period paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Period
  * @see Period#parse(CharSequence)
  * 

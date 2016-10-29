@@ -26,6 +26,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
 /**
  * Converts a String to a {@link ByteOrder}. Valid values are {@code "BIG_ENDIAN"} and {@code "LITTLE_ENDIAN"}.
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ByteOrderConverter.class)
+ * private ByteOrder paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see ByteOrder
  * @see ByteOrder#BIG_ENDIAN
  * @see ByteOrder#LITTLE_ENDIAN

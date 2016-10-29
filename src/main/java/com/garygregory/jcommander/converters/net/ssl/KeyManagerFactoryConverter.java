@@ -37,6 +37,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * by {@link KeyManagerFactory#getInstance(String, String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = KeyManagerFactoryConverter.class)
+ * private KeyManagerFactory paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see KeyManagerFactory
  * @see KeyManagerFactory#getInstance(String)
  * @see KeyManagerFactory#getInstance(String, String)

@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link DriverManager#getDriver(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = DriverConverter.class)
+ * private Driver paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Driver
  * @see DriverManager#getDriver(String)
  * 

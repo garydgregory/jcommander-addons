@@ -38,6 +38,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * {@link Cipher#getInstance(String, String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CipherConverter.class)
+ * private Cipher paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Cipher
  * @see Cipher#getInstance(String)
  * @see Cipher#getInstance(String, String)

@@ -34,9 +34,19 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the transformation parameter format, see {@link Mac#getInstance(String)}.
  * </p>
  * <p>
- * To get a Mac from a specific {@link Provider}, use the syntax {@code algorithm:provider} as
- * described by {@link Mac#getInstance(String, String)}.
+ * To get a Mac from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
+ * {@link Mac#getInstance(String, String)}.
  * </p>
+ * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = MacConverter.class)
+ * private Mac paramname;</code>
+ * </pre>
+ * <p>
  * 
  * @see Mac
  * @see Mac#getInstance(String)
@@ -58,8 +68,7 @@ public class MacConverter extends AbstractBaseConverter<Mac> {
     }
 
     @Override
-    protected Mac convertImpl(final String value)
-            throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
+    protected Mac convertImpl(final String value) throws NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException {
         final String[] split = split(value);
         final String algorithm = split[0];
         return isSingle(split) ? Mac.getInstance(value) : Mac.getInstance(algorithm, split[1]);

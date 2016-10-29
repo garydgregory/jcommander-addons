@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link BigInteger#BigInteger(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = BigIntegerConverter.class)
+ * private BigInteger paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see BigInteger
  * @see BigInteger#BigInteger(String)
  * 

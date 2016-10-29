@@ -30,6 +30,16 @@ import com.garygregory.jcommander.converters.sql.TypesConverter;
  * For a description of the format, see {@link Types}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = TypesConverter.class)
+ * private Types paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Types
  * 
  * @since 1.0.0

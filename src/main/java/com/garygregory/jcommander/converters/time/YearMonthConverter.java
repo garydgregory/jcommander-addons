@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link YearMonth#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = YearMonthConverter.class)
+ * private YearMonth paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see YearMonth
  * @see YearMonth#parse(CharSequence)
  * 

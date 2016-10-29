@@ -34,9 +34,19 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the transformation parameter format, see {@link KeyGenerator#getInstance(String)}.
  * </p>
  * <p>
- * To get a KeyGenerator from a specific {@link Provider}, use the syntax {@code algorithm:provider} as
- * described by {@link KeyGenerator#getInstance(String, String)}.
+ * To get a KeyGenerator from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
+ * {@link KeyGenerator#getInstance(String, String)}.
  * </p>
+ * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = KeyGeneratorConverter.class)
+ * private KeyGenerator paramname;</code>
+ * </pre>
+ * <p>
  * 
  * @see KeyGenerator
  * @see KeyGenerator#getInstance(String)

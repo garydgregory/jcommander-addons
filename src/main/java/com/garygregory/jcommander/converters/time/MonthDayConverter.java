@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link MonthDay#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = MonthDayConverter.class)
+ * private MonthDay paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see MonthDay
  * @see MonthDay#parse(CharSequence)
  * 

@@ -28,6 +28,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * <p>
  * For a description of the format, see {@link QName#valueOf(String)}.
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = QNameConverter.class)
+ * private QName paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see QName
  * @see QName#valueOf(String)
  * 

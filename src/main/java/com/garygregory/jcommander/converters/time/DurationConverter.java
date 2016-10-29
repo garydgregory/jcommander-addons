@@ -30,6 +30,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link Period#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = DurationConverter.class)
+ * private Duration paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Duration
  * @see Duration#parse(CharSequence)
  * 

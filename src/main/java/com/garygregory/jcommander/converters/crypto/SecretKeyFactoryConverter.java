@@ -34,9 +34,19 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the transformation parameter format, see {@link SecretKeyFactory#getInstance(String)}.
  * </p>
  * <p>
- * To get a SecretKeyFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as
- * described by {@link SecretKeyFactory#getInstance(String, String)}.
+ * To get a SecretKeyFactory from a specific {@link Provider}, use the syntax {@code algorithm:provider} as described by
+ * {@link SecretKeyFactory#getInstance(String, String)}.
  * </p>
+ * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = SecretKeyFactoryConverter.class)
+ * private SecretKeyFactory paramname;</code>
+ * </pre>
+ * <p>
  * 
  * @see SecretKeyFactory
  * @see SecretKeyFactory#getInstance(String)

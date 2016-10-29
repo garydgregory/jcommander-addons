@@ -30,6 +30,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link URL#URL(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = URLConverter.class)
+ * private URL paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see URL
  * @see URL#URL(String)
  * 

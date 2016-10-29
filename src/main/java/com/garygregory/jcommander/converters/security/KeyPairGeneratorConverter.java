@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link KeyPairGenerator#getInstance(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = KeyPairGeneratorConverter.class)
+ * private KeyPairGenerator paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see KeyPairGenerator
  * @see KeyPairGenerator#getInstance(String)
  * 

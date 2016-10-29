@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link BigDecimal#BigDecimal(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = BigDecimalConverter.class)
+ * private BigDecimal paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see BigDecimal
  * @see BigDecimal#BigDecimal(String)
  * 

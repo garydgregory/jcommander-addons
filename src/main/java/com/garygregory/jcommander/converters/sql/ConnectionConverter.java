@@ -31,6 +31,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link DriverManager#getConnection(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ConnectionConverter.class)
+ * private Connection paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Connection
  * @see DriverManager#getConnection(String)
  * 

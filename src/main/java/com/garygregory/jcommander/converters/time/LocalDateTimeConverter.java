@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link LocalDateTime#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = LocalDateTimeConverter.class)
+ * private LocalDateTime paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see LocalDateTime
  * @see LocalDateTime#parse(CharSequence)
  * 

@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link Instant#parse(CharSequence)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = InstantConverter.class)
+ * private Instant paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Instant
  * @see Instant#parse(CharSequence)
  * 

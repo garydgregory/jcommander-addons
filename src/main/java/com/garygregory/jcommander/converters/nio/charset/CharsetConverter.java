@@ -29,6 +29,16 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * For a description of the format, see {@link Charset#forName(String)}.
  * </p>
  * 
+ * <p>
+ * Example:
+ * </p>
+ * 
+ * <pre class="prettyprint">
+ * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CharsetConverter.class)
+ * private Charset paramname;</code>
+ * </pre>
+ * <p>
+ * 
  * @see Charset
  * @see Charset#forName(String)
  * 
