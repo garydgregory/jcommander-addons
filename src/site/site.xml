@@ -36,4 +36,14 @@
     <menu ref="reports" inherit="bottom" />
   </body>
 
+  <custom>
+    <fluidoSkin>
+      <gitHub>
+        <projectId>garydgregory/jcommander-addons</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>green</ribbonColor>
+      </gitHub>
+    </fluidoSkin>
+  </custom>
+  
 </project>
