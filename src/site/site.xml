@@ -18,4 +18,29 @@
     limitations under the License.
 -->
 <project name="Gary Gregory" xmlns="http://maven.apache.org/DECORATION/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd" />
+  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.1.0 http://maven.apache.org/xsd/decoration-1.1.0.xsd">
+  
+    <!-- N.B. all non-body elements are automatically inherited -->
+
+  <bannerLeft>
+    <name>JCommander Add-ons</name>
+    <src>images/logo.png</src>
+    <alt>JCommander Add-ons</alt>
+    <href>/index.html</href>
+  </bannerLeft>
+
+  <body>
+    <links>
+      <item name="Books" href="https://www.amazon.com/author/garygregory/" />
+      <item name="LinkedIn" href="https://www.linkedin.com/in/garydgregory/" />
+      <item name="Blog" href="https://garygregory.wordpress.com" />
+      <item name="Apache" href="https://people.apache.org/~ggregory/" />
+      <item name="GitHub" href="https://github.com/garydgregory" />
+    </links>
+    <menu name="User Guide">
+      <item href="README.html" name="Read Me" />
+    </menu>
+    <menu ref="reports" inherit="bottom" />
+  </body>
+
+</project>
