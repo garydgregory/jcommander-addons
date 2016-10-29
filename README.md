@@ -33,96 +33,96 @@ Converters include:
 
 ### Crypto Converters
 
-- crypto/CipherConverter
-- crypto/ExemptionMechanismConverter
-- crypto/KeyAgreementConverter
-- crypto/KeyGeneratorConverter
-- crypto/MacConverter
-- crypto/SecretKeyFactoryConverter
+- [CipherConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/crypto/CipherConverter.html)
+- [ExemptionMechanismConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/crypto/ExemptionMechanismConverter.html)
+- [KeyAgreementConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/crypto/KeyAgreementConverter.html)
+- [KeyGeneratorConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/crypto/KeyGeneratorConverter.html)
+- [MacConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/crypto/MacConverter.html)
+- [SecretKeyFactoryConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/crypto/SecretKeyFactoryConverter.html)
 
 ### Lang  Converters
-- lang/ClassConverter
+- [ClassConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/lang/ClassConverter.html)
 
 ### Math Converters
 
-- math/BigDecimalConverter
-- math/BigIntegerConverter
+- [BigDecimalConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/math/BigDecimalConverter.html)
+- [BigIntegerConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/math/BigIntegerConverter.html)
 
 ### Net Converters
 
-- net/NetworkInterfaceIndexConverter
-- net/NetworkInterfaceNameConverter
-- net/URIConverter
-- net/URLConverter
+- [NetworkInterfaceIndexConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/net/NetworkInterfaceIndexConverter.html)
+- [NetworkInterfaceNameConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/net/NetworkInterfaceNameConverter.html)
+- [URIConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/net/URIConverter.html)
+- [URLConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/net/URLConverter.html)
 
 ### Net SSL Converters
 
-- net/ssl/KeyManagerFactoryConverter
-- net/ssl/TrustManagerFactoryConverter
+- [KeyManagerFactoryConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/net/ssl/KeyManagerFactoryConverter.html)
+- [TrustManagerFactoryConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/net/ssl/TrustManagerFactoryConverter.html)
 
 ### NIO Converters
 
-- nio/ByteOrderConverter
-- nio/charset/CharsetConverter
-- nio/file/attribute/PosixFilePermissionSetConverter
+- [ByteOrderConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/nio/ByteOrderConverter.html)
+- [CharsetConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/nio/charset/CharsetConverter.html)
+- [PosixFilePermissionSetConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/nio/file/attribute/PosixFilePermissionSetConverter.html)
 
 ### Security Converters
 
-- security/AlgorithmParameterGeneratorConverter
-- security/AlgorithmParametersConverter
-- security/KeyFactoryConverter
-- security/KeyPairGeneratorConverter
-- security/KeyStoreConverter
-- security/MessageDigestConverter
-- security/ProviderConverter
-- security/SecureRandomConverter
-- security/SignatureConverter
+- [AlgorithmParameterGeneratorConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/AlgorithmParameterGeneratorConverter.html)
+- [AlgorithmParametersConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/AlgorithmParametersConverter.html)
+- [KeyFactoryConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/KeyFactoryConverter.html)
+- [KeyPairGeneratorConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/KeyPairGeneratorConverter.html)
+- [KeyStoreConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/KeyStoreConverter.html)
+- [MessageDigestConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/MessageDigestConverter.html)
+- [ProviderConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/ProviderConverter.html)
+- [SecureRandomConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/SecureRandomConverter.html)
+- [SignatureConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/SignatureConverter.html)
 
 ### Security Certificate Converters
 
-- security/cert/CertificateFactoryConverter
-- security/cert/CertPathValidatorConverter
+- [CertificateFactoryConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/cert/CertificateFactoryConverter.html)
+- [CertPathValidatorConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/security/cert/CertPathValidatorConverter.html)
 
 ### SQL Converters
  
-- sql/ConnectionConverter
-- sql/DateConverter
-- sql/DriverConverter
-- sql/TimeConverter
-- sql/TimestampConverter
-- sql/TypesConverter
-- sql/microsoft/MicrosoftTypesConverter
-- sql/mysql/MysqlTypesConverter
-- sql/oracle/OracleTypesConverter
+- [ConnectionConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/ConnectionConverter.html)
+- [DateConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/DateConverter.html)
+- [DriverConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/DriverConverter.html)
+- [TimeConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/TimeConverter.html)
+- [TimestampConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/TimestampConverter.html)
+- [TypesConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/TypesConverter.html)
+- [MicrosoftTypesConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/microsoft/MicrosoftTypesConverter.html)
+- [MysqlTypesConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/mysql/MysqlTypesConverter.html)
+- [OracleTypesConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/sql/oracle/OracleTypesConverter.html)
 
 ### Time Converters
 
-- time/DurationConverter
-- time/InstantConverter
-- time/LocalDateConverter
-- time/LocalDateTimeConverter
-- time/LocalTimeConverter
-- time/MonthDayConverter
-- time/OffsetDateTimeConverter
-- time/OffsetTimeConverter
-- time/PeriodConverter
-- time/YearConverter
-- time/YearMonthConverter
-- time/ZonedDateTimeConverter
-- time/ZoneIdConverter
-- time/ZoneOffsetConverter
+- [DurationConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/DurationConverter.html)
+- [InstantConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/InstantConverter.html)
+- [LocalDateConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/LocalDateConverter.html)
+- [LocalDateTimeConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/LocalDateTimeConverter.html)
+- [LocalTimeConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/LocalTimeConverter.html)
+- [MonthDayConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/MonthDayConverter.html)
+- [OffsetDateTimeConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/OffsetDateTimeConverter.html)
+- [OffsetTimeConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/OffsetTimeConverter.html)
+- [PeriodConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/PeriodConverter.html)
+- [YearConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/YearConverter.html)
+- [YearMonthConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/YearMonthConverter.html)
+- [ZonedDateTimeConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/ZonedDateTimeConverter.html)
+- [ZoneIdConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/ZoneIdConverter.html)
+- [ZoneOffsetConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/time/ZoneOffsetConverter.html)
 
 ### Util Converters
 
-- util/CurrencyConverter
-- util/LocaleConverter
-- util/TimeZoneConverter
-- util/UUIDConverter
+- [CurrencyConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/util/CurrencyConverter.html)
+- [LocaleConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/util/LocaleConverter.html)
+- [TimeZoneConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/util/TimeZoneConverter.html)
+- [UUIDConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/util/UUIDConverter.html)
 
 ### XML Converters
 
-- xml/datatype/DurationConverter
-- xml/namespace/QNameConverter 
+- [DurationConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/xml/datatype/DurationConverter.html)
+- [QNameConverter](https://garydgregory.github.io/jcommander-addons/apidocs/com/garygregory/jcommander/converters/xml/namespace/QNameConverter.html) 
 
 ## Status
 
