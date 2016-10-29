@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = SecureRandomConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--secureRandom" }, converter = SecureRandomConverter.class)
  * private SecureRandom secureRandom;</code>
  * </pre>
  * <p>

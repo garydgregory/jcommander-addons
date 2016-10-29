@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = DateConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--date" }, converter = DateConverter.class)
  * private Date date;</code>
  * </pre>
  * <p>

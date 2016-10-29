@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = UUIDConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--uUID" }, converter = UUIDConverter.class)
  * private UUID uUID;</code>
  * </pre>
  * <p>

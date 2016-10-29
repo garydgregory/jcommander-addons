@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = LocaleConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--locale" }, converter = LocaleConverter.class)
  * private Locale locale;</code>
  * </pre>
  * <p>

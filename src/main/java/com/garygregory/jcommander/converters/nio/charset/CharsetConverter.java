@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = CharsetConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--charset" }, converter = CharsetConverter.class)
  * private Charset charset;</code>
  * </pre>
  * <p>

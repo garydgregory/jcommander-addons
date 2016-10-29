@@ -35,7 +35,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = NetworkInterfaceConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--networkInterface" }, converter = NetworkInterfaceConverter.class)
  * private NetworkInterface networkInterface;</code>
  * </pre>
  * <p>

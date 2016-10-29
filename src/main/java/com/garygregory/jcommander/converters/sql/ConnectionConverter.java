@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ConnectionConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--connection" }, converter = ConnectionConverter.class)
  * private Connection connection;</code>
  * </pre>
  * <p>

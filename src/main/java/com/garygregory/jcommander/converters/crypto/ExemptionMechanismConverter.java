@@ -43,7 +43,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = ExemptionMechanismConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--exemptionMechanism" }, converter = ExemptionMechanismConverter.class)
  * private ExemptionMechanism exemptionMechanism;</code>
  * </pre>
  * <p>

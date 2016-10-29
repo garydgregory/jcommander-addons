@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = TypesConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--types" }, converter = TypesConverter.class)
  * private Types types;</code>
  * </pre>
  * <p>

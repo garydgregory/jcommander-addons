@@ -36,7 +36,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = KeyStoreConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--keyStore" }, converter = KeyStoreConverter.class)
  * private KeyStore keyStore;</code>
  * </pre>
  * <p>

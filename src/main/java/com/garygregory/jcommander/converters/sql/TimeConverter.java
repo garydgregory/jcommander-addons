@@ -34,7 +34,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * </p>
  * 
  * <pre class="prettyprint">
- * <code class="language-java">&#64;Parameter(names = { "--paramname" }, converter = TimeConverter.class)
+ * <code class="language-java">&#64;Parameter(names = { "--time" }, converter = TimeConverter.class)
  * private Time time;</code>
  * </pre>
  * <p>
