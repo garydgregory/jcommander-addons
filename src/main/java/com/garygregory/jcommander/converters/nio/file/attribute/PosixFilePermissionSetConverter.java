@@ -37,7 +37,7 @@ import com.garygregory.jcommander.converters.AbstractBaseConverter;
  * 
  * <pre class="prettyprint">
  * <code class="language-java">&#64;Parameter(names = { "--posixFilePermissions" }, converter = PosixFilePermissionSetConverter.class)
- * private Set&lt;PosixFilePermission> posixFilePermissions;</code>
+ * private Set&lt;PosixFilePermission&gt; posixFilePermissions;</code>
  * </pre>
  * <p>
  * 
