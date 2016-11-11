@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.9954233409610984" branch-rate="0.7575757575757576" lines-covered="435" lines-valid="437" branches-covered="450" branches-valid="594" complexity="3.1925925925925926" version="2.1.1" timestamp="1477856626645">
+<coverage line-rate="0.9954233409610984" branch-rate="0.7575757575757576" lines-covered="435" lines-valid="437" branches-covered="450" branches-valid="594" complexity="3.1925925925925926" version="2.1.1" timestamp="1478822442355">
 	<sources>
 		<source>--source</source>
 		<source>E:/vcs/git/github/garydgregory/jcommander-addons/target/generated-sources/annotations</source>

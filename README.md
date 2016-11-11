@@ -130,4 +130,11 @@ Converters include:
 [![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons)
 
+## Building
 
+The site is generated in `target/docs` and manually copied to the `docs` folder for publication to GitHub Pages at 
+[https://garydgregory.github.io/jcommander-addons](https://garydgregory.github.io/jcommander-addons). 
+
+To generate the site run:
+
+```mvn clean site site:stage -DstagingDirectory=target/docs```
