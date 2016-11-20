@@ -29,6 +29,15 @@ Feel free to submit a pull-request and examine the [sources](https://github.com/
 [![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons)
 
+## Example
+
+To convert a command line argument into a Duration object, you write:
+
+```
+@Parameter(names = { "--duration" }, converter = DurationConverter.class)
+private Duration duration;
+```
+
 ## Converters 
 Converters include:
 
