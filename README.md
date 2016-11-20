@@ -25,6 +25,7 @@ Feel free to submit a pull-request and examine the [sources](https://github.com/
 [build site](https://garydgregory.github.io/jcommander-addons/README.html).
 
 [![Build Status](https://travis-ci.org/garydgregory/jcommander-addons.svg?branch=master)](https://travis-ci.org/garydgregory/jcommander-addons)
+[![Build status](https://ci.appveyor.com/api/projects/status/1faiwut5808fcndo?svg=true)](https://ci.appveyor.com/project/garydgregory/jcommander-addons)
 [![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons)
 
