@@ -33,4 +33,6 @@ install:
   - cmd: mvn --version
   - cmd: java -version
 build_script:
-  - mvn -B -V verify
+  - mvn clean package -Dmaven.test.skip=true
+test_script:
+  - mvn test
