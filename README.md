@@ -148,3 +148,7 @@ The site is generated in `target/docs` and manually copied to the `docs` folder 
 To generate the site run:
 
 ```mvn clean site site:stage -DstagingDirectory=target/docs```
+
+## Versioning
+
+This project follows [Semantic Versioning](http://semver.org/).
