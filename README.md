@@ -233,16 +233,16 @@ Set the version from SNAPSHOT to normal and create a signed tag:
 ```
 mvn versions:set -DnewVersion=1.0.0 -DgenerateBackupPoms=false
 git commit -am "Update version numbers for release jcommander-addons 1.0.0"
+mvn deploy -Prelease
 git tag -s 1.0.0 -m "Tag release jcommander-addons 1.0.0" -u "ggregory@apache.org"
 git push origin 1.0.0
-mvn deploy -Prelease
 ```
 
 Now reset the version to the next version:
 
 ```
-mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=false
-git commit -am "Update to the version to 1.0.1-SNAPSHOT after releasing 1.0.0"
+mvn versions:set -DnewVersion=1.1.0-SNAPSHOT -DgenerateBackupPoms=false
+git commit -am "Update to the version to 1.1.0-SNAPSHOT after releasing 1.0.0"
 git push
 ```
 
