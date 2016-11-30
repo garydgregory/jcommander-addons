@@ -18,6 +18,8 @@
 -->
 ![jcommander-addons](https://github.com/garydgregory/jcommander-addons/raw/master/src/site/resources/images/logo.png "jcommander-addons")
 
+[JCommander](http://jcommander.org/) is a small Java framework that makes it simple to parse command line parameters.
+
 The goal of the JCommander-Addons project is to provide any and all [JCommander](http://jcommander.org/) 
 converters and validators an advanced applications will need.
 
@@ -29,17 +31,50 @@ Feel free to submit a pull-request and examine the [sources](https://github.com/
 [![Coverage Status](https://coveralls.io/repos/github/garydgregory/jcommander-addons/badge.svg?branch=master)](https://coveralls.io/github/garydgregory/jcommander-addons?branch=master)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.garygregory/jcommander-addons)
 
-## Example
+## Examples
 
-To convert a command line argument into a Duration object, you write:
+To convert a command line argument into a ```Duration``` object, you write:
 
 ```
 @Parameter(names = { "--duration" }, converter = DurationConverter.class)
 private Duration duration;
 ```
 
+Here is a complete program using a ```LocalDate```:
+
+```
+package com.garygregory.jcommander.examples;
+
+import java.time.LocalDate;
+
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
+import com.garygregory.jcommander.converters.time.LocalDateConverter;
+
+public class SimpleExample {
+
+    @Parameter(
+      names = { "--dob", "-d" }, 
+      converter = LocalDateConverter.class, 
+      required = true, 
+      description = "Birthday in the format YYYY-MM-DD, for example 2007-12-03")
+    LocalDate localDate;
+
+    public static void main(String... args) {
+        SimpleExample main = new SimpleExample();
+        new JCommander(main, args);
+        main.run();
+    }
+
+    public void run() {
+        System.out.printf("You were born on a %s.", localDate.getDayOfWeek());
+    }
+
+}
+```
+
 ## Converters 
-Converters include:
+Our Converters include:
 
 ### Crypto Converters
 
