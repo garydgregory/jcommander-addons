@@ -177,12 +177,74 @@ Our Converters include:
 
 ## Building
 
+### Testing
+
+To make sure everything is OK, build from first principles and run all the tests:
+
+```mvn clean test```
+
+### Validating a patch or pull request
+
+If you want to submit a patch or pull request, make sure all is well:
+
+```
+mvn apache-rat:check
+mvn clirr:check
+mvn clean site
+```
+
+### Deploying a SNAPSHOT
+
+To deploy a SNAPSHOT build to the SNAPSHOT repository, run:
+
+```mvn clean deploy```
+
+### Generating the site 
+
 The site is generated in `target/docs` and manually copied to the `docs` folder for publication to GitHub Pages at 
 [https://garydgregory.github.io/jcommander-addons](https://garydgregory.github.io/jcommander-addons). 
 
 To generate the site run:
 
 ```mvn clean site site:stage -DstagingDirectory=target/docs```
+
+### Releasing a new version
+
+Make sure all is well in your development branch:
+
+```
+mvn apache-rat:check
+mvn clirr:check
+mvn clean site
+```
+
+Create a clean clone and make sure all is well:
+
+```
+git clone https://github.com/garydgregory/jcommander-addons.git jcommander-addons-1.0.0-rc1
+cd jcommander-addons-1.0.0-rc1
+mvn apache-rat:check
+mvn clirr:check
+mvn clean site
+```
+
+Set the version from SNAPSHOT to normal and create a signed tag:
+
+```
+mvn versions:set -DnewVersion=1.0.0 -DgenerateBackupPoms=false
+git commit -am "Update version numbers for release jcommander-addons 1.0.0"
+git tag -s 1.0.0 -m "Tag release jcommander-addons 1.0.0" -u "ggregory@apache.org"
+git push origin 1.0.0
+mvn deploy -Prelease
+```
+
+Now reset the version to the next version:
+
+```
+mvn versions:set -DnewVersion=1.0.1-SNAPSHOT -DgenerateBackupPoms=false
+git commit -am "Update to the version to 1.0.1-SNAPSHOT after releasing 1.0.0"
+git push
+```
 
 ## Versioning
 
